@@ -2,7 +2,7 @@
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
 html,body                       { width:100%; height:100%; }
-body                            { padding:0; margin:0; font:16px 'Lato', Arial, sans-serif; background:#e4e9eb; color:#131617; }
+body                            { padding:0; margin:0; font:16px/1.6 'Lato', Arial, sans-serif; background:#e4e9eb; color:#131617; }
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea {
 	padding:0;
 	margin:0;
@@ -81,16 +81,46 @@ img {
 /*----------------------------------------------------------------------------------*/
 .header {
     background: #131617;
+    color: #ffffff;
 }
     .header-box {
-        padding: 20px 30px;
+        position: relative;
+        padding: 60px 30px;
     }
+        .logo-wrap {
+            overflow: hidden;
+        }
+            a.logo:hover, .logo a:hover,
+            a.footer-logo:hover, .footer-logo a:hover {
+                text-decoration: none;
+            }
+            .logo {
+                display: inline-block;
+                float: left;
+                max-width: 253px;
+                margin-right: 55px;
+            }
+                .logo img {
+                    max-width: 100%;
+                    height: auto;
+                    margin-bottom: -3px;
+                }
+            .logo-wrap strong {
+                display: inline-block;
+                margin-top: 7px;
+                font-weight: 300;
+                font-size: 2.25em;
+                text-transform: uppercase;
+            }
+                .logo-wrap strong span {
+                    color: #2bb8b7;
+                }
 /*----------------------------------------------------------------------------------*/
 /*--------------------------------------NAV-----------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .mobile-menu-wrap,
 .mobile-menu-toggle {
-    display: none;
+    /*display: none;*/
 }
     .mobile-menu-wrap {
         position: fixed;
@@ -130,10 +160,10 @@ img {
             opacity: 1;
         }
             .mobile-menu-nav-wrap{
-                width: 320px;
+                width: 350px;
                 max-width: 85%;
                 position: absolute;
-                right: -320px;
+                right: -350px;
                 z-index: 2;
                 -webkit-transition: right 0.3s;
                 -moz-transition: right 0.3s;
@@ -188,10 +218,11 @@ img {
                     }
         .mobile-menu-toggle {
             position: absolute;
-            right: 0;
-            top: 0;
-            height: 96px;
+            right: 5px;
+            top: 50%;
+            height: 80px;
             width: 80px;
+            margin-top: -40px;
             background-color: transparent;
             vertical-align: middle;
             cursor: pointer;
@@ -231,10 +262,9 @@ img {
                 bottom: -10px;
             }
         .mobile-menu-wrap .mobile-menu-toggle {
-            right: 16px;
-            top: 28px;
-            height: 40px;
-            width: 40px;
+            right: 0;
+            top: 0;
+            margin-top: 0;
             background-color: transparent;
         }
         .mobile-menu-toggle.active span {
@@ -283,17 +313,8 @@ img {
     background: #131617;
     color: #ffffff;
 }
-    .footer-bottom {
-        border-top: 1px solid #1f2223;
-    }
-        .copyright {
-            color: #5a5c5d;
-            font-size: 12px;
-        }
-            .copyright p:not(:last-child) {
-                margin-bottom: 6px;
-            }
     .footer-box {
+        overflow: hidden;
         padding: 40px 50px;
     }
         .footer a {
@@ -306,3 +327,36 @@ img {
         .footer .fa {
             color: #0cbcc9;
         }
+
+    .footer-top {}
+        .footer-logo {
+            float: left;
+        }
+            .footer-logo a {
+                display: inline-block;
+                max-width: 186px;
+                margin-right: 55px;
+            }
+                .footer-logo img {
+                    max-width: 100%;
+                    height: auto;
+                }
+        .footer-menu,
+        .footer-contacts {
+            float: right;
+            width: 20%;
+        }
+        .footer-text {
+            overflow: hidden;
+            font-size: 14px;
+        }
+    .footer-bottom {
+        border-top: 1px solid #1f2223;
+    }
+        .copyright {
+            color: #5a5c5d;
+            font-size: 12px;
+        }
+            .copyright p:not(:last-child) {
+                margin-bottom: 6px;
+            }
