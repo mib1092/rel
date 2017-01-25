@@ -857,3 +857,126 @@ img {
         text-align: justify;
     }
 }
+@media all and (max-width: 768px) {
+    .wrapper {
+        padding-top: 90px;
+    }
+    .header {
+        position: fixed;
+        z-index: 9990;
+        top: 0;
+        left: 0;
+        right: 0;
+        -webkit-box-shadow: 0 1px 8px 0 rgba(50, 50, 50, 0.5);
+        -moz-box-shadow: 0 1px 8px 0 rgba(50, 50, 50, 0.5);
+        box-shadow: 0 1px 8px 0 rgba(50, 50, 50, 0.5);
+    }
+    .header .container {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .header-box {
+        padding: 20px 0;
+    }
+    .logo {
+        max-width: 200px;
+        margin-right: 20px;
+    }
+    .logo img {
+        margin-bottom: -4px;
+    }
+    .logo-wrap strong {
+        margin-top: 8px;
+        font-size: 1.5em;
+    }
+    .mobile-menu-toggle {
+        right: -15px;
+        height: 60px;
+        width: 60px;
+        margin-top: -30px;
+    }
+    .footer-box,
+    .footer-top .footer-box {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .footer-logo {
+        float: none;
+        margin-top: 0;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+    .footer-logo a {
+        margin-right: 0;
+    }
+    .footer-menu,
+    .footer-contacts {
+        width: 50%;
+    }
+    .footer-menu {
+        padding-left: 1em;
+    }
+    .footer-contacts {
+        padding-left: 0;
+        padding-right: 1em;
+    }
+    .footer-text {
+        text-align: center;
+    }
+    .copyright {
+        text-align: center;
+    }
+}
+@media all and (max-width: 640px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .header .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .content-wrap {
+        padding-top: 35px;
+        padding-bottom: 50px;
+    }
+    .footer-menu,
+    .footer-contacts {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+    .footer-menu {
+        margin-bottom: 35px;
+        text-align: center;
+    }
+}
+@media all and (max-width: 560px) {
+    .wrapper {
+        padding-top: 120px;
+    }
+    .logo-wrap {
+        padding-right: 0;
+        text-align: center;
+    }
+    .logo {
+        float: none;
+        margin: 0 45px;
+    }
+    .logo-wrap strong {
+        display: block;
+        line-height: 1.25;
+        margin-top: 10px;
+        margin-bottom: -7px;
+    }
+    .mobile-menu-toggle {
+        top: 13px;
+        margin-top: 0;
+    }
+}
+@media all and (max-width: 480px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
