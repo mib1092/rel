@@ -540,7 +540,7 @@ img {
                     background: transparent;
                 }
                 .open .accordion-content {
-                    display: block;
+                    /*display: block;*/
                 }
                     .accordion-content-box {
                         max-width: 750px;
@@ -648,11 +648,21 @@ img {
             display: table-cell;
             width: 100%;
             text-align: center;
-        }
-        .accordion-sub-tab-list > li.active {
+            opacity: 0.5;
             -webkit-border-radius: 10px 10px 0 0;
             -moz-border-radius: 10px 10px 0 0;
             border-radius: 10px 10px 0 0;
+            -webkit-transition: 0.25s;
+            -moz-transition: 0.25s;
+            -o-transition: 0.25s;
+            transition: 0.25s;
+        }
+        .accordion-sub-tab-list > li:hover {
+            opacity: 1;
+            background-color: #f0f3f4;
+        }
+        .accordion-sub-tab-list > li.active {
+            opacity: 1;
             background-color: #f0f3f4;
         }
             .sub-tab-item {}
@@ -675,7 +685,7 @@ img {
                 display: none;
             }
             .sub-tab-box-lis > li.active .sub-tab-box {
-                display: block;
+                /*display: block;*/
             }
         .strategy-examples-block {
             padding-top: 32px;
@@ -719,7 +729,7 @@ img {
                 display: none;
             }
             .strategy-examples-box-list > li.active .accordion-content-box-wrap {
-                display: block;
+                /*display: block;*/
             }
         .outcomes-block {
             padding-top: 27px;
