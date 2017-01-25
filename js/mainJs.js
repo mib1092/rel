@@ -21,4 +21,57 @@ jQuery(document).ready(function($) {
         removalDelay: 300,
         mainClass: 'mfp-fade'
     });
+
+    //for sub tab
+    $('.accordion-sub-tab-list li').click(function(){
+        var tabID = $(this).data('subTab'),
+            tabContent = $(this).parent().next(),
+            allTab = $(this).parent().find('li'),
+            allTabContent = tabContent.find('li');
+
+        if (!$(this).hasClass('active')) {
+            allTab.removeClass('active');
+            allTabContent.removeClass('active');
+            $(this).addClass('active');
+            tabContent.find("[data-sub-box="+tabID+"]").addClass('active');
+
+            //carousel
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                responsive:{
+                    0:{
+                        items:1
+                    }
+                }
+            });
+
+            // height carousel box
+            var box = $('.slider-text-content'),
+                maxHeight = 0;
+            box.each(function(){
+                if ( $(this).height() > maxHeight )
+                {
+                    maxHeight = $(this).height();
+                }
+            });
+            box.height(maxHeight);
+        }
+    });
+
+    //for example tab
+    $('.strategy-examples-item-list li').click(function(){
+        var tabID = $(this).data('examplesItem'),
+            tabContent = $(this).parent().next(),
+            allTab = $(this).parent().find('li'),
+            allTabContent = tabContent.find('li');
+
+        if (!$(this).hasClass('active')) {
+            allTab.removeClass('active');
+            allTabContent.removeClass('active');
+            $(this).addClass('active');
+            tabContent.find("[data-examples-box="+tabID+"]").addClass('active');
+        }
+    });
+
 });

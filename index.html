@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Index</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Nunito:300,400,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Nunito:300,400,600,700,800" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/magnific/magnific.css" rel="stylesheet" type="text/css">
+    <link href="assets/owlcarousel/owl.carousel.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -105,7 +106,7 @@
                             </div>
                         </li>
 
-                        <li class="open" id="catalyzing-strategy">
+                        <li id="catalyzing-strategy">
                             <div class="accordion-tab">
                                 <ul class="accordion-tab-table">
                                     <li><h2 class="tab-title">Catalyzing Strategy</h2></li>
@@ -353,7 +354,7 @@
                             </div>
                         </li>
 
-                        <li id="target-outcomes">
+                        <li class="open" id="target-outcomes">
                             <div class="accordion-tab">
                                 <ul class="accordion-tab-table">
                                     <li><h2 class="tab-title">Target & Outcomes</h2></li>
@@ -362,54 +363,1234 @@
                             </div>
                             <div class="accordion-content">
                                 <ul class="accordion-sub-tab-list">
-                                    <li>
+                                    <li data-sub-tab="0">
                                         <div class="sub-tab-item">
                                             <div class="sub-tab-item-img">
-                                                <img src="img/education-tools_icon@2x.png">
+                                                <img src="img/athlete_icon@2x.png">
                                             </div>
                                             <h3 class="sub-tab-item-title">Athlete</h3>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li data-sub-tab="1">
                                         <div class="sub-tab-item">
                                             <div class="sub-tab-item-img">
-                                                <img src="img/education-tools_icon@2x.png">
+                                                <img src="img/family-community_icon@2x.png">
                                             </div>
                                             <h3 class="sub-tab-item-title">Family/Community</h3>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li data-sub-tab="2">
                                         <div class="sub-tab-item">
                                             <div class="sub-tab-item-img">
-                                                <img src="img/education-tools_icon@2x.png">
+                                                <img src="img/coach-league_icon@2x.png">
                                             </div>
-                                            <h3 class="sub-tab-item-title">Athlete</h3>
+                                            <h3 class="sub-tab-item-title">Coach/League</h3>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li data-sub-tab="3">
                                         <div class="sub-tab-item">
                                             <div class="sub-tab-item-img">
-                                                <img src="img/education-tools_icon@2x.png">
+                                                <img src="img/organization_icon@2x.png">
                                             </div>
-                                            <h3 class="sub-tab-item-title">Athlete</h3>
+                                            <h3 class="sub-tab-item-title">Organization</h3>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li data-sub-tab="4">
                                         <div class="sub-tab-item">
                                             <div class="sub-tab-item-img">
-                                                <img src="img/education-tools_icon@2x.png">
+                                                <img src="img/society_icon@2x.png">
                                             </div>
-                                            <h3 class="sub-tab-item-title">Athlete</h3>
+                                            <h3 class="sub-tab-item-title">Society</h3>
                                         </div>
                                     </li>
                                 </ul>
-                                <!--<div class="accordion-content-box">-->
-                                    <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor-->
-                                        <!--incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis-->
-                                        <!--nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.-->
-                                        <!--Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore-->
-                                        <!--eu fugiat nulla pariatur.</p>-->
-                                <!--</div>-->
+                                <ul class="sub-tab-box-lis">
+                                    <li data-sub-box="0">
+                                        <div class="sub-tab-box">
+                                            <div class="accordion-content-box">
+                                                <h3 class="accordion-content-box-title">Engage Families & Communities</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                eu fugiat nulla pariatur.</p>
+                                            </div>
+                                            <div class="strategy-examples-block" >
+                                                <h2 class="block-title">Strategy Examples</h2>
+                                                <ul class="strategy-examples-item-list">
+                                                    <li data-examples-item="0">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/evaluation_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Evaluation</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="1">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/education-tools_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Education <br>& Tools</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="2">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/resources_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Resources</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="3">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/champion-building_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Champion Building</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="4">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/communities-practice_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Communities Practice</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="5">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/partnerships_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Partnerships</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="6">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/policy_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Policy</h3>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <ul class="strategy-examples-box-list">
+                                                    <li data-examples-box="0">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="1">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">2. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="2">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">3. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="3">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">4. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="4">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">5. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="5">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">6. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="6">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">7. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="outcomes-block">
+                                                <h2 class="block-title">Outcomes</h2>
+                                                <ul class="slider-list">
+                                                    <li class="theme-light-color">
+                                                        <div class="slider-text-wrap">
+                                                            <h3 class="slider-text-title">Short</h3>
+                                                            <div class="owl-carousel">
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                    magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris </p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                    elit, sed do eiusmod tempor incididunt ut labore
+                                                                    et dolore magna aliqua.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="theme-color">
+                                                        <div class="slider-text-wrap">
+                                                            <h3 class="slider-text-title">Medium</h3>
+                                                            <div class="owl-carousel">
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="theme-dark-color">
+                                                        <div class="slider-text-wrap">
+                                                            <h3 class="slider-text-title">Long</h3>
+                                                            <div class="owl-carousel">
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-sub-box="1">
+                                        <div class="sub-tab-box">
+                                            <div class="accordion-content-box">
+                                                <h3 class="accordion-content-box-title">Engage Families & Communities</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                    eu fugiat nulla pariatur.</p>
+                                            </div>
+                                            <div class="strategy-examples-block" >
+                                                <h2 class="block-title">Strategy Examples 2</h2>
+                                                <ul class="strategy-examples-item-list">
+                                                    <li class="active" data-examples-item="0">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/evaluation_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Evaluation</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="1">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/education-tools_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Education <br>& Tools</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="2">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/resources_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Resources</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="3">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/champion-building_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Champion Building</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="4">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/communities-practice_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Communities Practice</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="5">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/partnerships_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Partnerships</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="6">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/policy_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Policy</h3>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <ul class="strategy-examples-box-list">
+                                                    <li class="active" data-examples-box="0">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="1">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">2. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="2">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">3. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="3">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">4. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="4">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">5. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="5">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">6. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="6">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">7. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="outcomes-block">
+                                                <h2 class="block-title">Outcomes</h2>
+                                                <ul class="slider-list">
+                                                    <li class="theme-light-color">
+                                                        <div class="slider-text-wrap">
+                                                            <h3 class="slider-text-title">Short</h3>
+                                                            <div class="owl-carousel">
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="theme-color">
+                                                        <div class="slider-text-wrap">
+                                                            <h3 class="slider-text-title">Medium</h3>
+                                                            <div class="owl-carousel">
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="theme-dark-color">
+                                                        <div class="slider-text-wrap">
+                                                            <h3 class="slider-text-title">Long</h3>
+                                                            <div class="owl-carousel">
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-sub-box="2">
+                                        <div class="sub-tab-box">
+                                            <div class="accordion-content-box">
+                                                <h3 class="accordion-content-box-title">Engage Families & Communities</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                    eu fugiat nulla pariatur.</p>
+                                            </div>
+                                            <div class="strategy-examples-block" >
+                                                <h2 class="block-title">Strategy Examples 3</h2>
+                                                <ul class="strategy-examples-item-list">
+                                                    <li class="active" data-examples-item="0">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/evaluation_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Evaluation</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="1">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/education-tools_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Education <br>& Tools</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="2">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/resources_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Resources</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="3">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/champion-building_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Champion Building</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="4">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/communities-practice_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Communities Practice</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="5">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/partnerships_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Partnerships</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="6">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/policy_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Policy</h3>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <ul class="strategy-examples-box-list">
+                                                    <li class="active" data-examples-box="0">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="1">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">2. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="2">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">3. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="3">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">4. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="4">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">5. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="5">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">6. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="6">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">7. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="outcomes-block">
+                                                <h2 class="block-title">Outcomes</h2>
+                                                <ul class="slider-list">
+                                                    <li class="theme-light-color">
+                                                        <div class="slider-text-wrap">
+                                                            <h3 class="slider-text-title">Short</h3>
+                                                            <div class="owl-carousel">
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="theme-color">
+                                                        <div class="slider-text-wrap">
+                                                            <h3 class="slider-text-title">Medium</h3>
+                                                            <div class="owl-carousel">
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="theme-dark-color">
+                                                        <div class="slider-text-wrap">
+                                                            <h3 class="slider-text-title">Long</h3>
+                                                            <div class="owl-carousel">
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-sub-box="3">
+                                        <div class="sub-tab-box">
+                                            <div class="accordion-content-box">
+                                                <h3 class="accordion-content-box-title">Engage Families & Communities</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                    eu fugiat nulla pariatur.</p>
+                                            </div>
+                                            <div class="strategy-examples-block" >
+                                                <h2 class="block-title">Strategy Examples 4</h2>
+                                                <ul class="strategy-examples-item-list">
+                                                    <li class="active" data-examples-item="0">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/evaluation_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Evaluation</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="1">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/education-tools_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Education <br>& Tools</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="2">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/resources_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Resources</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="3">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/champion-building_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Champion Building</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="4">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/communities-practice_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Communities Practice</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="5">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/partnerships_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Partnerships</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="6">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/policy_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Policy</h3>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <ul class="strategy-examples-box-list">
+                                                    <li class="active" data-examples-box="0">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="1">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">2. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="2">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">3. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="3">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">4. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="4">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">5. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="5">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">6. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="6">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">7. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="outcomes-block">
+                                                <h2 class="block-title">Outcomes</h2>
+                                                <ul class="slider-list">
+                                                    <li class="theme-light-color">
+                                                        <div class="slider-text-wrap">
+                                                            <h3 class="slider-text-title">Short</h3>
+                                                            <div class="owl-carousel">
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="theme-color">
+                                                        <div class="slider-text-wrap">
+                                                            <h3 class="slider-text-title">Medium</h3>
+                                                            <div class="owl-carousel">
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="theme-dark-color">
+                                                        <div class="slider-text-wrap">
+                                                            <h3 class="slider-text-title">Long</h3>
+                                                            <div class="owl-carousel">
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li data-sub-box="4">
+                                        <div class="sub-tab-box">
+                                            <div class="accordion-content-box">
+                                                <h3 class="accordion-content-box-title">Engage Families & Communities</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                    eu fugiat nulla pariatur.</p>
+                                            </div>
+                                            <div class="strategy-examples-block" >
+                                                <h2 class="block-title">Strategy Examples 5</h2>
+                                                <ul class="strategy-examples-item-list">
+                                                    <li class="active" data-examples-item="0">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/evaluation_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Evaluation</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="1">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/education-tools_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Education <br>& Tools</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="2">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/resources_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Resources</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="3">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/champion-building_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Champion Building</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="4">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/communities-practice_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Communities Practice</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="5">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/partnerships_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Partnerships</h3>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-item="6">
+                                                        <div class="icon-box">
+                                                            <div class="icon-img-box">
+                                                                <img src="img/policy_icon@2x.png">
+                                                            </div>
+                                                            <h3 class="icon-title">Policy</h3>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <ul class="strategy-examples-box-list">
+                                                    <li class="active" data-examples-box="0">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="1">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">2. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="2">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">3. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="3">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">4. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="4">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">5. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="5">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">6. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li data-examples-box="6">
+                                                        <div class="accordion-content-box-wrap">
+                                                            <div class="accordion-content-box">
+                                                                <h3 class="accordion-content-box-title">7. Engage Families & Communities</h3>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                                                    eu fugiat nulla pariatur.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="outcomes-block">
+                                                <h2 class="block-title">Outcomes</h2>
+                                                <ul class="slider-list">
+                                                    <li class="theme-light-color">
+                                                        <div class="slider-text-wrap">
+                                                            <h3 class="slider-text-title">Short</h3>
+                                                            <div class="owl-carousel">
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="theme-color">
+                                                        <div class="slider-text-wrap">
+                                                            <h3 class="slider-text-title">Medium</h3>
+                                                            <div class="owl-carousel">
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="theme-dark-color">
+                                                        <div class="slider-text-wrap">
+                                                            <h3 class="slider-text-title">Long</h3>
+                                                            <div class="owl-carousel">
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                                                        magna aliqua. Ut enim ad minim veniam, quis
+                                                                        nostrud exercitation ullamco laboris </p>
+                                                                </div>
+                                                                <div class="slider-text-content">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                        elit, sed do eiusmod tempor incididunt ut labore
+                                                                        et dolore magna aliqua.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </li>
 
@@ -543,6 +1724,7 @@
     </footer>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="assets/owlcarousel/owl.carousel.min.js"></script>
     <script src="assets/magnific/magnific.js"></script>
 	<script src="js/smooth-scroll.min.js"></script>
     <script src="js/mainJs.js"></script>
