@@ -590,3 +590,101 @@ img {
             .copyright p:not(:last-child) {
                 margin-bottom: 6px;
             }
+
+/*----------------------------------------------------------------------------------*/
+/*-----------------------------------RESPONSIVE-------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media all and (max-width: 1440px) {
+    .header-box {
+        padding: 50px 10px;
+    }
+    .logo {
+        margin-right: 40px;
+    }
+    .mobile-menu-toggle {
+        right: -12px;
+    }
+    .sidebar {
+        width: 340px;
+        margin-right: 0;
+    }
+    .container .main {
+        padding-right: 10px;
+    }
+    .footer-box,
+    .footer-top .footer-box {
+        padding: 40px 10px;
+    }
+    .footer-menu {
+        width: 22%;
+        padding-left: 3em;
+    }
+    .footer-contacts {
+        width: 27%;
+        padding-left: 4em;
+    }
+    .copyright {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+@media all and (max-width: 1180px) {
+    body {
+        font-size: 15px;
+    }
+    .sidebar {
+        width: 300px;
+    }
+    .nav-menu a {
+        padding-right: 40px;
+        padding-left: 55px;
+    }
+    .nav-menu a .menu-icon {
+        left: 17px;
+    }
+    .nav-menu a:after {
+        right: 22px;
+    }
+    .container .main {
+        padding-left: 40px;
+        padding-right: 0;
+    }
+    .accordion-tab-table {
+        min-width: 210px;
+    }
+    .accordion-content,
+    .primary-item .accordion-content {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .primary-item .accordion-content {
+        padding-bottom: 60px;
+    }
+}
+@media all and (max-width: 992px) {
+    .logo-wrap {
+        padding-right: 40px;
+    }
+    .sidebar {
+        display: none;
+    }
+    .container .main {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .footer-logo a {
+         margin-right: 30px;
+    }
+    .footer-menu {
+        width: 33.33%;
+    }
+    .footer-contacts {
+        width: 33.33%;
+        padding-left: 1em;
+    }
+    .footer-text {
+        display: inline-block;
+        margin-top: 35px;
+        text-align: justify;
+    }
+}
