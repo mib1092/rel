@@ -98,6 +98,9 @@ img {
                 -webkit-box-shadow: 0 1px 8px 0 rgba(50, 50, 50, 0.05);
                 -moz-box-shadow: 0 1px 8px 0 rgba(50, 50, 50, 0.05);
                 box-shadow: 0 1px 8px 0 rgba(50, 50, 50, 0.05);
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
             }
                 .list-wrap-img {
                     overflow: hidden;
@@ -490,7 +493,8 @@ img {
                         -moz-border-radius: 4px;
                         border-radius: 4px;
                     }
-                    .open .open-icon {
+                    .open .open-icon,
+                    .accordion-tab:hover .open-icon {
                         border-color: #fcc01e;
                     }
                         .open-icon:before,
@@ -517,7 +521,9 @@ img {
                             height: 14px;
                         }
                         .open .open-icon:before,
-                        .open .open-icon:after {
+                        .open .open-icon:after,
+                        .accordion-tab:hover .open-icon:before,
+                        .accordion-tab:hover .open-icon:after {
                             background-color: #fcc01e;
                         }
                         .open .open-icon:after {
@@ -529,7 +535,6 @@ img {
                         }
                 .accordion-content {
                     display: none;
-                    /*padding: 40px 140px 50px;*/
                     padding: 40px 40px 50px;
                     border-top: 1px solid #F0F2F5;
                     background: #FCFDFD;
@@ -540,7 +545,7 @@ img {
                     background: transparent;
                 }
                 .open .accordion-content {
-                    /*display: block;*/
+                    display: block;
                 }
                     .accordion-content-box {
                         max-width: 750px;
@@ -858,7 +863,6 @@ img {
 /*-------------------------------------SIDEBAR--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .sidebar {
-    display: none;
     float: left;
     width: 370px;
     margin-right: 30px;
@@ -1110,7 +1114,7 @@ img {
     }
     .header {
         position: fixed;
-        z-index: 9990;
+        z-index: 1000;
         top: 0;
         left: 0;
         right: 0;
