@@ -14,5 +14,11 @@ jQuery(document).ready(function($) {
         easing: 'easeInQuad', // Easing pattern to use
         offset: 50 // Integer. How far to offset the scrolling anchor location in pixels
     });
-
+    //for popup
+    $('.open-popup-link').magnificPopup({
+        type:'inline',
+        midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+        removalDelay: 300,
+        mainClass: 'mfp-fade'
+    });
 });
