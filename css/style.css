@@ -253,8 +253,8 @@ img {
             opacity: 1;
         }
             .mobile-menu-nav-wrap{
-                width: 350px;
-                max-width: 85%;
+                width: 370px;
+                max-width: 90%;
                 position: absolute;
                 right: -350px;
                 z-index: 2;
@@ -264,14 +264,13 @@ img {
                 transition: right 0.3s;
                 height: 100%;
                 overflow: auto;
-                background-color: #0c7281;
-                -webkit-box-shadow: -10px 10px 30px rgba(0,0,0,0.2);
-                -moz-box-shadow: -10px 10px 30px rgba(0,0,0,0.2);
-                -ms-box-shadow: -10px 10px 30px rgba(0,0,0,0.2);
-                -o-box-shadow: -10px 10px 30px rgba(0,0,0,0.2);
-                box-shadow: -10px 10px 30px rgba(0,0,0,0.2);
-                padding-top: 20px;
-                padding-bottom: 40px;
+                background-color: #e4e9eb;
+                -webkit-box-shadow: -5px 5px 20px rgba(0,0,0,0.1);
+                -moz-box-shadow: -5px 5px 20px rgba(0,0,0,0.1);
+                -ms-box-shadow: -5px 5px 20px rgba(0,0,0,0.1);
+                -o-box-shadow: -5px 5px 20px rgba(0,0,0,0.1);
+                box-shadow: -5px 5px 20px rgba(0,0,0,0.1);
+                padding: 80px 15px 20px;
             }
             .showing .mobile-menu-nav-wrap {
                 right: 0;
@@ -339,6 +338,11 @@ img {
                 -o-transition: all 0.3s;
                 transition: all 0.3s;
             }
+            .mobile-menu-wrap .mobile-menu-toggle span:before,
+            .mobile-menu-wrap .mobile-menu-toggle span:after,
+            .mobile-menu-wrap .mobile-menu-toggle span {
+                background: #54636b;
+            }
             .mobile-menu-toggle span {
                 left: 50%;
                 top: 50%;
@@ -381,12 +385,22 @@ img {
                 bottom: 0;
                 background: #fff;
             }
+            .mobile-menu-wrap .mobile-menu-toggle.active span:before,
+            .mobile-menu-wrap .mobile-menu-toggle.active span:after {
+                background: #54636b;
+            }
             .mobile-menu-toggle:not(.active):hover span,
             .mobile-menu-toggle:hover span:before,
             .mobile-menu-toggle:hover span:after,
             .mobile-menu-toggle:not(.active):active span,
             .mobile-menu-toggle:active span:before,
-            .mobile-menu-toggle:active span:after {
+            .mobile-menu-toggle:active span:after,
+            .mobile-menu-wrap .mobile-menu-toggle:not(.active):hover span,
+            .mobile-menu-wrap .mobile-menu-toggle:hover span:before,
+            .mobile-menu-wrap .mobile-menu-toggle:hover span:after,
+            .mobile-menu-wrap .mobile-menu-toggle:not(.active):active span,
+            .mobile-menu-wrap .mobile-menu-toggle:active span:before,
+            .mobile-menu-wrap .mobile-menu-toggle:active span:after {
                 background: #fcc01e;
             }
 /*----------------------------------------------------------------------------------*/
@@ -895,6 +909,9 @@ img {
         width: 60px;
         margin-top: -30px;
     }
+    .mobile-menu-nav-wrap {
+        padding-top: 60px;
+    }
     .footer-box,
     .footer-top .footer-box {
         padding-left: 0;
@@ -978,5 +995,23 @@ img {
     .container {
         padding-left: 20px;
         padding-right: 20px;
+    }
+}
+@media all and (max-width: 420px) {
+    .mobile-menu-nav-wrap{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .nav-menu a {
+        padding: 14px 30px 12px 45px;
+    }
+    .nav-menu a .menu-icon {
+        left: 13px;
+        margin-top: -11px;
+        max-width: 22px;
+        max-height: 22px;
+    }
+    .nav-menu a:after {
+        right: 16px;
     }
 }
