@@ -1378,6 +1378,10 @@ img {
     .accordion-content-box {
         padding: 0;
     }
+    .accordion-content-box-wrap {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 @media all and (max-width: 420px) {
     .mobile-menu-nav-wrap{
@@ -1396,7 +1400,14 @@ img {
     .nav-menu a:after {
         right: 16px;
     }
+    .accordion-content-box-wrap {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
 }
-.accordion-sub-tab-list {
-    width: 95%;
+@media all and (max-width: 360px) {
+    .accordion-sub-tab-list {
+        width: 95%;
+    }
 }
