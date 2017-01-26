@@ -712,6 +712,7 @@ img {
             }
             .sub-tab-box-lis > li.active .sub-tab-box {
                 /*display: block;*/
+                margin-bottom: -50px;
             }
         .strategy-examples-block {
             padding-top: 32px;
@@ -1037,7 +1038,7 @@ img {
 /*----------------------------------------------------------------------------------*/
 /*-----------------------------------RESPONSIVE-------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-@media all and (max-width: 1440px) {
+@media all and (max-width: 1650px) {
     .sub-tab-box {
         max-width: 95%;
     }
@@ -1256,6 +1257,9 @@ img {
     .copyright {
         text-align: center;
     }
+    .strategy-examples-item-list > li {
+        width: 24%;
+    }
 }
 @media all and (max-width: 736px) {
     .accordion-sub-tab-list {
@@ -1267,11 +1271,6 @@ img {
     .accordion-sub-tab-list > li {
         display: inline-block;
         width: 32%;
-    }
-}
-@media all and (max-width: 680px) {
-    .strategy-examples-item-list > li {
-        width: 24%;
     }
 }
 @media all and (max-width: 640px) {
