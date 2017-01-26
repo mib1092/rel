@@ -63,13 +63,13 @@ img {
 }
 .cell-list {
     overflow: hidden;
-    margin: 0 -50px;
+    margin: 0 -4%;
     text-align: center;
 }
     .cell-list > li {
         display: inline-block;
         width: 49%;
-        padding: 0 50px;
+        padding: 0 4%;
         max-width: 580px;
     }
         .list-box-wrap { position: relative; }
@@ -98,9 +98,9 @@ img {
                 -webkit-box-shadow: 0 1px 8px 0 rgba(50, 50, 50, 0.05);
                 -moz-box-shadow: 0 1px 8px 0 rgba(50, 50, 50, 0.05);
                 box-shadow: 0 1px 8px 0 rgba(50, 50, 50, 0.05);
-                -webkit-border-radius: 5px;
-                -moz-border-radius: 5px;
-                border-radius: 5px;
+                -webkit-border-radius: 6px;
+                -moz-border-radius: 6px;
+                border-radius: 6px;
             }
                 .list-wrap-img {
                     overflow: hidden;
@@ -130,6 +130,9 @@ img {
                     padding: 74px 45px 54px;
                     text-align: center;
                     font-size: 16px;
+                    -webkit-border-radius: 6px;
+                    -moz-border-radius: 6px;
+                    border-radius: 6px;
                 }
                     .cell-box a {
                         text-decoration: none;
@@ -535,7 +538,7 @@ img {
                         }
                 .accordion-content {
                     display: none;
-                    padding: 40px 40px 50px;
+                    padding: 40px 140px 50px;
                     border-top: 1px solid #F0F2F5;
                     background: #FCFDFD;
                 }
@@ -562,10 +565,18 @@ img {
                         .accordion-content-box > :last-child {
                             margin-bottom: 0;
                         }
+#catalyzing-strategy .accordion-content,
+#impact .accordion-content {
+    padding-left: 4%;
+    padding-right: 4%;
+}
 /*-------------------------------------ASSETS--------------------------------------*/
 #assets .accordion-content {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 80px 0 80px;
+}
+.accordion-content-wrap {
+    max-width: 890px;
+    margin: 0 auto;
 }
 .icon-list {
     margin: 0 -60px -50px;
@@ -641,11 +652,11 @@ img {
 #target-outcomes .accordion-content {
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 0;
 }
     .accordion-sub-tab-list {
         display: table;
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
         table-layout: fixed;
     }
         .accordion-sub-tab-list > li {
@@ -654,6 +665,7 @@ img {
             width: 100%;
             text-align: center;
             opacity: 0.5;
+            cursor: pointer;
             -webkit-border-radius: 10px 10px 0 0;
             -moz-border-radius: 10px 10px 0 0;
             border-radius: 10px 10px 0 0;
@@ -661,10 +673,10 @@ img {
             -moz-transition: 0.25s;
             -o-transition: 0.25s;
             transition: 0.25s;
+            vertical-align: top;
         }
         .accordion-sub-tab-list > li:hover {
             opacity: 1;
-            background-color: #f0f3f4;
         }
         .accordion-sub-tab-list > li.active {
             opacity: 1;
@@ -682,8 +694,16 @@ img {
                 .sub-tab-item-title {
                     font: 700 1.13em/1.4 'Nunito', 'Lato', Arial, sans-serif;
                 }
+                .sub-tab-item-title br {
+                    display: none;
+                }
+        .sub-tab-box-wrap {
+            background-color: #f0f3f4;
+        }
         .sub-tab-box {
-            padding: 60px 40px 80px;
+            max-width: 90%;
+            margin: 0 auto;
+            padding: 60px 20px 80px;
             background-color: #f0f3f4;
         }
             .sub-tab-box-lis > li .sub-tab-box {
@@ -750,6 +770,8 @@ img {
             .block-title:after {
                 content: '';
                 display: inline-block;
+                position: relative;
+                top: -2px;
                 vertical-align: middle;
                 box-sizing: border-box;
                 width: 100%;
@@ -772,14 +794,14 @@ img {
                 background-color: #ffffff;
             }
             .slider-list {
-                width: 100%;
+                /*width: 100%;*/
                 margin: 0 -10px;
             }
                 .slider-list > li {
                     color: #ffffff;
                     display: inline-block;
-                    width: 32%;
-                    max-width: 360px;
+                    width: 33%;
+                    /*max-width: 360px;*/
                     padding: 0 10px;
                     vertical-align: top;
                 }
@@ -1048,6 +1070,25 @@ img {
         padding-bottom: 30px;
     }
 }
+@media all and (max-width: 1390px) {
+    .sub-tab-item-title br {
+        display: inline-block;
+    }
+}
+@media all and (max-width: 1300px) {
+.icon-list {
+    margin-left: -30px;
+    margin-right: -30px;
+}
+    .icon-list > li {
+        max-width: 190px;
+        padding: 0 30px;
+    }
+    .cell-box {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
 @media all and (max-width: 1180px) {
     body {
         font-size: 15px;
@@ -1081,16 +1122,18 @@ img {
         padding-bottom: 60px;
     }
 }
-@media all and (max-width: 992px) {
-    .logo-wrap {
-        padding-right: 40px;
-    }
+@media all and (max-width: 1080px) {
     .sidebar {
         display: none;
     }
     .container .main {
         padding-left: 0;
         padding-right: 0;
+    }
+}
+@media all and (max-width: 992px) {
+    .logo-wrap {
+        padding-right: 40px;
     }
     .footer-logo a {
          margin-right: 30px;
@@ -1182,6 +1225,22 @@ img {
     }
 }
 @media all and (max-width: 640px) {
+    #assets .accordion-content {
+        padding: 40px 0 40px;
+    }
+    .open-icon {
+        right: 20px;
+    }
+    .cell-list > li {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .accordion-tab {
+        padding: 20px 60px 20px 20px;
+    }
+    .icon-list > li {
+        width: 33%;
+    }
     .container {
         padding-left: 30px;
         padding-right: 30px;
@@ -1227,11 +1286,17 @@ img {
         top: 13px;
         margin-top: 0;
     }
+        .icon-list > li {
+            width: 50%;
+        }
 }
 @media all and (max-width: 480px) {
     .container {
         padding-left: 20px;
         padding-right: 20px;
+    }
+    .accordion-content-box {
+        padding: 0;
     }
 }
 @media all and (max-width: 420px) {
