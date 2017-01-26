@@ -7,6 +7,16 @@ jQuery(document).ready(function($) {
         $(document.body).toggleClass('overflow');
     });
 
+    // for header-fixed padding
+    $(window).on('load resize', function() {
+        if ($(window).width() <= '768') {
+            var headerHeight = $('#header').outerHeight();
+            $('.wrapper').css('padding-top', headerHeight);
+        } else {
+            $('.wrapper').removeAttr('style');
+        }
+    });
+
     // for smooth scroll
     smoothScroll.init({
         selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
