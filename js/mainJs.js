@@ -62,33 +62,64 @@ jQuery(document).ready(function($) {
         var tabID = $(this).data('subTab'),
             tabContent = $(this).parent().next(),
             allTab = $(this).parent().find('li'),
-            allTabContent = tabContent.find('li');
+            allTabContent = tabContent.find('li'),
+            tabParrent = $(this).parent();
 
-        if (!$(this).hasClass('active')) {
-            var idTabContent = tabContent.find("[data-sub-box="+tabID+"]");
+        if ($(window).width() <= '736'){
+            if (!$(this).hasClass('active')) {
+                var idTabContent = tabContent.find("[data-sub-box="+tabID+"]");
 
-            allTab.removeClass('active');
-            allTabContent.removeClass('active');
-            allTabContent.find('.sub-tab-box').slideUp(500);
-            $(this).addClass('active');
-            idTabContent.addClass('active');
-            setTimeout(function () {
-                idTabContent.find('.sub-tab-box').slideDown(500);
-            }, 500);
+                allTab.removeClass('active');
+                allTabContent.removeClass('active');
+                allTabContent.find('.sub-tab-box').slideUp(500);
+                $(this).addClass('active');
+                $(this).appendTo(tabParrent).show('slow');
+                idTabContent.addClass('active');
+                setTimeout(function () {
+                    idTabContent.find('.sub-tab-box').slideDown(500);
+                }, 500);
 
-            // height carousel box
-            setTimeout(function () {
-                var box = idTabContent.find('.slider-text-content'),
-                    maxHeight = 0;
-                box.each(function(){
-                    if ( $(this).height() > maxHeight ){
-                        maxHeight = $(this).height();
-                    }
-                });
-                console.log(maxHeight);
-                box.height(maxHeight);
-            }, 500);
+                // height carousel box
+                setTimeout(function () {
+                    var box = idTabContent.find('.slider-text-content'),
+                        maxHeight = 0;
+                    box.each(function(){
+                        if ( $(this).height() > maxHeight ){
+                            maxHeight = $(this).height();
+                        }
+                    });
+                    console.log(maxHeight);
+                    box.height(maxHeight);
+                }, 500);
+            }
+        } else {
+            if (!$(this).hasClass('active')) {
+                var idTabContent = tabContent.find("[data-sub-box="+tabID+"]");
+
+                allTab.removeClass('active');
+                allTabContent.removeClass('active');
+                allTabContent.find('.sub-tab-box').slideUp(500);
+                $(this).addClass('active');
+                idTabContent.addClass('active');
+                setTimeout(function () {
+                    idTabContent.find('.sub-tab-box').slideDown(500);
+                }, 500);
+
+                // height carousel box
+                setTimeout(function () {
+                    var box = idTabContent.find('.slider-text-content'),
+                        maxHeight = 0;
+                    box.each(function(){
+                        if ( $(this).height() > maxHeight ){
+                            maxHeight = $(this).height();
+                        }
+                    });
+                    console.log(maxHeight);
+                    box.height(maxHeight);
+                }, 500);
+            }
         }
+
     });
 
     //for example tab
@@ -96,20 +127,38 @@ jQuery(document).ready(function($) {
         var tabID = $(this).data('examplesItem'),
             tabContent = $(this).parent().next(),
             allTab = $(this).parent().find('li'),
-            allTabContent = tabContent.find('li');
+            allTabContent = tabContent.find('li'),
+            tabParrent = $(this).parent();
 
-        if (!$(this).hasClass('active')) {
-            var idTabContent = tabContent.find("[data-examples-box="+tabID+"]");
-            allTab.removeClass('active');
-            allTabContent.removeClass('active');
-            // allTabContent.find('.accordion-content-box-wrap').css('display', 'none');
+        if ($(window).width() <= '992'){
+            if (!$(this).hasClass('active')) {
+                var idTabContent = tabContent.find("[data-examples-box="+tabID+"]");
+                allTab.removeClass('active');
+                allTabContent.removeClass('active');
+                // allTabContent.find('.accordion-content-box-wrap').css('display', 'none');
 
-            $(this).addClass('active');
-            idTabContent.addClass('active');
-            // setTimeout(function () {
-            //     idTabContent.find('.accordion-content-box-wrap').slideDown(500);
-            // }, 500);
+                $(this).addClass('active');
+                $(this).appendTo(tabParrent);
+                idTabContent.addClass('active');
+                // setTimeout(function () {
+                //     idTabContent.find('.accordion-content-box-wrap').slideDown(500);
+                // }, 500);
+            }
+        } else {
+            if (!$(this).hasClass('active')) {
+                var idTabContent = tabContent.find("[data-examples-box="+tabID+"]");
+                allTab.removeClass('active');
+                allTabContent.removeClass('active');
+                // allTabContent.find('.accordion-content-box-wrap').css('display', 'none');
+
+                $(this).addClass('active');
+                idTabContent.addClass('active');
+                // setTimeout(function () {
+                //     idTabContent.find('.accordion-content-box-wrap').slideDown(500);
+                // }, 500);
+            }
         }
+
     });
 
 });

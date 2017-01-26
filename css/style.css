@@ -1148,6 +1148,16 @@ img {
     }
 }
 @media all and (max-width: 992px) {
+    .strategy-examples-item-list {
+        display: block;
+    }
+    .strategy-examples-item-list > li {
+        display: inline-block;
+        width: 20%;
+    }
+    .icon-title {
+        min-height: 46px;
+    }
     .logo-wrap {
         padding-right: 40px;
     }
@@ -1247,7 +1257,34 @@ img {
         text-align: center;
     }
 }
+@media all and (max-width: 736px) {
+    .accordion-sub-tab-list {
+        display: block;
+    }
+    .sub-tab-item-title {
+        min-height: 46px;
+    }
+    .accordion-sub-tab-list > li {
+        display: inline-block;
+        width: 32%;
+    }
+}
+@media all and (max-width: 680px) {
+    .strategy-examples-item-list > li {
+        width: 24%;
+    }
+}
 @media all and (max-width: 640px) {
+    .strategy-examples-item-list > li {
+        width: 32%;
+    }
+    .accordion-sub-tab-list {
+        display: block;
+    }
+    .accordion-sub-tab-list > li {
+        display: inline-block;
+        width: 32%;
+    }
     #assets .accordion-content {
         padding: 40px 0 40px;
     }
@@ -1321,6 +1358,9 @@ img {
     .accordion-content-box {
         padding: 0;
     }
+    .strategy-examples-item-list > li {
+        width: 49%;
+    }
 }
 @media all and (max-width: 420px) {
     .mobile-menu-nav-wrap{
@@ -1338,5 +1378,10 @@ img {
     }
     .nav-menu a:after {
         right: 16px;
+    }
+
+    .accordion-sub-tab-list > li {
+        display: inline-block;
+        width: 49%;
     }
 }
