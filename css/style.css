@@ -600,7 +600,7 @@ img {
             }
                 .icon-img-box {
                     margin-bottom: 12px;
-                    height: 60px;
+                    height: 65px;
                 }
                     .icon-img-box img {
                         max-width: 60px;
@@ -608,6 +608,7 @@ img {
                         line-height: 60px;
                     }
                 .icon-title {
+                    margin-bottom: 20px;
                     font: 700 1.13em/1.4 'Nunito', 'Lato', Arial, sans-serif;
                 }
 
@@ -740,11 +741,14 @@ img {
                 .strategy-examples-item-list > li:hover {
                     opacity: 1;
                 }
-                .strategy-examples-item-list > li.active:after {
+                .example-item.active {
+                    position: relative;
+                }
+                .example-item.active:after {
                     position: absolute;
                     content: "";
                     left: 50%;
-                    bottom: -22px;
+                    bottom: -40px;
                     margin-left: -27px;
                     width: 0;
                     height: 0;
@@ -752,6 +756,12 @@ img {
                     border-right: 27px solid transparent;
                     border-top: 23px solid #f0f3f4;
                 }
+            .strategy-examples-item-list .example-item.active:after {
+                bottom: -2px;
+            }
+        .strategy-examples-box-list {
+            margin-top: -20px;
+        }
             .strategy-examples-box-list > li .accordion-content-box-wrap {
                 display: none;
             }
@@ -882,7 +892,26 @@ img {
 .owl-dots .owl-dot.active span, .owl-dots .owl-dot:hover span {
     background: #ffffff;
 }
-
+.owl-examples {
+    display: none !important;
+}
+.owl-examples.owl-carousel .owl-item img {
+    width: auto;
+    margin: 0 auto;
+}
+    .owl-examples .icon-box {
+        text-align: center;
+    }
+        .owl-examples .example-item {
+            margin-bottom: 40px;
+        }
+        .example-item {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        .example-item.active {
+            opacity: 1;
+        }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -1150,12 +1179,14 @@ img {
 }
 @media all and (max-width: 992px) {
     .strategy-examples-item-list {
-        display: block;
+        display: none;
     }
-    .strategy-examples-item-list > li {
-        display: inline-block;
-        width: 20%;
+    .owl-examples {
+        display: block !important;
     }
+        .icon-title {
+            display: none;
+        }
     .icon-title {
         min-height: 46px;
     }
@@ -1257,32 +1288,15 @@ img {
     .copyright {
         text-align: center;
     }
-    .strategy-examples-item-list > li {
-        width: 24%;
-    }
 }
 @media all and (max-width: 736px) {
-    .accordion-sub-tab-list {
-        display: block;
-    }
     .sub-tab-item-title {
         min-height: 46px;
     }
-    .accordion-sub-tab-list > li {
-        display: inline-block;
-        width: 32%;
-    }
 }
 @media all and (max-width: 640px) {
-    .strategy-examples-item-list > li {
-        width: 32%;
-    }
-    .accordion-sub-tab-list {
-        display: block;
-    }
-    .accordion-sub-tab-list > li {
-        display: inline-block;
-        width: 32%;
+    .sub-tab-item-title {
+        display: none;
     }
     #assets .accordion-content {
         padding: 40px 0 40px;
@@ -1324,6 +1338,13 @@ img {
     }
 }
 @media all and (max-width: 560px) {
+    .sub-tab-item-img {
+        height: 30px;
+    }
+    .sub-tab-item-img img {
+        max-width: 35px;
+        max-height: 30px;
+    }
     .wrapper {
         padding-top: 120px;
     }
@@ -1357,9 +1378,6 @@ img {
     .accordion-content-box {
         padding: 0;
     }
-    .strategy-examples-item-list > li {
-        width: 49%;
-    }
 }
 @media all and (max-width: 420px) {
     .mobile-menu-nav-wrap{
@@ -1378,9 +1396,7 @@ img {
     .nav-menu a:after {
         right: 16px;
     }
-
-    .accordion-sub-tab-list > li {
-        display: inline-block;
-        width: 49%;
-    }
+}
+.accordion-sub-tab-list {
+    width: 95%;
 }

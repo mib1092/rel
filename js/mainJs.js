@@ -34,7 +34,7 @@ jQuery(document).ready(function($) {
     });
 
     //carousel
-    $(".owl-carousel").owlCarousel({
+    $(".owl-text").owlCarousel({
         items: 1,
         loop: true,
         responsive:{
@@ -43,7 +43,18 @@ jQuery(document).ready(function($) {
             }
         }
     });
-
+    // tab carousel
+    $(".owl-examples").owlCarousel({
+        dots: false,
+        responsive:{
+            0:{
+                items:3
+            },
+            600:{
+                items:5
+            }
+        }
+    });
     // for accordion list
     $('.accordion-tab').click(function(){
         var accordionItem = $(this).parent(),
@@ -65,34 +76,6 @@ jQuery(document).ready(function($) {
             allTabContent = tabContent.find('li'),
             tabParrent = $(this).parent();
 
-        if ($(window).width() <= '736'){
-            if (!$(this).hasClass('active')) {
-                var idTabContent = tabContent.find("[data-sub-box="+tabID+"]");
-
-                allTab.removeClass('active');
-                allTabContent.removeClass('active');
-                allTabContent.find('.sub-tab-box').slideUp(500);
-                $(this).addClass('active');
-                $(this).appendTo(tabParrent).show('slow');
-                idTabContent.addClass('active');
-                setTimeout(function () {
-                    idTabContent.find('.sub-tab-box').slideDown(500);
-                }, 500);
-
-                // height carousel box
-                setTimeout(function () {
-                    var box = idTabContent.find('.slider-text-content'),
-                        maxHeight = 0;
-                    box.each(function(){
-                        if ( $(this).height() > maxHeight ){
-                            maxHeight = $(this).height();
-                        }
-                    });
-                    console.log(maxHeight);
-                    box.height(maxHeight);
-                }, 500);
-            }
-        } else {
             if (!$(this).hasClass('active')) {
                 var idTabContent = tabContent.find("[data-sub-box="+tabID+"]");
 
@@ -118,46 +101,26 @@ jQuery(document).ready(function($) {
                     box.height(maxHeight);
                 }, 500);
             }
-        }
-
     });
 
     //for example tab
-    $('.strategy-examples-item-list li').click(function(){
+    $('.example-item').click(function(){
         var tabID = $(this).data('examplesItem'),
-            tabContent = $(this).parent().next(),
-            allTab = $(this).parent().find('li'),
-            allTabContent = tabContent.find('li'),
-            tabParrent = $(this).parent();
+            tabWrap = $(this).parents('.strategy-examples-block'),
+            tabContent = tabWrap.children('.strategy-examples-box-list'),
+            tabParent = $(this).parents('.tab-parent'),
+            allTab = tabWrap.find('.example-item'),
+            allTabContent = tabContent.children();
 
-        if ($(window).width() <= '992'){
             if (!$(this).hasClass('active')) {
                 var idTabContent = tabContent.find("[data-examples-box="+tabID+"]");
                 allTab.removeClass('active');
                 allTabContent.removeClass('active');
-                // allTabContent.find('.accordion-content-box-wrap').css('display', 'none');
 
-                $(this).addClass('active');
-                $(this).appendTo(tabParrent);
+                // $(this).addClass('active');
+                tabWrap.find("[data-examples-item="+tabID+"]").addClass('active');
                 idTabContent.addClass('active');
-                // setTimeout(function () {
-                //     idTabContent.find('.accordion-content-box-wrap').slideDown(500);
-                // }, 500);
             }
-        } else {
-            if (!$(this).hasClass('active')) {
-                var idTabContent = tabContent.find("[data-examples-box="+tabID+"]");
-                allTab.removeClass('active');
-                allTabContent.removeClass('active');
-                // allTabContent.find('.accordion-content-box-wrap').css('display', 'none');
-
-                $(this).addClass('active');
-                idTabContent.addClass('active');
-                // setTimeout(function () {
-                //     idTabContent.find('.accordion-content-box-wrap').slideDown(500);
-                // }, 500);
-            }
-        }
 
     });
 
