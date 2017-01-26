@@ -71,6 +71,7 @@ img {
         width: 49%;
         padding: 0 4%;
         max-width: 580px;
+        vertical-align: top;
     }
         .list-box-wrap { position: relative; }
         .list-box-wrap:before {
@@ -591,7 +592,7 @@ img {
         vertical-align: top;
     }
         a.icon-link:hover {
-            opacity: 0.5;
+            /*opacity: 0.5;*/
             text-decoration: none;
         }
             .icon-box {
@@ -754,7 +755,7 @@ img {
                 display: none;
             }
             .strategy-examples-box-list > li.active .accordion-content-box-wrap {
-                /*display: block;*/
+                display: block;
             }
         .outcomes-block {
             padding-top: 27px;
@@ -1037,6 +1038,14 @@ img {
 /*-----------------------------------RESPONSIVE-------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 @media all and (max-width: 1440px) {
+    .sub-tab-box {
+        max-width: 95%;
+    }
+}
+@media all and (max-width: 1440px) {
+    .sub-tab-box {
+        max-width: 100%;
+    }
     .header-box {
         padding: 50px 10px;
     }
@@ -1087,6 +1096,13 @@ img {
     .cell-box {
         padding-left: 25px;
         padding-right: 25px;
+    }
+    .slider-list {
+        margin-bottom: -30px;
+    }
+    .slider-list > li {
+        width: 49%;
+        margin-bottom: 30px;
     }
 }
 @media all and (max-width: 1180px) {
@@ -1152,6 +1168,13 @@ img {
     }
 }
 @media all and (max-width: 768px) {
+    .cell-list > li {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .icon-list > li {
+        width: 33%;
+    }
     .wrapper {
         padding-top: 90px;
     }
@@ -1231,15 +1254,15 @@ img {
     .open-icon {
         right: 20px;
     }
-    .cell-list > li {
-        width: 100%;
-        margin-bottom: 30px;
-    }
     .accordion-tab {
         padding: 20px 60px 20px 20px;
     }
-    .icon-list > li {
-        width: 33%;
+    .slider-list > li {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .slider-text-content {
+        height: auto !important;
     }
     .container {
         padding-left: 30px;

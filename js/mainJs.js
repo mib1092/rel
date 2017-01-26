@@ -102,13 +102,13 @@ jQuery(document).ready(function($) {
             var idTabContent = tabContent.find("[data-examples-box="+tabID+"]");
             allTab.removeClass('active');
             allTabContent.removeClass('active');
-            allTabContent.find('.accordion-content-box-wrap').css('display', 'none');
+            // allTabContent.find('.accordion-content-box-wrap').css('display', 'none');
 
             $(this).addClass('active');
             idTabContent.addClass('active');
-            setTimeout(function () {
-                idTabContent.find('.accordion-content-box-wrap').slideDown(500);
-            }, 500);
+            // setTimeout(function () {
+            //     idTabContent.find('.accordion-content-box-wrap').slideDown(500);
+            // }, 500);
         }
     });
 
