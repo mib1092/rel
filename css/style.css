@@ -430,13 +430,12 @@ img {
 
     .accordion-tab,
     .accordion-list > li,
-    .accordion-content,
     .open-icon,
     .open-icon:before, .open-icon:after {
-        /*-webkit-transition: all 0.35s;*/
-        /*-moz-transition: all 0.35s;*/
-        /*-o-transition: all 0.35s;*/
-        /*transition: all 0.35s;*/
+        -webkit-transition: all 0.35s;
+        -moz-transition: all 0.35s;
+        -o-transition: all 0.35s;
+        transition: all 0.35s;
     }
     .main {
         overflow: hidden;
