@@ -18,6 +18,14 @@ jQuery(document).ready(function($) {
     });
 
     // for smooth scroll
+    // setTimeout(function () {
+    //     smoothScroll.init({
+    //         selector: '[data-scroll], .nav-menu a', // Selector for links (must be a class, ID, data attribute, or element tag)
+    //         speed: 500, // Integer. How fast to complete the scroll in milliseconds
+    //         easing: 'easeInQuad', // Easing pattern to use
+    //         offset: 50 // Integer. How far to offset the scrolling anchor location in pixels
+    //     });
+    // }, 1000);
     smoothScroll.init({
         selector: '[data-scroll], .nav-menu a', // Selector for links (must be a class, ID, data attribute, or element tag)
         speed: 500, // Integer. How fast to complete the scroll in milliseconds
@@ -143,68 +151,85 @@ jQuery(document).ready(function($) {
         allNavItem = $('.nav-menu a, .sub-nav a, .accordion-link'),
         accordionListItem = $('.accordion-list > li');
 
-    allNavItem.click(function(){
-        var lastHash = window.location.hash;
+        function mainLogic() {
+            var lastHash = window.location.hash;
 
-        setTimeout(function () {
-            var href = window.location.hash;
-            if ( href == '#problem' || href == '#vision') {
-                accordionListItem.removeClass('open');
-                allNavItem.removeClass('active');
-                problem.addClass('open');
-                vision.addClass('open');
-                catalyzingStrategy.addClass('disable');
-                assets.addClass('disable');
-                targetOutcomes.addClass('disable');
-                impact.addClass('disable');
-                problemNavItem.addClass('active');
-                visionNavItem.addClass('active');
-            }
+            setTimeout(function () {
+                var href = window.location.hash;
+                if ( href == '#problem' || href == '#vision') {
+                    accordionListItem.removeClass('open');
+                    allNavItem.removeClass('active');
+                    problem.addClass('open');
+                    vision.addClass('open');
+                    problem.find('.accordion-content').slideDown(500);
+                    vision.find('.accordion-content').slideDown(500);
+                    catalyzingStrategy.addClass('disable');
+                    assets.addClass('disable');
+                    targetOutcomes.addClass('disable');
+                    impact.addClass('disable');
+                    problemNavItem.addClass('active');
+                    visionNavItem.addClass('active');
+                }
 
-            if ( href == '#catalyzing-strategy' || href == '#assets' || href == '#target-outcomes' || href == '#impact' ){
-                if (href == '#catalyzing-strategy') {
-                    catalyzingStrategy.removeClass('disable');
-                    assets.removeClass('disable');
-                    targetOutcomes.removeClass('disable');
-                    impact.removeClass('disable');
-                    accordionListItem.removeClass('open');
-                    allNavItem.removeClass('active');
-                    catalyzingStrategy.addClass('open');
-                    catalyzingStrategyNavItem.addClass('active');
-                }
-                if (href == '#assets') {
-                    catalyzingStrategy.removeClass('disable');
-                    assets.removeClass('disable');
-                    targetOutcomes.removeClass('disable');
-                    impact.removeClass('disable');
-                    accordionListItem.removeClass('open');
-                    allNavItem.removeClass('active');
-                    assets.addClass('open');
-                    assetsNavItem.addClass('active');
-                }
-                if (href == '#target-outcomes') {
-                    catalyzingStrategy.removeClass('disable');
-                    assets.removeClass('disable');
-                    targetOutcomes.removeClass('disable');
-                    impact.removeClass('disable');
-                    accordionListItem.removeClass('open');
-                    allNavItem.removeClass('active');
-                    targetOutcomes.addClass('open');
-                    targetOutcomesNavItem.addClass('active');
-                }
-                if (href == '#impact') {
-                    if (lastHash == '#vision' || lastHash == '#problem' || lastHash == href) {
-                        accordionListItem.removeClass('open');
-                        allNavItem.removeClass('active');
+                if ( href == '#catalyzing-strategy' || href == '#assets' || href == '#target-outcomes' || href == '#impact' ){
+                    problem.find('.accordion-content').slideUp(500);
+                    vision.find('.accordion-content').slideUp(500);
+                    if (href == '#catalyzing-strategy') {
                         catalyzingStrategy.removeClass('disable');
                         assets.removeClass('disable');
                         targetOutcomes.removeClass('disable');
                         impact.removeClass('disable');
-                        impact.addClass('open');
-                        impactNavItem.addClass('active');
-                    } else {
-                        impact.addClass('open');
-                        impactNavItem.addClass('active');
+                        accordionListItem.removeClass('open');
+                        allNavItem.removeClass('active');
+                        catalyzingStrategy.addClass('open');
+                        targetOutcomes.find('.accordion-content').slideUp(500);
+                        assets.find('.accordion-content').slideUp(500);
+                        impact.find('.accordion-content').slideUp(500);
+                        catalyzingStrategy.find('.accordion-content').slideDown(500);
+                        catalyzingStrategyNavItem.addClass('active');
+                    }
+                    if (href == '#assets') {
+                        catalyzingStrategy.removeClass('disable');
+                        assets.removeClass('disable');
+                        targetOutcomes.removeClass('disable');
+                        impact.removeClass('disable');
+                        accordionListItem.removeClass('open');
+                        allNavItem.removeClass('active');
+                        assets.addClass('open');
+                        targetOutcomes.find('.accordion-content').slideUp(500);
+                        catalyzingStrategy.find('.accordion-content').slideUp(500);
+                        impact.find('.accordion-content').slideUp(500);
+                        assets.find('.accordion-content').slideDown(500);
+                        assetsNavItem.addClass('active');
+                    }
+                    if (href == '#target-outcomes') {
+                        catalyzingStrategy.removeClass('disable');
+                        assets.removeClass('disable');
+                        targetOutcomes.removeClass('disable');
+                        impact.removeClass('disable');
+                        accordionListItem.removeClass('open');
+                        allNavItem.removeClass('active');
+                        targetOutcomes.addClass('open');
+                        assets.find('.accordion-content').slideUp(500);
+                        catalyzingStrategy.find('.accordion-content').slideUp(500);
+                        impact.find('.accordion-content').slideUp(500);
+                        targetOutcomes.find('.accordion-content').slideDown(500);
+                        targetOutcomesNavItem.addClass('active');
+                    }
+                    if (href == '#impact') {
+                        if (lastHash == '#vision' || lastHash == '#problem' || lastHash == href) {
+                            accordionListItem.removeClass('open');
+                            allNavItem.removeClass('active');
+                            catalyzingStrategy.removeClass('disable');
+                            assets.removeClass('disable');
+                            targetOutcomes.removeClass('disable');
+                            impact.removeClass('disable');
+                            impact.addClass('open');
+                            impact.find('.accordion-content').slideDown(500);
+                            impactNavItem.addClass('active');
+                        } else {
+                            impact.addClass('open');
+                            impactNavItem.addClass('active');
                             if (lastHash == '#catalyzing-strategy' ) {
                                 assets.addClass('disable');
                                 targetOutcomes.addClass('disable');
@@ -217,11 +242,19 @@ jQuery(document).ready(function($) {
                                 catalyzingStrategy.addClass('disable');
                                 assets.addClass('disable');
                             }
+                            impact.find('.accordion-content').slideDown(500);
+                        }
                     }
                 }
-            }
-        },100 );
+            },100 );
+        };
 
+    allNavItem.click(function(){
+        mainLogic()
+    });
+
+    $(window).on('load', function() {
+        mainLogic()
     });
     //hash
     // $(window).on('load', function() {

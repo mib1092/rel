@@ -433,10 +433,10 @@ img {
     .accordion-content,
     .open-icon,
     .open-icon:before, .open-icon:after {
-        -webkit-transition: all 0.35s;
-        -moz-transition: all 0.35s;
-        -o-transition: all 0.35s;
-        transition: all 0.35s;
+        /*-webkit-transition: all 0.35s;*/
+        /*-moz-transition: all 0.35s;*/
+        /*-o-transition: all 0.35s;*/
+        /*transition: all 0.35s;*/
     }
     .main {
         overflow: hidden;
@@ -548,6 +548,8 @@ img {
                     padding: 40px 140px 50px;
                     border-top: 1px solid #F0F2F5;
                     background: #FCFDFD;
+                    animation-timing-function: linear;
+                    animation-duration: 2s;
                 }
                 .primary-item .accordion-content {
                     padding: 10px 40px 74px;
@@ -555,7 +557,7 @@ img {
                     background: transparent;
                 }
                 .open .accordion-content {
-                    display: block;
+                    /*display: block;*/
                 }
                     .accordion-content-box {
                         max-width: 750px;
