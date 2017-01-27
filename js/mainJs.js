@@ -126,10 +126,74 @@ jQuery(document).ready(function($) {
 
     });
 
-    // main logic
-    $('.nav-menu a, .sub-nav a, .accordion-link').click(function(){
-        var href = $(this).attr('href');
-        console.log(href);
-    });
 
+    // main logic
+    var problem = $('#problem'),
+        catalyzingStrategy = $('#catalyzing-strategy'),
+        assets = $('#assets'),
+        targetOutcomes = $('#target-outcomes'),
+        impact = $('#impact'),
+        vision = $('#vision'),
+        problemNavItem = $('[href="#problem"]'),
+        catalyzingStrategyNavItem = $('[href="#catalyzing-strategy"]'),
+        assetsNavItem = $('[href="#assets"]'),
+        targetOutcomesNavItem = $('[href="#target-outcomes"]'),
+        impactNavItem = $('[href="#impact"]'),
+        visionNavItem = $('[href="#vision"]'),
+        allNavItem = $('.nav-menu a, .sub-nav a, .accordion-link'),
+        accordionListItem = $('.accordion-list > li');
+
+    $('.nav-menu a, .sub-nav a, .accordion-link').click(function(){
+        var lastHash = window.location.hash;
+
+        setTimeout(function () {
+            var href = window.location.hash;
+            if ( href == '#problem' || href == '#vision') {
+                accordionListItem.removeClass('open');
+                allNavItem.removeClass('active');
+                problem.addClass('open');
+                vision.addClass('open');
+                problemNavItem.addClass('active');
+                visionNavItem.addClass('active');
+            }
+
+            if ( href == '#catalyzing-strategy' || href == '#assets' || href == '#target-outcomes' || href == '#impact' ){
+                if (href == '#catalyzing-strategy') {
+                    accordionListItem.removeClass('open');
+                    allNavItem.removeClass('active');
+                    catalyzingStrategy.addClass('open');
+                    catalyzingStrategyNavItem.addClass('active');
+                }
+                if (href == '#assets') {
+                    accordionListItem.removeClass('open');
+                    allNavItem.removeClass('active');
+                    assets.addClass('open');
+                    assetsNavItem.addClass('active');
+                }
+                if (href == '#target-outcomes') {
+                    accordionListItem.removeClass('open');
+                    allNavItem.removeClass('active');
+                    targetOutcomes.addClass('open');
+                    targetOutcomesNavItem.addClass('active');
+                }
+                if (href == '#impact') {
+                    if (lastHash == '#vision' || lastHash == '#problem' || lastHash == href) {
+                        accordionListItem.removeClass('open');
+                        allNavItem.removeClass('active');
+                        impact.addClass('open');
+                        impactNavItem.addClass('active');
+                    } else {
+                        impact.addClass('open');
+                        impactNavItem.addClass('active');
+                    }
+                }
+            }
+        },100 );
+
+    });
+    //hash
+    // $(window).on('load', function() {
+    //     var hashLink = window.location.hash;
+    //     console.log(hashLink);
+    // });
 });
