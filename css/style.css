@@ -918,7 +918,7 @@ img {
 .owl-nav {
     position: absolute;
     width: 100%;
-    top: 5px;
+    top: 0;
 }
 .owl-prev {
     position: absolute;
@@ -1311,6 +1311,9 @@ img {
     }
 }
 @media all and (max-width: 640px) {
+    .accordion-sub-tab-list > li {
+        padding: 20px 10px 6px;
+    }
     .sub-tab-item-title {
         display: none;
     }

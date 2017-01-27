@@ -52,11 +52,20 @@ jQuery(document).ready(function($) {
             0:{
                 items:2
             },
-            440:{
+            320:{
                 items:3
             },
-            600:{
+            420:{
+                items:4
+            },
+            480:{
                 items:5
+            },
+            640:{
+                items:6
+            },
+            768:{
+                items:7
             }
         }
     });
