@@ -143,7 +143,8 @@ jQuery(document).ready(function($) {
         impactNavItem = $('[href="#impact"]'),
         visionNavItem = $('[href="#vision"]'),
         allNavItem = $('.nav-menu a, .sub-nav a, .accordion-link:not(.active)'),
-        accordionListItem = $('.accordion-list > li');
+        accordionListItem = $('.accordion-list > li'),
+        duration = 350;
 
     function mainLogic() {
         var lastHash = window.location.hash;
@@ -155,8 +156,8 @@ jQuery(document).ready(function($) {
                 allNavItem.removeClass('active');
                 problem.addClass('open');
                 vision.addClass('open');
-                problem.find('.accordion-content').slideDown(300);
-                vision.find('.accordion-content').slideDown(300);
+                problem.find('.accordion-content').slideDown(duration);
+                vision.find('.accordion-content').slideDown(duration);
                 catalyzingStrategy.addClass('disable');
                 assets.addClass('disable');
                 targetOutcomes.addClass('disable');
@@ -166,8 +167,8 @@ jQuery(document).ready(function($) {
             }
 
             if ( href == '#catalyzing-strategy' || href == '#assets' || href == '#target-outcomes' || href == '#impact' ){
-                problem.find('.accordion-content').slideUp(300);
-                vision.find('.accordion-content').slideUp(300);
+                problem.find('.accordion-content').slideUp(duration);
+                vision.find('.accordion-content').slideUp(duration);
                 if (href == '#catalyzing-strategy') {
                     catalyzingStrategy.removeClass('disable');
                     assets.removeClass('disable');
@@ -176,10 +177,10 @@ jQuery(document).ready(function($) {
                     accordionListItem.removeClass('open');
                     allNavItem.removeClass('active');
                     catalyzingStrategy.addClass('open');
-                    targetOutcomes.find('.accordion-content').slideUp(300);
-                    assets.find('.accordion-content').slideUp(300);
-                    impact.find('.accordion-content').slideUp(300);
-                    catalyzingStrategy.find('.accordion-content').slideDown(300);
+                    targetOutcomes.find('.accordion-content').slideUp(duration);
+                    assets.find('.accordion-content').slideUp(duration);
+                    impact.find('.accordion-content').slideUp(duration);
+                    catalyzingStrategy.find('.accordion-content').slideDown(duration);
                     catalyzingStrategyNavItem.addClass('active');
                 }
                 else if (href == '#assets') {
@@ -190,10 +191,10 @@ jQuery(document).ready(function($) {
                     accordionListItem.removeClass('open');
                     allNavItem.removeClass('active');
                     assets.addClass('open');
-                    targetOutcomes.find('.accordion-content').slideUp(300);
-                    catalyzingStrategy.find('.accordion-content').slideUp(300);
-                    impact.find('.accordion-content').slideUp(300);
-                    assets.find('.accordion-content').slideDown(300);
+                    targetOutcomes.find('.accordion-content').slideUp(duration);
+                    catalyzingStrategy.find('.accordion-content').slideUp(duration);
+                    impact.find('.accordion-content').slideUp(duration);
+                    assets.find('.accordion-content').slideDown(duration);
                     assetsNavItem.addClass('active');
                 }
                 else if (href == '#target-outcomes') {
@@ -204,10 +205,10 @@ jQuery(document).ready(function($) {
                     accordionListItem.removeClass('open');
                     allNavItem.removeClass('active');
                     targetOutcomes.addClass('open');
-                    assets.find('.accordion-content').slideUp(300);
-                    catalyzingStrategy.find('.accordion-content').slideUp(300);
-                    impact.find('.accordion-content').slideUp(300);
-                    targetOutcomes.find('.accordion-content').slideDown(300);
+                    assets.find('.accordion-content').slideUp(duration);
+                    catalyzingStrategy.find('.accordion-content').slideUp(duration);
+                    impact.find('.accordion-content').slideUp(duration);
+                    targetOutcomes.find('.accordion-content').slideDown(duration);
                     targetOutcomesNavItem.addClass('active');
                 }
                 else if (href == '#impact') {
@@ -219,13 +220,13 @@ jQuery(document).ready(function($) {
                         targetOutcomes.removeClass('disable');
                         impact.removeClass('disable');
                         impact.addClass('open');
-                        impact.find('.accordion-content').slideDown(300);
+                        impact.find('.accordion-content').slideDown(duration);
                         impactNavItem.addClass('active');
                     }
                     if (lastHash == href) {
                         if (!impact.hasClass('open')){
                             impact.addClass('open');
-                            impact.find('.accordion-content').slideDown(300);
+                            impact.find('.accordion-content').slideDown(duration);
                             impactNavItem.addClass('active');
                         }
                     } else {
@@ -243,7 +244,7 @@ jQuery(document).ready(function($) {
                             catalyzingStrategy.addClass('disable');
                             assets.addClass('disable');
                         }
-                        impact.find('.accordion-content').slideDown(300);
+                        impact.find('.accordion-content').slideDown(duration);
                     }
                 }
             }
@@ -255,9 +256,9 @@ jQuery(document).ready(function($) {
         setTimeout(function () {
             var target = window.location.hash;
             $('html, body').animate({
-                scrollTop: $(target).offset().top-50
-            }, 300);
-        }, 310);
+                scrollTop: $(target).offset().top
+            }, 400);
+        }, duration + 10);
     });
 
     $(window).on('load', function() {
