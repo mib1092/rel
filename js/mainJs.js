@@ -141,18 +141,10 @@ jQuery(document).ready(function($) {
         impactNavItem = $('[href="#impact"]'),
         visionNavItem = $('[href="#vision"]'),
         allNavItem = $('.nav-menu a, .sub-nav a, .accordion-link'),
-        accordionListItem = $('.accordion-list > li'),
-        targetOutcomeSubTabList = $('.accordion-sub-tab-list > li'),
-        targetOutcomesSubTabBox = $('.sub-tab-box-lis > li'),
-        targetOutcomesExampleTabList = $('.tab-parent .example-item'),
-        targetOutcomesExampleTabBox = $('.strategy-examples-box-list > li');
+        accordionListItem = $('.accordion-list > li');
 
     $('.nav-menu a, .sub-nav a, .accordion-link').click(function(){
         var lastHash = window.location.hash;
-        targetOutcomeSubTabList.removeClass('active');
-        targetOutcomesSubTabBox.removeClass('active');
-        targetOutcomesExampleTabList.removeClass('active');
-        targetOutcomesExampleTabBox.removeClass('active');
 
         setTimeout(function () {
             var href = window.location.hash;
