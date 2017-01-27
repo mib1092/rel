@@ -451,6 +451,9 @@ img {
             .accordion-list > li > a:hover {
                 text-decoration: none;
             }
+            .accordion-list > li.disable {
+                display: none;
+            }
                 .accordion-tab {
                     position: relative;
                     padding: 20px 80px;

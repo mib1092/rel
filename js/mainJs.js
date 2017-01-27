@@ -153,24 +153,40 @@ jQuery(document).ready(function($) {
                 allNavItem.removeClass('active');
                 problem.addClass('open');
                 vision.addClass('open');
+                catalyzingStrategy.addClass('disable');
+                assets.addClass('disable');
+                targetOutcomes.addClass('disable');
+                impact.addClass('disable');
                 problemNavItem.addClass('active');
                 visionNavItem.addClass('active');
             }
 
             if ( href == '#catalyzing-strategy' || href == '#assets' || href == '#target-outcomes' || href == '#impact' ){
                 if (href == '#catalyzing-strategy') {
+                    catalyzingStrategy.removeClass('disable');
+                    assets.removeClass('disable');
+                    targetOutcomes.removeClass('disable');
+                    impact.removeClass('disable');
                     accordionListItem.removeClass('open');
                     allNavItem.removeClass('active');
                     catalyzingStrategy.addClass('open');
                     catalyzingStrategyNavItem.addClass('active');
                 }
                 if (href == '#assets') {
+                    catalyzingStrategy.removeClass('disable');
+                    assets.removeClass('disable');
+                    targetOutcomes.removeClass('disable');
+                    impact.removeClass('disable');
                     accordionListItem.removeClass('open');
                     allNavItem.removeClass('active');
                     assets.addClass('open');
                     assetsNavItem.addClass('active');
                 }
                 if (href == '#target-outcomes') {
+                    catalyzingStrategy.removeClass('disable');
+                    assets.removeClass('disable');
+                    targetOutcomes.removeClass('disable');
+                    impact.removeClass('disable');
                     accordionListItem.removeClass('open');
                     allNavItem.removeClass('active');
                     targetOutcomes.addClass('open');
@@ -180,11 +196,27 @@ jQuery(document).ready(function($) {
                     if (lastHash == '#vision' || lastHash == '#problem' || lastHash == href) {
                         accordionListItem.removeClass('open');
                         allNavItem.removeClass('active');
+                        catalyzingStrategy.removeClass('disable');
+                        assets.removeClass('disable');
+                        targetOutcomes.removeClass('disable');
+                        impact.removeClass('disable');
                         impact.addClass('open');
                         impactNavItem.addClass('active');
                     } else {
                         impact.addClass('open');
                         impactNavItem.addClass('active');
+                            if (lastHash == '#catalyzing-strategy' ) {
+                                assets.addClass('disable');
+                                targetOutcomes.addClass('disable');
+                            }
+                            if (lastHash == '#assets' ) {
+                                catalyzingStrategy.addClass('disable');
+                                targetOutcomes.addClass('disable');
+                            }
+                            if (lastHash == '#target-outcomes' ) {
+                                catalyzingStrategy.addClass('disable');
+                                assets.addClass('disable');
+                            }
                     }
                 }
             }
