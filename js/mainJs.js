@@ -17,21 +17,15 @@ jQuery(document).ready(function($) {
         }
     });
 
+
     // for smooth scroll
-    // setTimeout(function () {
-    //     smoothScroll.init({
-    //         selector: '[data-scroll], .nav-menu a', // Selector for links (must be a class, ID, data attribute, or element tag)
-    //         speed: 500, // Integer. How fast to complete the scroll in milliseconds
-    //         easing: 'easeInQuad', // Easing pattern to use
-    //         offset: 50 // Integer. How far to offset the scrolling anchor location in pixels
-    //     });
-    // }, 1000);
     smoothScroll.init({
-        selector: '[data-scroll], .nav-menu a', // Selector for links (must be a class, ID, data attribute, or element tag)
+        selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
         speed: 500, // Integer. How fast to complete the scroll in milliseconds
         easing: 'easeInQuad', // Easing pattern to use
         offset: 50 // Integer. How far to offset the scrolling anchor location in pixels
     });
+
 
     //for popup
     $('.open-popup-link').magnificPopup({
@@ -148,117 +142,125 @@ jQuery(document).ready(function($) {
         targetOutcomesNavItem = $('[href="#target-outcomes"]'),
         impactNavItem = $('[href="#impact"]'),
         visionNavItem = $('[href="#vision"]'),
-        allNavItem = $('.nav-menu a, .sub-nav a, .accordion-link'),
+        allNavItem = $('.nav-menu a, .sub-nav a, .accordion-link:not(.active)'),
         accordionListItem = $('.accordion-list > li');
 
-        function mainLogic() {
-            var lastHash = window.location.hash;
+    function mainLogic() {
+        var lastHash = window.location.hash;
 
-            setTimeout(function () {
-                var href = window.location.hash;
-                if ( href == '#problem' || href == '#vision') {
+        setTimeout(function () {
+            var href = window.location.hash;
+            if ( href == '#problem' || href == '#vision') {
+                accordionListItem.removeClass('open');
+                allNavItem.removeClass('active');
+                problem.addClass('open');
+                vision.addClass('open');
+                problem.find('.accordion-content').slideDown(400);
+                vision.find('.accordion-content').slideDown(400);
+                catalyzingStrategy.addClass('disable');
+                assets.addClass('disable');
+                targetOutcomes.addClass('disable');
+                impact.addClass('disable');
+                problemNavItem.addClass('active');
+                visionNavItem.addClass('active');
+            }
+
+            if ( href == '#catalyzing-strategy' || href == '#assets' || href == '#target-outcomes' || href == '#impact' ){
+                problem.find('.accordion-content').slideUp(400);
+                vision.find('.accordion-content').slideUp(400);
+                if (href == '#catalyzing-strategy') {
+                    catalyzingStrategy.removeClass('disable');
+                    assets.removeClass('disable');
+                    targetOutcomes.removeClass('disable');
+                    impact.removeClass('disable');
                     accordionListItem.removeClass('open');
                     allNavItem.removeClass('active');
-                    problem.addClass('open');
-                    vision.addClass('open');
-                    problem.find('.accordion-content').slideDown(500);
-                    vision.find('.accordion-content').slideDown(500);
-                    catalyzingStrategy.addClass('disable');
-                    assets.addClass('disable');
-                    targetOutcomes.addClass('disable');
-                    impact.addClass('disable');
-                    problemNavItem.addClass('active');
-                    visionNavItem.addClass('active');
+                    catalyzingStrategy.addClass('open');
+                    targetOutcomes.find('.accordion-content').slideUp(400);
+                    assets.find('.accordion-content').slideUp(400);
+                    impact.find('.accordion-content').slideUp(400);
+                    catalyzingStrategy.find('.accordion-content').slideDown(400);
+                    catalyzingStrategyNavItem.addClass('active');
                 }
-
-                if ( href == '#catalyzing-strategy' || href == '#assets' || href == '#target-outcomes' || href == '#impact' ){
-                    problem.find('.accordion-content').slideUp(500);
-                    vision.find('.accordion-content').slideUp(500);
-                    if (href == '#catalyzing-strategy') {
+                else if (href == '#assets') {
+                    catalyzingStrategy.removeClass('disable');
+                    assets.removeClass('disable');
+                    targetOutcomes.removeClass('disable');
+                    impact.removeClass('disable');
+                    accordionListItem.removeClass('open');
+                    allNavItem.removeClass('active');
+                    assets.addClass('open');
+                    targetOutcomes.find('.accordion-content').slideUp(400);
+                    catalyzingStrategy.find('.accordion-content').slideUp(400);
+                    impact.find('.accordion-content').slideUp(400);
+                    assets.find('.accordion-content').slideDown(400);
+                    assetsNavItem.addClass('active');
+                }
+                else if (href == '#target-outcomes') {
+                    catalyzingStrategy.removeClass('disable');
+                    assets.removeClass('disable');
+                    targetOutcomes.removeClass('disable');
+                    impact.removeClass('disable');
+                    accordionListItem.removeClass('open');
+                    allNavItem.removeClass('active');
+                    targetOutcomes.addClass('open');
+                    assets.find('.accordion-content').slideUp(400);
+                    catalyzingStrategy.find('.accordion-content').slideUp(400);
+                    impact.find('.accordion-content').slideUp(400);
+                    targetOutcomes.find('.accordion-content').slideDown(400);
+                    targetOutcomesNavItem.addClass('active');
+                }
+                else if (href == '#impact') {
+                    if (lastHash == '#vision' || lastHash == '#problem') {
+                        accordionListItem.removeClass('open');
+                        allNavItem.removeClass('active');
                         catalyzingStrategy.removeClass('disable');
                         assets.removeClass('disable');
                         targetOutcomes.removeClass('disable');
                         impact.removeClass('disable');
-                        accordionListItem.removeClass('open');
-                        allNavItem.removeClass('active');
-                        catalyzingStrategy.addClass('open');
-                        targetOutcomes.find('.accordion-content').slideUp(500);
-                        assets.find('.accordion-content').slideUp(500);
-                        impact.find('.accordion-content').slideUp(500);
-                        catalyzingStrategy.find('.accordion-content').slideDown(500);
-                        catalyzingStrategyNavItem.addClass('active');
+                        impact.addClass('open');
+                        impact.find('.accordion-content').slideDown(400);
+                        impactNavItem.addClass('active');
                     }
-                    if (href == '#assets') {
-                        catalyzingStrategy.removeClass('disable');
-                        assets.removeClass('disable');
-                        targetOutcomes.removeClass('disable');
-                        impact.removeClass('disable');
-                        accordionListItem.removeClass('open');
-                        allNavItem.removeClass('active');
-                        assets.addClass('open');
-                        targetOutcomes.find('.accordion-content').slideUp(500);
-                        catalyzingStrategy.find('.accordion-content').slideUp(500);
-                        impact.find('.accordion-content').slideUp(500);
-                        assets.find('.accordion-content').slideDown(500);
-                        assetsNavItem.addClass('active');
-                    }
-                    if (href == '#target-outcomes') {
-                        catalyzingStrategy.removeClass('disable');
-                        assets.removeClass('disable');
-                        targetOutcomes.removeClass('disable');
-                        impact.removeClass('disable');
-                        accordionListItem.removeClass('open');
-                        allNavItem.removeClass('active');
-                        targetOutcomes.addClass('open');
-                        assets.find('.accordion-content').slideUp(500);
-                        catalyzingStrategy.find('.accordion-content').slideUp(500);
-                        impact.find('.accordion-content').slideUp(500);
-                        targetOutcomes.find('.accordion-content').slideDown(500);
-                        targetOutcomesNavItem.addClass('active');
-                    }
-                    if (href == '#impact') {
-                        if (lastHash == '#vision' || lastHash == '#problem' || lastHash == href) {
-                            accordionListItem.removeClass('open');
-                            allNavItem.removeClass('active');
-                            catalyzingStrategy.removeClass('disable');
-                            assets.removeClass('disable');
-                            targetOutcomes.removeClass('disable');
-                            impact.removeClass('disable');
+                    if (lastHash == href) {
+                        if (!impact.hasClass('open')){
                             impact.addClass('open');
-                            impact.find('.accordion-content').slideDown(500);
+                            impact.find('.accordion-content').slideDown(400);
                             impactNavItem.addClass('active');
-                        } else {
-                            impact.addClass('open');
-                            impactNavItem.addClass('active');
-                            if (lastHash == '#catalyzing-strategy' ) {
-                                assets.addClass('disable');
-                                targetOutcomes.addClass('disable');
-                            }
-                            if (lastHash == '#assets' ) {
-                                catalyzingStrategy.addClass('disable');
-                                targetOutcomes.addClass('disable');
-                            }
-                            if (lastHash == '#target-outcomes' ) {
-                                catalyzingStrategy.addClass('disable');
-                                assets.addClass('disable');
-                            }
-                            impact.find('.accordion-content').slideDown(500);
                         }
+                    } else {
+                        impact.addClass('open');
+                        impactNavItem.addClass('active');
+                        if (lastHash == '#catalyzing-strategy' ) {
+                            assets.addClass('disable');
+                            targetOutcomes.addClass('disable');
+                        }
+                        else if (lastHash == '#assets' ) {
+                            catalyzingStrategy.addClass('disable');
+                            targetOutcomes.addClass('disable');
+                        }
+                        else if (lastHash == '#target-outcomes' ) {
+                            catalyzingStrategy.addClass('disable');
+                            assets.addClass('disable');
+                        }
+                        impact.find('.accordion-content').slideDown(400);
                     }
                 }
-            },100 );
-        };
+            }
+        }, 100);
+    }
 
     allNavItem.click(function(){
-        mainLogic()
+        mainLogic();
+        // setTimeout(function () {
+        //     var target = window.location.hash;
+        //     $('html, body').animate({
+        //         scrollTop: $(target).offset().top
+        //     }, 400);
+        // }, 400);
     });
 
     $(window).on('load', function() {
-        mainLogic()
+        mainLogic();
     });
-    //hash
-    // $(window).on('load', function() {
-    //     var hashLink = window.location.hash;
-    //     console.log(hashLink);
-    // });
 });
