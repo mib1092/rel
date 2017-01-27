@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
 
     // for smooth scroll
     smoothScroll.init({
-        selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+        selector: '[data-scroll], .nav-menu a', // Selector for links (must be a class, ID, data attribute, or element tag)
         speed: 500, // Integer. How fast to complete the scroll in milliseconds
         easing: 'easeInQuad', // Easing pattern to use
         offset: 50 // Integer. How far to offset the scrolling anchor location in pixels
@@ -143,7 +143,7 @@ jQuery(document).ready(function($) {
         allNavItem = $('.nav-menu a, .sub-nav a, .accordion-link'),
         accordionListItem = $('.accordion-list > li');
 
-    $('.nav-menu a, .sub-nav a, .accordion-link').click(function(){
+    allNavItem.click(function(){
         var lastHash = window.location.hash;
 
         setTimeout(function () {
