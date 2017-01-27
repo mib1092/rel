@@ -448,6 +448,9 @@ img {
             .accordion-list > li:not(:last-child) {
                 border-bottom: 1px solid #F0F2F5;
             }
+            .accordion-list > li > a:hover {
+                text-decoration: none;
+            }
                 .accordion-tab {
                     position: relative;
                     padding: 20px 80px;
@@ -712,7 +715,7 @@ img {
                 display: none;
             }
             .sub-tab-box-lis > li.active .sub-tab-box {
-                /*display: block;*/
+                display: block;
                 margin-bottom: -50px;
             }
         .strategy-examples-block {
@@ -912,6 +915,19 @@ img {
         .example-item.active {
             opacity: 1;
         }
+.owl-nav {
+    position: absolute;
+    width: 100%;
+    top: 5px;
+}
+.owl-prev {
+    position: absolute;
+    left: -5px;
+}
+.owl-next {
+    position: absolute;
+    right: -5px;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
 /*----------------------------------------------------------------------------------*/

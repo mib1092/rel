@@ -46,25 +46,18 @@ jQuery(document).ready(function($) {
     // tab carousel
     $(".owl-examples").owlCarousel({
         dots: false,
+        nav: true,
+        navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
         responsive:{
             0:{
+                items:2
+            },
+            440:{
                 items:3
             },
             600:{
                 items:5
             }
-        }
-    });
-    // for accordion list
-    $('.accordion-tab').click(function(){
-        var accordionItem = $(this).parent(),
-            accordionContent = $(this).next();
-        if (!accordionItem.hasClass('open')){
-            accordionItem.addClass('open');
-            accordionContent.slideDown(300);
-        } else {
-            accordionItem.removeClass('open');
-            accordionContent.slideUp(300);
         }
     });
 
@@ -81,12 +74,12 @@ jQuery(document).ready(function($) {
 
                 allTab.removeClass('active');
                 allTabContent.removeClass('active');
-                allTabContent.find('.sub-tab-box').slideUp(500);
+                // allTabContent.find('.sub-tab-box').slideUp(500);
                 $(this).addClass('active');
                 idTabContent.addClass('active');
-                setTimeout(function () {
-                    idTabContent.find('.sub-tab-box').slideDown(500);
-                }, 500);
+                // setTimeout(function () {
+                //     // idTabContent.find('.sub-tab-box').slideDown(500);
+                // }, 500);
 
                 // height carousel box
                 setTimeout(function () {
@@ -122,6 +115,12 @@ jQuery(document).ready(function($) {
                 idTabContent.addClass('active');
             }
 
+    });
+
+    // main logic
+    $('.nav-menu a, .sub-nav a, .accordion-link').click(function(){
+        var href = $(this).attr('href');
+        console.log(href);
     });
 
 });
