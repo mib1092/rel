@@ -18,6 +18,12 @@ jQuery(document).ready(function($) {
     });
 
 
+    // for empty links
+    $('.prevent, a[href="#"]').on('click', function(event){
+        event.preventDefault();
+    });
+
+
     // for smooth scroll
     smoothScroll.init({
         selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
@@ -26,7 +32,6 @@ jQuery(document).ready(function($) {
         offset: 50 // Integer. How far to offset the scrolling anchor location in pixels
     });
 
-
     //for popup
     $('.open-popup-link').magnificPopup({
         type:'inline',
@@ -34,6 +39,7 @@ jQuery(document).ready(function($) {
         removalDelay: 300,
         mainClass: 'mfp-fade'
     });
+
 
     //carousel
     $(".owl-text").owlCarousel({
@@ -45,6 +51,7 @@ jQuery(document).ready(function($) {
             }
         }
     });
+
     // tab carousel
     $(".owl-examples").owlCarousel({
         dots: false,
@@ -107,7 +114,7 @@ jQuery(document).ready(function($) {
             }
     });
 
-    //for example tab
+    // for example tab
     $('.example-item').click(function(){
         var tabID = $(this).data('examplesItem'),
             tabWrap = $(this).parents('.strategy-examples-block'),
@@ -129,7 +136,7 @@ jQuery(document).ready(function($) {
     });
 
 
-    // main logic
+    // main Accordion logic
     var problem = $('#problem'),
         catalyzingStrategy = $('#catalyzing-strategy'),
         assets = $('#assets'),
