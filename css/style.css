@@ -856,6 +856,12 @@ img {
                     padding: 0 10px;
                     vertical-align: top;
                 }
+                .slider-list.two > li {
+                    width: 49%;
+                }
+                .slider-list.one > li {
+                    width: 100%;
+                }
                     .slider-text-wrap {
                         padding: 24px 20px 20px
                     }
@@ -1201,6 +1207,10 @@ img {
         width: 49%;
         margin-bottom: 30px;
     }
+    .slider-list.two > li,
+    .slider-list.one > li {
+        margin-bottom: 0;
+    }
 }
 @media all and (max-width: 1180px) {
     body {
@@ -1380,7 +1390,8 @@ img {
     .accordion-tab {
         padding: 20px 60px 20px 20px;
     }
-    .slider-list > li {
+    .slider-list > li,
+    .slider-list.two > li {
         width: 100%;
         margin-bottom: 30px;
     }
