@@ -11,7 +11,7 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
 	outline:none;
 	list-style:none;
 }
-h1,h2,h3,h4,h5,h6,.heading-font{ font-family: 'Nunito', 'MyriadProRegular', Arial, sans-serif; }
+h1,h2,h3,h4,h5,h6,.heading-font{ font-family: 'Gotham-Bold', 'MyriadProRegular', Arial, sans-serif; }
 select, input, textarea        { font-size:16px; vertical-align:middle; color:#131617; }
 textarea                       { vertical-align:top; }
 :focus                         { outline:none; }
@@ -44,28 +44,40 @@ a:hover                        { text-decoration:underline; color:#fcc01e; }
     font-family: "MyriadProRegular";
     src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
     src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
-    url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+         url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+         url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
 @font-face {
-    font-family: "MyriadProBold";
-    src: url("../fonts/MyriadProBold/MyriadProBold.eot");
-    src: url("../fonts/MyriadProBold/MyriadProBold.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/MyriadProBold/MyriadProBold.woff") format("woff"),
-    url("../fonts/MyriadProBold/MyriadProBold.ttf") format("truetype");
-    font-style: normal;
+    font-family: 'Gotham-Book';
+    src: url('../fonts/Gotham-Book/Gotham-Book.eot');
+    src: url('../fonts/Gotham-Book/Gotham-Book.eot?#iefix')format("embedded-opentype"),
+         url('../fonts/Gotham-Book/Gotham-Book.woff') format('woff'),
+         url('../fonts/Gotham-Book/Gotham-Book.ttf') format('truetype'),
+         url('../fonts/Gotham-Book/Gotham-Book.svg') format('svg');
     font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-    font-family: "MyriadProItalic";
-    src: url("../fonts/MyriadProItalic/MyriadProItalic.eot");
-    src: url("../fonts/MyriadProItalic/MyriadProItalic.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/MyriadProItalic/MyriadProItalic.woff") format("woff"),
-    url("../fonts/MyriadProItalic/MyriadProItalic.ttf") format("truetype");
-    font-style: normal;
+    font-family: 'Gotham-Medium';
+    src: url('../fonts/Gotham-Medium/Gotham-Medium.eot');
+    src: url('../fonts/Gotham-Medium/Gotham-Medium.eot?#iefix')format("embedded-opentype"),
+    url('../fonts/Gotham-Medium/Gotham-Medium.woff') format('woff'),
+    url('../fonts/Gotham-Medium/Gotham-Medium.ttf') format('truetype'),
+    url('../fonts/Gotham-Medium/Gotham-Medium.svg') format('svg');
     font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('../fonts/Gotham-Bold/Gotham-Bold.eot');
+    src: url('../fonts/Gotham-Bold/Gotham-Bold.eot?#iefix')format("embedded-opentype"),
+    url('../fonts/Gotham-Bold/Gotham-Bold.woff') format('woff'),
+    url('../fonts/Gotham-Bold/Gotham-Bold.ttf') format('truetype'),
+    url('../fonts/Gotham-Bold/Gotham-Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 /*----------------------------------------------------------------------------------*/
 
