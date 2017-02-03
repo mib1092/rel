@@ -488,7 +488,7 @@ img {
 				position: relative;
 				-webkit-box-shadow: 0 1px 8px 0 rgba(50, 50, 50, 0.05);
 				-moz-box-shadow: 0 1px 8px 0 rgba(50, 50, 50, 0.05);
-				box-shadow: 0 1px 8px 0 rgba(50, 50, 50, 0.05);`
+				box-shadow: 0 1px 8px 0 rgba(50, 50, 50, 0.05);
 			}
             .accordion-list > li:not(:last-child) {
                 /*border-bottom: 1px solid #F0F2F5;*/
@@ -1193,7 +1193,6 @@ img {
 /*-------------------------------------SIDEBAR--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .sidebar {
-    /*display: none;*/
     float: left;
     width: 370px;
     margin-right: 30px;
@@ -1359,6 +1358,9 @@ img {
     .owl-examples {
         display: block !important;
     }
+	.icon-title {
+		height: 46px;
+	}
 }
 @media all and (max-width: 1650px) {
     /*.sub-tab-box {*/
@@ -1616,6 +1618,16 @@ img {
     }
 }
 @media all and (max-width: 640px) {
+	.primary .tab-title {
+		font-size: 1.75em;
+	}
+	.tab-title {
+		font-size: 1.5em;
+	}
+	.accordion-tab-table .tab-icon img {
+		max-width: 30px;
+		max-height: 32px;
+	}
     #target-outcomes .accordion-content,
     .sub-tab-box {
         padding-left: 10px;
