@@ -2,7 +2,7 @@
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
 html,body                       { width:100%; height:100%; }
-body                            { padding:0; margin:0; font:16px/1.6 'Gotham-Book', 'MyriadProRegular', Arial, sans-serif; background:#DFE7E8; color:#131617;
+body                            { padding:0; margin:0; font:16px/1.6 'MyriadProRegular', Arial, sans-serif; background:#DFE7E8; color:#131617;
                                   -webkit-font-smoothing: antialiased;
                                   -moz-osx-font-smoothing: grayscale; }
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea {
@@ -189,7 +189,7 @@ img {
                         margin-top: 24px;
                     }
                     .title-cell {
-                        font: 700 1.5em/1.4 'Nunito', 'MyriadProRegular', Arial, sans-serif;
+                        font: 700 1.5em/1.4 'Gotham-Medium', 'MyriadProRegular', Arial, sans-serif;
                         margin-bottom: 14px;
                         text-decoration: none;
                         -webkit-transition: 0.2s;
@@ -251,9 +251,8 @@ img {
                 }
             .logo-wrap strong {
                 display: inline-block;
-                margin-top: 4px;
-                font-weight: 300;
-                font-size: 2.25em;
+                margin-top: 3px;
+                font: 300 2.25em/1.6 'MyriadProRegular';
                 text-transform: uppercase;
             }
                 .logo-wrap strong span {
@@ -392,7 +391,7 @@ img {
             .mobile-menu-wrap .mobile-menu-toggle span:before,
             .mobile-menu-wrap .mobile-menu-toggle span:after,
             .mobile-menu-wrap .mobile-menu-toggle span {
-                background: #54636b;
+                background: #0c7281;
             }
             .mobile-menu-toggle span {
                 left: 50%;
@@ -438,7 +437,7 @@ img {
             }
             .mobile-menu-wrap .mobile-menu-toggle.active span:before,
             .mobile-menu-wrap .mobile-menu-toggle.active span:after {
-                background: #54636b;
+                background: #0c7281;
             }
             .mobile-menu-toggle:not(.active):hover span,
             .mobile-menu-toggle:hover span:before,
@@ -540,6 +539,9 @@ img {
                                 margin-top: -13px;
                                 font: 1em/1.4 'Gotham-Book', 'Lato', Arial, sans-serif;
                                 color: #54636b;
+                            }
+                            .primary .tab-title-info {
+                                margin-top: -8px;
                             }
                             .open .tab-title-info {
                                 display: block;
@@ -1202,7 +1204,7 @@ img {
             display: block;
             padding: 17px 50px 15px 65px;
             font: 1.1em/1.6 'Gotham-Bold', 'MyriadProRegular', Arial, sans-serif;
-            color: #54636b;
+            color: #0c7281;
             text-transform: uppercase;
             -webkit-border-radius: 5em;
             -moz-border-radius: 5em;
