@@ -2,7 +2,7 @@
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
 html,body                       { width:100%; height:100%; }
-body                            { padding:0; margin:0; font:16px/1.6 'MyriadProRegular', Arial, sans-serif; background:#e4e9eb; color:#131617;
+body                            { padding:0; margin:0; font:16px/1.6 'MyriadProRegular', Arial, sans-serif; background:#DFE7E8; color:#131617;
                                   -webkit-font-smoothing: antialiased;
                                   -moz-osx-font-smoothing: grayscale; }
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea {
@@ -19,7 +19,7 @@ input[type=submit], button     { cursor:pointer; }
 img, fieldset                  { border:0; }
 table                          { border-collapse:collapse; border-spacing:0; }
 a:link, a:visited              { font-family: 'MyriadProRegular', Arial, sans-serif; color:#131617; text-decoration:none; }
-a:hover                        { text-decoration:underline; color:#fcc01e; }
+a:hover                        { text-decoration:underline; color:#0cbcc9; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------DEFAULT CLASSES------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -171,7 +171,7 @@ img {
                         text-decoration: none;
                     }
                     .cell-box a:hover h3 {
-                        color: #17f0d4;
+                        color: #0cbcc9;
                     }
                     .cell-box a.btn {
                         margin-top: 24px;
@@ -335,7 +335,7 @@ img {
             .mobile-menu .current-menu-ancestor > a,
             .mobile-menu .current-page-ancestor > a {
                 background-color: #182631;
-                color: #fcc01e;
+                color: #0cbcc9;
                 text-decoration: none;
             }
             .mobile-menu .sub-menu {
@@ -440,7 +440,7 @@ img {
             .mobile-menu-wrap .mobile-menu-toggle:not(.active):active span,
             .mobile-menu-wrap .mobile-menu-toggle:active span:before,
             .mobile-menu-wrap .mobile-menu-toggle:active span:after {
-                background: #fcc01e;
+                background: #0cbcc9;
             }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------CONTENT--------------------------------------*/
@@ -492,7 +492,7 @@ img {
                 }
                 .open .accordion-tab,
                 .accordion-tab:hover {
-                    color: #fcc01e;
+                    color: #0cbcc9;
                 }
                 .accordion-tab:hover {
                     -webkit-transition: color 0.25s;
@@ -518,8 +518,18 @@ img {
                             }
                             .tab-title {
                                 font: 800 1.75em/1.4 'Nunito', 'MyriadProRegular', Arial, sans-serif;
+								text-transform: uppercase;
                             }
-                            .primary-item .tab-title {
+                            .tab-title-info {
+                                display: none;
+                                margin-top: -15px;
+                                font: 400 1em/1.4 'Nunito', 'Lato', Arial, sans-serif;
+                                color: #54636b;
+                            }
+                            .open .tab-title-info {
+                                display: block;
+                            }
+                            .primary .tab-title {
                                 font-size: 2.25em;
                             }
                     .open-icon {
@@ -536,7 +546,7 @@ img {
                     }
                     .open .open-icon,
                     .accordion-tab:hover .open-icon {
-                        border-color: #fcc01e;
+                        border-color: #0cbcc9;
                     }
                         .open-icon:before,
                         .open-icon:after {
@@ -565,7 +575,7 @@ img {
                         .open .open-icon:after,
                         .accordion-tab:hover .open-icon:before,
                         .accordion-tab:hover .open-icon:after {
-                            background-color: #fcc01e;
+                            background-color: #0cbcc9;
                         }
                         .open .open-icon:after {
                             -moz-transform: rotate(-90deg);
@@ -578,11 +588,11 @@ img {
                     display: none;
                     padding: 40px 140px 50px;
                     border-top: 1px solid #F0F2F5;
-                    background: #FCFDFD;
                     animation-timing-function: linear;
                     animation-duration: 2s;
+                    background-color: #F2FBFA;
                 }
-                .primary-item .accordion-content {
+                .primary .accordion-content {
                     padding: 10px 40px 74px;
                     border-top: none;
                     background: transparent;
@@ -617,7 +627,7 @@ img {
                             text-align: left;
                         }
                         .content a {
-                            color: #fcc01e;
+                            color: #0cbcc9;
                         }
                         .content img {
                             max-width: 100%;
@@ -642,6 +652,7 @@ img {
     padding-left: 4%;
     padding-right: 4%;
 }
+/*---------------------------------CUSTOM-ACCORDION--------------------------------*/
 /*-------------------------------------ASSETS--------------------------------------*/
 #assets .accordion-content {
     padding: 80px 0 80px;
@@ -710,7 +721,7 @@ img {
     .popup-content-box-title {
         margin-bottom: 14px;
         font: 700 1.5em/1.4 'Nunito', 'MyriadProRegular', Arial, sans-serif;
-        color: #fcc01e;
+        color: #0cbcc9;
 }
     .popup-content-box {
         text-align: center;
@@ -723,8 +734,8 @@ img {
         }
 /*-----------------------------------TARGET-OUTCOMES--------------------------------*/
 #target-outcomes .accordion-content {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 40px;
+    padding-right: 40px;
 }
     .accordion-sub-tab-list {
         display: table;
@@ -753,7 +764,7 @@ img {
         }
         .accordion-sub-tab-list > li.active {
             opacity: 1;
-            background-color: #f0f3f4;
+            background-color: #ffffff;
         }
             .sub-tab-item {}
                 .sub-tab-item-img {
@@ -771,13 +782,13 @@ img {
                     display: none;
                 }
         .sub-tab-box-wrap {
-            background-color: #f0f3f4;
+            background-color: #ffffff;
         }
         .sub-tab-box {
             max-width: 90%;
             margin: 0 auto;
-            padding: 60px 20px 80px;
-            background-color: #f0f3f4;
+            padding: 60px 40px 80px;
+            background-color: #ffffff;
         }
             .sub-tab-box-lis > li .sub-tab-box {
                 display: none;
@@ -825,7 +836,7 @@ img {
                     height: 0;
                     border-left: 27px solid transparent;
                     border-right: 27px solid transparent;
-                    border-top: 23px solid #f0f3f4;
+                    border-top: 23px solid #ffffff;
                 }
             .strategy-examples-item-list .example-item.active:after {
                 bottom: -2px;
@@ -874,7 +885,7 @@ img {
                 -webkit-border-radius: 10px;
                 -moz-border-radius: 10px;
                 border-radius: 10px;
-                background-color: #ffffff;
+                background-color: #F2FBFA;
             }
             .slider-list {
                 /*width: 100%;*/
@@ -911,6 +922,7 @@ img {
                             font: 800 1.38em/1.3 'Nunito', 'MyriadProRegular', Arial, sans-serif;
                         }
                             .slider-text-content > * {
+                                font-size: 0.94;
                                 margin-bottom: 10px;
                             }
 
@@ -1004,7 +1016,7 @@ img {
 .wrap-404 {
     text-align: center;
     padding: 20px 0;
-    color: #fcc01e;
+    color: #0cbcc9;
     font-size: 4.125em;
     letter-spacing: 0;
 }
@@ -1021,6 +1033,7 @@ img {
 /*-------------------------------------SIDEBAR--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .sidebar {
+    display: none;
     float: left;
     width: 370px;
     margin-right: 30px;
@@ -1038,12 +1051,12 @@ img {
             border-radius: 5em;
         }
         .nav-menu a:hover {
-            color: #fcc01e;
+            color: #0cbcc9;
             text-decoration: none;
         }
         .nav-menu a.active {
             background: #ffffff;
-            color: #fcc01e;
+            color: #0cbcc9;
         }
             .nav-menu a:after {
                 display: none;
@@ -1056,7 +1069,7 @@ img {
                 text-rendering: auto;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
-                color: #fcc01e;
+                color: #0cbcc9;
             }
             .nav-menu a.active:after {
                 display: inline-block;
@@ -1168,7 +1181,9 @@ img {
             .copyright p:not(:last-child) {
                 margin-bottom: 6px;
             }
-
+.mfp-close:hover, .mfp-close:focus {
+    color: #0cbcc9;
+}
 /*----------------------------------------------------------------------------------*/
 /*-----------------------------------RESPONSIVE-------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -1269,11 +1284,11 @@ img {
         min-width: 210px;
     }
     .accordion-content,
-    .primary-item .accordion-content {
+    .primary .accordion-content {
         padding-left: 30px;
         padding-right: 30px;
     }
-    .primary-item .accordion-content {
+    .primary .accordion-content {
         padding-bottom: 60px;
     }
 }
@@ -1407,6 +1422,12 @@ img {
     }
 }
 @media all and (max-width: 640px) {
+    .owl-prev {
+        left: -15px;
+    }
+    .owl-next {
+        right: -15px;
+    }
     .accordion-sub-tab-list > li {
         padding: 20px 10px 6px;
     }
