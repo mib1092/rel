@@ -291,6 +291,8 @@ jQuery(document).ready(function($) {
                     secondaryItems.addClass('disable');
                     thirdItems.addClass('disable');
                 } else if (accordionItem.hasClass(secondary)) {
+                    var secondaryCountOpen = $('.secondary.open').length;
+
                     accordionList.removeClass('neighbors-open');
 
                     if (prevItem.hasClass(primary) && !nextItem.hasClass(primary)) {
@@ -299,27 +301,44 @@ jQuery(document).ready(function($) {
                         nextItem.addClass('neighbors-open');
                     }
 
-                    accordionList.find('.accordion-content').slideUp(duration);
-                    accordionList.removeClass('disable');
-                    accordionList.removeClass('open');
+                    accordionList.not('.secondary').find('.accordion-content').slideUp(duration);
+                    accordionList.not('.secondary').removeClass('open');
+                    if(secondaryCountOpen > 0) {
+                        thirdItems.addClass('disable');
+                    } else {
+                        accordionList.removeClass('disable');
+                    }
                     allNavItem.removeClass('active');
                     navItems.addClass('active');
                     accordionItem.addClass('open');
                     accordionItem.find('.accordion-content').slideDown(duration);
+
+
                 } else if (accordionItem.hasClass(third)) {
                     accordionList.removeClass('neighbors-open');
 
                     if (prevItem.hasClass(secondary) && !nextItem.hasClass(secondary)) {
                         prevItem.addClass('neighbors-open');
-
+                        if (prevItem.hasClass(secondary) && nextItem.hasClass(third)) {
+                            nextItem.removeClass('top');
+                            nextItem.addClass('bottom');
+                        }
+                    } else if (prevItem.hasClass(third) && nextItem.hasClass(third)) {
+                        prevItem.removeClass('bottom');
+                        prevItem.addClass('top');
+                        nextItem.removeClass('top');
+                        nextItem.addClass('bottom');
                     } else if (!prevItem.hasClass(secondary) && nextItem.hasClass(secondary)) {
                         nextItem.addClass('neighbors-open');
-
+                        if (nextItem.hasClass(secondary) && prevItem.hasClass(third) ) {
+                            prevItem.removeClass('bottom');
+                            prevItem.addClass('top');
+                        }
                     }
 
-                    accordionList.find('.accordion-content').slideUp(duration);
+                    accordionList.not('.third').find('.accordion-content').slideUp(duration);
                     accordionList.removeClass('disable');
-                    accordionList.removeClass('open');
+                    accordionList.not('.third').removeClass('open');
                     allNavItem.removeClass('active');
                     navItems.addClass('active');
                     accordionItem.addClass('open');
