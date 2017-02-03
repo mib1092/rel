@@ -726,6 +726,16 @@ img {
 			border-bottom: 20px solid #07515C;
 			border-left: 20px solid transparent;
 		}
+        .neighbors-open.bottom .accordion-link:after,
+        .neighbors-open.bottom .accordion-link:before {
+            top: -30px;
+            border-bottom-width: 30px;
+        }
+        .neighbors-open.top .accordion-link:before,
+        .neighbors-open.top .accordion-link:after {
+            bottom: -30px;
+            border-top-width: 30px;
+        }
 		.neighbors-open.top .accordion-link:after,
 		.neighbors-open.bottom .accordion-link:after {
 			border-right-width: 40px;

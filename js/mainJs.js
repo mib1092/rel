@@ -327,7 +327,7 @@ jQuery(document).ready(function($) {
                 }
             }
 
-        }, 100);
+        }, 10);
     }
 
     allNavItem.click(function(){
