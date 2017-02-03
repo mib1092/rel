@@ -284,10 +284,8 @@ jQuery(document).ready(function($) {
             if (!accordionItem.hasClass('open')) {
                 if (accordionItem.hasClass(primary)) {
                     accordionList.removeClass('neighbors-open');
-                    allNavItem.removeClass('active');
                     accordionList.removeClass('open');
                     accordionList.find('.accordion-content').slideUp(duration);
-                    navItems.addClass('active');
                     primaryItems.addClass('open');
                     primaryItems.find('.accordion-content').slideDown(duration);
                     secondaryItems.addClass('disable');
@@ -310,8 +308,6 @@ jQuery(document).ready(function($) {
                     } else {
                         accordionList.removeClass('disable');
                     }
-                    allNavItem.removeClass('active');
-                    navItems.addClass('active');
                     accordionItem.addClass('open');
                     accordionItem.find('.accordion-content').slideDown(duration);
 
@@ -340,12 +336,25 @@ jQuery(document).ready(function($) {
                     accordionList.not('.third').find('.accordion-content').slideUp(duration);
                     accordionList.removeClass('disable');
                     accordionList.not('.third').removeClass('open');
-                    allNavItem.removeClass('active');
-                    navItems.addClass('active');
                     accordionItem.addClass('open');
                     accordionItem.find('.accordion-content').slideDown(duration);
                 }
             }
+
+            var activeNavItem = $('.accordion-list li.open').find('a');
+
+            allNavItem.removeClass('active');
+
+            activeNavItem.each(function (i) {
+                var id = activeNavItem.eq(i).attr('href');
+                allNavItem.each(function (y) {
+                  if (id == allNavItem.eq(y).attr('href')) {
+                      allNavItem.eq(y).addClass('active');
+                  }
+                  console.log(allNavItem.eq(y));
+                })
+
+            });
 
         }, 10);
     }
