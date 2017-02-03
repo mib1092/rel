@@ -283,8 +283,10 @@ jQuery(document).ready(function($) {
 
             if (!accordionItem.hasClass('open')) {
                 if (accordionItem.hasClass(primary)) {
+                    accordionList.removeClass('neighbors-open');
                     allNavItem.removeClass('active');
                     accordionList.removeClass('open');
+                    accordionList.find('.accordion-content').slideUp(duration);
                     navItems.addClass('active');
                     primaryItems.addClass('open');
                     primaryItems.find('.accordion-content').slideDown(duration);
@@ -293,7 +295,7 @@ jQuery(document).ready(function($) {
                 } else if (accordionItem.hasClass(secondary)) {
                     var secondaryCountOpen = $('.secondary.open').length;
 
-                    accordionList.removeClass('neighbors-open');
+                    accordionList.not('.primary').not('.third').removeClass('neighbors-open');
 
                     if (prevItem.hasClass(primary) && !nextItem.hasClass(primary)) {
                         prevItem.addClass('neighbors-open');
@@ -315,7 +317,6 @@ jQuery(document).ready(function($) {
 
 
                 } else if (accordionItem.hasClass(third)) {
-                    accordionList.removeClass('neighbors-open');
 
                     if (prevItem.hasClass(secondary) && !nextItem.hasClass(secondary)) {
                         prevItem.addClass('neighbors-open');
