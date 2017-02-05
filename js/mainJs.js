@@ -264,17 +264,19 @@ jQuery(document).ready(function($) {
     }
 
     function firstLoadMobile() {
-        if ($(window).width() <= '768') {
-            var clickCont = 0;
-            $('.primary.open .accordion-content').click(function () {
-                if (clickCont < 1) {
-                    accordionList.removeClass('open');
-                    accordionList.find('.accordion-content').slideUp(duration);
-                    accordionList.removeClass('disable');
-                }
-                clickCont++;
-            });
-        }
+        $(window).on('load resize', function() {
+            if ($(window).width() <= '768') {
+                var clickCont = 0;
+                $('.primary.open .accordion-content').click(function () {
+                    if (clickCont < 1) {
+                        accordionList.removeClass('open');
+                        accordionList.find('.accordion-content').slideUp(duration);
+                        accordionList.removeClass('disable');
+                    }
+                    clickCont++;
+                });
+            }
+        });
     }
 
     firstLoadMobile();
