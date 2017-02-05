@@ -263,11 +263,12 @@ jQuery(document).ready(function($) {
         }, 10);
     }
 
+
     function firstLoadMobile() {
         $(window).on('load resize', function() {
-            if ($(window).width() <= '768') {
+            if ($(window).width() <= '1080') {
                 var clickCont = 0;
-                $('.primary.open .accordion-content').click(function () {
+                $('.primary.open .accordion-content').on('click touch touchend', function() {
                     if (clickCont < 1) {
                         accordionList.removeClass('open');
                         accordionList.find('.accordion-content').slideUp(duration);
@@ -278,8 +279,8 @@ jQuery(document).ready(function($) {
             }
         });
     }
-
     firstLoadMobile();
+
 
     function scrollHash() {
         setTimeout(function () {
