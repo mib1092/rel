@@ -263,6 +263,22 @@ jQuery(document).ready(function($) {
         }, 10);
     }
 
+    function firstLoadMobile() {
+        if ($(window).width() <= '768') {
+            var clickCont = 0;
+            $('.primary.open .accordion-content').click(function () {
+                if (clickCont < 1) {
+                    accordionList.removeClass('open');
+                    accordionList.find('.accordion-content').slideUp(duration);
+                    accordionList.removeClass('disable');
+                }
+                clickCont++;
+            });
+        }
+    }
+
+    firstLoadMobile();
+
     function scrollHash() {
         setTimeout(function () {
             var target = window.location.hash;
