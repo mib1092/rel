@@ -151,14 +151,13 @@ jQuery(document).ready(function($) {
         allNavItem = $('.nav-menu a, .accordion-link:not(.active)'),
         duration = 350;
 
-    function mainLogic() {
+    function mainLogic(arg) {
         setTimeout(function () {
             var href = window.location.hash,
                 navItems = $('[href="'+href+'"]'),
                 accordionItem = $('.accordion-list').find('[href="'+href+'"]').parent(),
                 nextItem = accordionItem.next(),
                 prevItem = accordionItem.prev();
-
             if (!accordionItem.hasClass('open')) {
                 if (accordionItem.hasClass(primary)) {
                     accordionList.removeClass('neighbors-open');
@@ -229,10 +228,20 @@ jQuery(document).ready(function($) {
                     accordionItem.find('.accordion-content').slideDown(duration);
                 }
             } else {
-                if (accordionItem.hasClass(primary)) {
-                    accordionList.removeClass('open');
-                    accordionList.find('.accordion-content').slideUp(duration);
-                    accordionList.removeClass('disable');
+                if ( arg == 'click') {
+                    if (accordionItem.hasClass(primary)) {
+                        accordionList.removeClass('open');
+                        accordionList.find('.accordion-content').slideUp(duration);
+                        accordionList.removeClass('disable');
+                    } else if (accordionItem.hasClass(secondary)) {
+                        accordionList.removeClass('open');
+                        accordionList.find('.accordion-content').slideUp(duration);
+                        accordionList.removeClass('disable');
+                    } else if (accordionItem.hasClass(third)) {
+                        accordionList.removeClass('open');
+                        accordionList.find('.accordion-content').slideUp(duration);
+                        accordionList.removeClass('disable');
+                    }
                 }
             }
 
@@ -254,7 +263,7 @@ jQuery(document).ready(function($) {
     }
 
     allNavItem.click(function(){
-        mainLogic();
+        mainLogic('click');
         setTimeout(function () {
             var target = window.location.hash;
             $('html, body').animate({
@@ -264,7 +273,7 @@ jQuery(document).ready(function($) {
     });
 
     $(window).on('load', function() {
-        mainLogic();
+        mainLogic('load');
     });
 
 });
