@@ -755,9 +755,9 @@ img {
 		.primary.open .accordion-link:before {
 			content: none;
 		}
-            .open .tab-title {
-                color: #0cbcc9;
-            }
+            /*.open .tab-title {*/
+                /*color: #0cbcc9;*/
+            /*}*/
 		.primary.open:last-child .accordion-tab {
 			-webkit-border-radius: 0;
 			-moz-border-radius: 0;
@@ -806,19 +806,19 @@ img {
 	.third .tab-title {
 		color: #24737C;
 	}
-.secondary.open .accordion-link,
-.third.open .accordion-link {
-	margin: 0;
-	background-color: #F2FBFA;
-}
-.secondary.open .accordion-tab,
-.third.open .accordion-tab {
-	background-color: #F2FBFA;
-}
-.secondary.open .tab-title,
-.third.open .tab-title {
-	color: #0cbcc9;
-}
+/*.secondary.open .accordion-link,*/
+/*.third.open .accordion-link {*/
+	/*margin: 0;*/
+	/*background-color: #F2FBFA;*/
+/*}*/
+/*.secondary.open .accordion-tab,*/
+/*.third.open .accordion-tab {*/
+	/*background-color: #F2FBFA;*/
+/*}*/
+/*.secondary.open .tab-title,*/
+/*.third.open .tab-title {*/
+	/*color: #0cbcc9;*/
+/*}*/
 .primary.open .tab-title,
 .primary.open .accordion-content,
 .primary.open .tab-title-info {

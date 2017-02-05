@@ -186,8 +186,15 @@ jQuery(document).ready(function($) {
                     } else {
                         accordionList.removeClass('disable');
                     }
-                    accordionItem.addClass('open');
-                    accordionItem.find('.accordion-content').slideDown(duration);
+
+                    if (href == '#impact') {
+                        accordionList.not('.primary').not('.third').addClass('open');
+                        accordionList.not('.primary').not('.third').find('.accordion-content').slideDown(duration);
+                        thirdItems.addClass('disable');
+                    } else {
+                        accordionItem.addClass('open');
+                        accordionItem.find('.accordion-content').slideDown(duration);
+                    }
 
 
                 } else if (accordionItem.hasClass(third)) {
@@ -203,19 +210,29 @@ jQuery(document).ready(function($) {
                         prevItem.addClass('top');
                         nextItem.removeClass('top');
                         nextItem.addClass('bottom');
+                        accordionItem.removeClass('bottom');
+                        accordionItem.addClass('top');
                     } else if (!prevItem.hasClass(secondary) && nextItem.hasClass(secondary)) {
                         nextItem.addClass('neighbors-open');
                         if (nextItem.hasClass(secondary) && prevItem.hasClass(third) ) {
                             prevItem.removeClass('bottom');
                             prevItem.addClass('top');
+                            accordionItem.removeClass('bottom');
+                            accordionItem.addClass('top');
                         }
                     }
 
-                    accordionList.not('.third').find('.accordion-content').slideUp(duration);
+                    accordionList.find('.accordion-content').slideUp(duration);
                     accordionList.removeClass('disable');
-                    accordionList.not('.third').removeClass('open');
+                    accordionList.removeClass('open');
                     accordionItem.addClass('open');
                     accordionItem.find('.accordion-content').slideDown(duration);
+                }
+            } else {
+                if (accordionItem.hasClass(primary)) {
+                    accordionList.removeClass('open');
+                    accordionList.find('.accordion-content').slideUp(duration);
+                    accordionList.removeClass('disable');
                 }
             }
 
@@ -229,7 +246,6 @@ jQuery(document).ready(function($) {
                   if (id == allNavItem.eq(y).attr('href')) {
                       allNavItem.eq(y).addClass('active');
                   }
-                  console.log(allNavItem.eq(y));
                 })
 
             });
