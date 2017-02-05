@@ -9,8 +9,9 @@ jQuery(document).ready(function($) {
 
     // for header-fixed padding
     $(window).on('load resize', function() {
+        headerHeight = $('#header').outerHeight();
+
         if ($(window).width() <= '768') {
-            var headerHeight = $('#header').outerHeight();
             $('.wrapper').css('padding-top', headerHeight);
         } else {
             $('.wrapper').removeAttr('style');
@@ -261,12 +262,8 @@ jQuery(document).ready(function($) {
 
         }, 10);
     }
-    $(window).on('load resize', function() {
-        headerHeight = $('#header').height();
-    });
 
-    allNavItem.click(function(){
-        mainLogic('click');
+    function scrollHash() {
         setTimeout(function () {
             var target = window.location.hash;
             if ($(window).width() <= '768') {
@@ -275,26 +272,20 @@ jQuery(document).ready(function($) {
                 }, 400);
             } else {
                 $('html, body').animate({
-                    scrollTop: $(target).offset().top
+                    scrollTop: $(target).offset().top - 30
                 }, 400);
             }
         }, duration + 10);
+    }
+
+    allNavItem.click(function(){
+        mainLogic('click');
+        scrollHash();
     });
 
     $(window).on('load', function() {
         mainLogic('load');
-        setTimeout(function () {
-            var target = window.location.hash;
-            if ($(window).width() <= '768') {
-                $('html, body').animate({
-                    scrollTop: $(target).offset().top - (headerHeight + 30)
-                }, 400);
-            } else {
-                $('html, body').animate({
-                    scrollTop: $(target).offset().top
-                }, 400);
-            }
-        }, duration + 100);
+        scrollHash();
     });
 
 });
