@@ -1716,7 +1716,7 @@ img {
         max-height: 30px;
     }
     .wrapper {
-        padding-top: 120px;
+        padding-top: 100px;
     }
     .logo-wrap {
         padding-right: 0;
@@ -1724,13 +1724,15 @@ img {
     }
     .logo {
         float: none;
+        max-width: 140px;
         margin: 0 45px;
     }
     .logo-wrap strong {
         display: block;
+        font-size: 1.35em;
         line-height: 1.25;
-        margin-top: 10px;
-        margin-bottom: -7px;
+        margin-top: 6px;
+        margin-bottom: -6px;
     }
     .mobile-menu-toggle {
         top: 13px;
