@@ -261,19 +261,40 @@ jQuery(document).ready(function($) {
 
         }, 10);
     }
+    $(window).on('load resize', function() {
+        headerHeight = $('#header').height();
+    });
 
     allNavItem.click(function(){
         mainLogic('click');
         setTimeout(function () {
             var target = window.location.hash;
-            $('html, body').animate({
-                scrollTop: $(target).offset().top
-            }, 400);
+            if ($(window).width() <= '768') {
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top-headerHeight
+                }, 400);
+            } else {
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top
+                }, 400);
+            }
         }, duration + 10);
     });
 
     $(window).on('load', function() {
         mainLogic('load');
+        setTimeout(function () {
+            var target = window.location.hash;
+            if ($(window).width() <= '768') {
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top-headerHeight
+                }, 400);
+            } else {
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top
+                }, 400);
+            }
+        }, duration + 100);
     });
 
 });
