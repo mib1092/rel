@@ -266,15 +266,11 @@ jQuery(document).ready(function($) {
     function scrollHash() {
         setTimeout(function () {
             var target = window.location.hash;
-            if ($(window).width() <= '768') {
-                $('html, body').animate({
-                    scrollTop: $(target).offset().top - (headerHeight + 30)
-                }, 400);
-            } else {
-                $('html, body').animate({
-                    scrollTop: $(target).offset().top - 30
-                }, 400);
-            }
+            var deduction = $(window).width() <= '768' ? headerHeight + 30 : 30;
+
+            $('html, body').animate({
+                scrollTop: $(target).offset().top - deduction
+            }, 400);
         }, duration + 10);
     }
 
