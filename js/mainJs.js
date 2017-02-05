@@ -271,7 +271,7 @@ jQuery(document).ready(function($) {
             var target = window.location.hash;
             if ($(window).width() <= '768') {
                 $('html, body').animate({
-                    scrollTop: $(target).offset().top-headerHeight
+                    scrollTop: $(target).offset().top - (headerHeight + 30)
                 }, 400);
             } else {
                 $('html, body').animate({
@@ -287,7 +287,7 @@ jQuery(document).ready(function($) {
             var target = window.location.hash;
             if ($(window).width() <= '768') {
                 $('html, body').animate({
-                    scrollTop: $(target).offset().top-headerHeight
+                    scrollTop: $(target).offset().top - (headerHeight + 30)
                 }, 400);
             } else {
                 $('html, body').animate({
