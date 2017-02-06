@@ -508,9 +508,11 @@ img {
                     padding: 20px 80px;
                     cursor: pointer;
                 }
-                .open .accordion-tab,
-                .accordion-tab:hover {
+                .open .accordion-tab {
                     color: #0cbcc9;
+                }
+                .accordion-tab:hover .tab-title {
+                    color: #ffffff;
                 }
                 .accordion-tab:hover {
                     -webkit-transition: color 0.25s;
@@ -537,6 +539,10 @@ img {
                             .tab-title {
                                 font: 1.75em/1.4 'Gotham-Medium', 'MyriadProRegular', Arial, sans-serif;
 								text-transform: uppercase;
+                                -webkit-transition: 0.25s;
+                                -moz-transition: 0.25s;
+                                -o-transition: 0.25s;
+                                transition: 0.25s;
                             }
                             .tab-title-info {
                                 display: none;
@@ -565,9 +571,11 @@ img {
                         -moz-border-radius: 4px;
                         border-radius: 4px;
                     }
-                    .open .open-icon,
-                    .accordion-tab:hover .open-icon {
+                    .open .open-icon {
                         border-color: #0cbcc9;
+                    }
+                    .accordion-tab:hover .open-icon {
+                        border-color: #ffffff;
                     }
                         .open-icon:before,
                         .open-icon:after {
@@ -593,10 +601,12 @@ img {
                             height: 14px;
                         }
                         .open .open-icon:before,
-                        .open .open-icon:after,
+                        .open .open-icon:after {
+                            background-color: #0cbcc9;
+                        }
                         .accordion-tab:hover .open-icon:before,
                         .accordion-tab:hover .open-icon:after {
-                            background-color: #0cbcc9;
+                            background-color: #ffffff;
                         }
                         .open .open-icon:after {
                             -moz-transform: rotate(-90deg);
@@ -673,6 +683,20 @@ img {
 #impact .accordion-content {
     padding-left: 4%;
     padding-right: 4%;
+}
+#continue-button {
+    position: absolute;
+    bottom: -17px;
+    left: 50%;
+    font-family: 'Gotham-Bold', 'MyriadProRegular', Arial, sans-serif;
+    font-size: 1.35em;
+    margin-left: -70px;
+    padding: 0 10px;
+    z-index: 999;
+    color: #ffffff;
+    background-color: #0c7281;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 /*---------------------------------CUSTOM-ACCORDION--------------------------------*/
 .primary {
@@ -751,6 +775,12 @@ img {
 		.primary.open .accordion-link {
 			margin: 0;
 		}
+        .primary #continue-button {
+            display: none;
+        }
+        .primary.open #continue-button {
+            display: block;
+        }
 		.primary.open .accordion-link:after,
 		.primary.open .accordion-link:before {
 			content: none;
@@ -1169,8 +1199,13 @@ img {
         .example-item {
             opacity: 0.5;
             cursor: pointer;
+            -webkit-transition: 0.25s;
+            -moz-transition: 0.25s;
+            -o-transition: 0.25s;
+            transition: 0.25s;
         }
-        .example-item.active {
+        .example-item.active,
+        .example-item:hover {
             opacity: 1;
         }
 .owl-nav {

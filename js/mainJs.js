@@ -267,14 +267,14 @@ jQuery(document).ready(function($) {
     function firstLoadMobile() {
         $(window).on('load resize', function() {
             if ($(window).width() <= '1080') {
-                var clickCont = 0;
-                $('.primary.open .accordion-content').on('click touch touchend', function() {
-                    if (clickCont < 1) {
+                // var clickCont = 0;
+                $('#continue-button').on('click touch touchend', function() {
+                    // if (clickCont < 1) {
                         accordionList.removeClass('open');
                         accordionList.find('.accordion-content').slideUp(duration);
                         accordionList.removeClass('disable');
-                    }
-                    clickCont++;
+                    // }
+                    // clickCont++;
                 });
             }
         });
