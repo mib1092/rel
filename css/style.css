@@ -608,12 +608,20 @@ img {
                         .accordion-tab:hover .open-icon:after {
                             background-color: #ffffff;
                         }
+                        .primary .open-icon:after,
                         .open .open-icon:after {
                             -moz-transform: rotate(-90deg);
                             -ms-transform: rotate(-90deg);
                             -webkit-transform: rotate(-90deg);
                             -o-transform: rotate(-90deg);
                             transform: rotate(-90deg);
+                        }
+                        .primary.open .open-icon:after {
+                            -moz-transform: rotate(0deg);
+                            -ms-transform: rotate(0deg);
+                            -webkit-transform: rotate(0deg);
+                            -o-transform: rotate(0deg);
+                            transform: rotate(0deg);
                         }
                 .accordion-content {
                     display: none;
