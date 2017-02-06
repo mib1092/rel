@@ -113,7 +113,6 @@ jQuery(document).ready(function($) {
                             maxHeight = $(this).height();
                         }
                     });
-                    console.log(maxHeight);
                     box.height(maxHeight);
                 }, 500);
             }
@@ -266,9 +265,9 @@ jQuery(document).ready(function($) {
 
     function firstLoadMobile() {
         $(window).on('load resize', function() {
-            if ($(window).width() <= '1080') {
+            // if ($(window).width() <= '1080') {
                 // var clickCont = 0;
-                $('#continue-button').on('click touch touchend', function() {
+                $('#continue').on('click touch', function() {
                     // if (clickCont < 1) {
                         accordionList.removeClass('open');
                         accordionList.find('.accordion-content').slideUp(duration);
@@ -276,7 +275,7 @@ jQuery(document).ready(function($) {
                     // }
                     // clickCont++;
                 });
-            }
+            // }
         });
     }
     firstLoadMobile();

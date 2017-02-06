@@ -684,20 +684,27 @@ img {
     padding-left: 4%;
     padding-right: 4%;
 }
-#continue-button {
+.continue-btn {
     position: absolute;
     bottom: -17px;
     left: 50%;
     font-family: 'Gotham-Bold', 'MyriadProRegular', Arial, sans-serif;
     font-size: 1.35em;
-    margin-left: -70px;
     padding: 0 10px;
     z-index: 999;
     color: #ffffff;
     background-color: #0c7281;
     text-transform: uppercase;
     cursor: pointer;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
+.continue-btn .fa-angle-right {
+    font-size: 1.2em;
+    margin-left: 4px;
+}
+
 /*---------------------------------CUSTOM-ACCORDION--------------------------------*/
 .primary {
 	margin: 0 20px;
@@ -714,6 +721,7 @@ img {
 		-webkit-border-radius: 0 0 10px 10px;
 		-moz-border-radius: 0 0 10px 10px;
 		border-radius: 0 0 10px 10px;
+        padding-top: 25px;
 	}
 		.accordion-link {
 			display: block;
@@ -775,10 +783,10 @@ img {
 		.primary.open .accordion-link {
 			margin: 0;
 		}
-        .primary #continue-button {
+        .primary .continue-btn {
             display: none;
         }
-        .primary.open #continue-button {
+        .primary.open .continue-btn {
             display: block;
         }
 		.primary.open .accordion-link:after,
