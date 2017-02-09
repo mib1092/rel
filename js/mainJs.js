@@ -300,10 +300,15 @@ jQuery(document).ready(function($) {
             // if ($(window).width() <= '1080') {
                 // var clickCont = 0;
                 $('#continue').on('click touch', function() {
+                    var deduction = $(window).width() <= '768' ? headerHeight + 30 : 30;
                     // if (clickCont < 1) {
                         accordionList.removeClass('open');
                         accordionList.find('.accordion-content').slideUp(duration);
                         accordionList.removeClass('disable');
+                        $('html, body').animate({
+                            scrollTop: $('#problem').offset().top - deduction
+                        }, 400);
+
                     // }
                     // clickCont++;
                 });
