@@ -937,7 +937,6 @@ img {
 }
     .popup-content-wrap {
         text-align: center;
-        max-width: 540px;
         width: 100%;
         margin: 0 auto;
     }
@@ -1795,6 +1794,10 @@ img {
         padding-left: 20px;
         padding-right: 20px;
     }
+    .white-popup {
+        padding-left: 25px;
+        padding-right: 25px;
+    )
 }
 @media all and (max-width: 560px) {
     .primary {
