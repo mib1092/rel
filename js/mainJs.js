@@ -124,7 +124,7 @@ jQuery(document).ready(function($) {
                 //     // idTabContent.find('.sub-tab-box').slideDown(500);
                 // }, 500);
 
-                // height carousel box
+                // height carousel content box
                 setTimeout(function () {
                     var box = idTabContent.find('.slider-text-content'),
                         maxHeight = 0;
@@ -134,6 +134,17 @@ jQuery(document).ready(function($) {
                         }
                     });
                     box.height(maxHeight);
+                }, 500);
+                // height carousel content box
+                setTimeout(function () {
+                    var wbox = idTabContent.find('.slider-text-wrap'),
+                        wmaxHeight = 0;
+                    wbox.each(function(){
+                        if ( $(this).height() > wmaxHeight ){
+                            wmaxHeight = $(this).height();
+                        }
+                    });
+                    wbox.height(wmaxHeight);
                 }, 500);
             }
     });
