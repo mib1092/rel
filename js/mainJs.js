@@ -85,6 +85,9 @@ jQuery(document).ready(function($) {
             },
             1440:{
                 items:6
+            },
+            1700:{
+                items:7
             }
         }
     });
