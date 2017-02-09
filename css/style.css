@@ -110,9 +110,6 @@ img {
     margin: 0 -4%;
     text-align: center;
 }
-.owl-list {
-    display: none !important;
-}
     .cell-list > li {
         display: inline-block;
         width: 49%;
@@ -1220,6 +1217,11 @@ img {
 .owl-dots .owl-dot.active span, .owl-dots .owl-dot:hover span {
     background: #ffffff;
 }
+.owl-list .owl-nav.disabled + .owl-dots {
+    margin-top: 25px;
+    margin-bottom: -15px;
+}
+
 .owl-list .owl-dots .owl-dot span {
     background: rgba(16, 159, 181, 0.25);
 }
@@ -1641,12 +1643,6 @@ img {
 @media all and (max-width: 768px) {
     .accordion-sub-tab-list {
         width: 100%;
-    }
-    .cell-list {
-        display: none;
-    }
-    .owl-list {
-        display: block !important;
     }
     .cell-list > li {
         width: 100%;
