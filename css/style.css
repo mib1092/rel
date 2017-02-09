@@ -200,6 +200,9 @@ img {
                     .description-cell {
                         display: block;
                     }
+                    .owl-list .description-cell {
+                        text-align: left;
+                    }
                     .description-cell p {
                         margin-bottom: 8px;
                     }
@@ -1229,9 +1232,11 @@ img {
     display: inline-block;
 }
 
-.owl-list .owl-dots .owl-dot.active span, .owl-dots .owl-dot:hover span {
+.owl-dots .owl-dot:hover span {
+    background: rgba(132, 187, 194, 1);
+}
+.owl-list .owl-dots .owl-dot.active span {
     background: rgba(16, 159, 181, 1);
-    /*background: rgba(132, 187, 194, 1);*/
 }
 .owl-examples {
     display: none !important;

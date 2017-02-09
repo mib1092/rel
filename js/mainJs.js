@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
     });
 
 
-    //carousel
+    // for Outcomes carousel
     $(".owl-text").owlCarousel({
         items: 1,
         loop: true,
@@ -52,6 +52,7 @@ jQuery(document).ready(function($) {
             }
         }
     });
+
 
     // tab carousel
     $(".owl-list").owlCarousel({
