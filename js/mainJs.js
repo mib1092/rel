@@ -62,25 +62,30 @@ jQuery(document).ready(function($) {
             0:{
                 items:2
             },
-            320:{
-                items:2
-            },
-            420:{
+            360:{
                 items:3
             },
-            480:{
+            420:{
                 items:4
             },
-            640:{
+            560:{
                 items:5
+            },
+            767:{
+                items:6
+            },
+            860:{
+                items:7
             },
             1081:{
                 items:4
             },
             1240:{
                 items:5
+            },
+            1440:{
+                items:6
             }
-
         }
     });
 
