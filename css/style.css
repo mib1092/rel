@@ -110,6 +110,9 @@ img {
     margin: 0 -4%;
     text-align: center;
 }
+.owl-list {
+    display: none !important;
+}
     .cell-list > li {
         display: inline-block;
         width: 49%;
@@ -1217,6 +1220,17 @@ img {
 .owl-dots .owl-dot.active span, .owl-dots .owl-dot:hover span {
     background: #ffffff;
 }
+.owl-list .owl-dots .owl-dot span {
+    background: rgba(16, 159, 181, 0.25);
+}
+.owl-list.owl-carousel .owl-item img {
+    display: inline-block;
+}
+
+.owl-list .owl-dots .owl-dot.active span, .owl-dots .owl-dot:hover span {
+    background: rgba(16, 159, 181, 1);
+    /*background: rgba(132, 187, 194, 1);*/
+}
 .owl-examples {
     display: none !important;
 }
@@ -1627,6 +1641,12 @@ img {
 @media all and (max-width: 768px) {
     .accordion-sub-tab-list {
         width: 100%;
+    }
+    .cell-list {
+        display: none;
+    }
+    .owl-list {
+        display: block !important;
     }
     .cell-list > li {
         width: 100%;

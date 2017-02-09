@@ -54,6 +54,17 @@ jQuery(document).ready(function($) {
     });
 
     // tab carousel
+    $(".owl-list").owlCarousel({
+        items: 1,
+        loop: true,
+        responsive:{
+            0:{
+                items:1
+            }
+        }
+    });
+
+    // tab carousel
     $(".owl-examples").owlCarousel({
         dots: false,
         nav: true,
@@ -91,6 +102,7 @@ jQuery(document).ready(function($) {
             }
         }
     });
+
 
     //for sub tab
     $('.accordion-sub-tab-list li').click(function(){
