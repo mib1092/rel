@@ -105,6 +105,25 @@ jQuery(document).ready(function($) {
     });
 
 
+    // for min-height LI
+    $(window).on('load resize', function() {
+        var mh = 0,
+            contentLi = $(".primary .accordion-content-box ul li");
+
+        if ($(window).width() > '736') {
+            contentLi.each(function () {
+                if ($(this).outerHeight() > mh) {
+                    mh = $(this).outerHeight();
+                }
+            });
+            contentLi.css('min-height', mh);
+        } else {
+            contentLi.removeAttr('style');
+        }
+    });
+
+
+
     //for sub tab
     $('.accordion-sub-tab-list li').click(function(){
         var tabID = $(this).data('subTab'),
@@ -284,9 +303,9 @@ jQuery(document).ready(function($) {
             activeNavItem.each(function (i) {
                 var id = activeNavItem.eq(i).attr('href');
                 allNavItem.each(function (y) {
-                  if (id == allNavItem.eq(y).attr('href')) {
-                      allNavItem.eq(y).addClass('active');
-                  }
+                    if (id == allNavItem.eq(y).attr('href')) {
+                        allNavItem.eq(y).addClass('active');
+                    }
                 })
 
             });

@@ -697,14 +697,16 @@ img {
 }
 .continue-btn {
     position: absolute;
-    bottom: -17px;
+    bottom: -20px;
     left: 50%;
-    font-family: 'Gotham-Bold', 'MyriadProRegular', Arial, sans-serif;
-    font-size: 1.35em;
-    padding: 0 10px;
+    min-width: 130px;
+    font-family: 'Gotham-Medium', 'Gotham-Bold', 'MyriadProRegular', Arial, sans-serif;
+    font-size: 1.3em;
+    padding: 4px 15px 3px;
     z-index: 999;
-    color: #ffffff;
-    background-color: #0c7281;
+    background: #0cbcc9;
+    color: #065864;
+    border-radius: 10px;
     text-transform: uppercase;
     cursor: pointer;
     -webkit-transform: translateX(-50%);
@@ -712,8 +714,31 @@ img {
     transform: translateX(-50%);
 }
 .continue-btn .fa-angle-right {
-    font-size: 1.2em;
-    margin-left: 4px;
+    font-size: 1.3em;
+    margin-left: 3px;
+    position: relative;
+    top: 1px;
+}
+.continue-btn:hover {
+    color: #ffffff;
+}
+#problem .accordion-content-box ul {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+.primary .accordion-content-box ul li {
+    display: inline-block;
+    width: 46%;
+    width: -moz-calc(49% - 20px);
+    width: calc(49% - 20px);
+    padding: 20px 30px;
+    background-color: #0a6876;
+    margin: 0 10px 20px;
+    border-radius: 10px;
+    vertical-align: top;
+    text-align: center;
+    font-size: 0.95em;
 }
 
 /*---------------------------------CUSTOM-ACCORDION--------------------------------*/
@@ -732,8 +757,10 @@ img {
 		-webkit-border-radius: 0 0 10px 10px;
 		-moz-border-radius: 0 0 10px 10px;
 		border-radius: 0 0 10px 10px;
-        padding-top: 25px;
 	}
+    .primary.bottom.open .accordion-tab {
+        padding-top: 60px;
+    }
 		.accordion-link {
 			display: block;
 			position: relative;
@@ -1738,6 +1765,10 @@ img {
     .sub-tab-item-title {
         display: none;
     }
+    .primary .accordion-content-box ul li {
+        width: 100%;
+        margin: 0 0 20px;
+    }
 }
 @media all and (max-width: 640px) {
     #target-outcomes .accordion-content,
@@ -1924,6 +1955,10 @@ img {
     }
     .accordion-content-box.assets-content {
         padding: 0 15px;
+    }
+    .primary .accordion-content-box ul li {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 @media all and (max-width: 360px) {
