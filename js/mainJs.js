@@ -187,7 +187,16 @@ jQuery(document).ready(function($) {
                 tabWrap.find("[data-examples-item="+tabID+"]").addClass('active');
                 idTabContent.addClass('active');
             }
+    });
+    //close example tab content
+    $('.accordion-content-box-wrap .mfp-close, .accordion-sub-tab-list li').on('click', function () {
+        var tabWrap = $('.strategy-examples-block'),
+            tabContent = tabWrap.children('.strategy-examples-box-list'),
+            allTab = tabWrap.find('.example-item'),
+            allTabContent = tabContent.children();
 
+        allTab.removeClass('active');
+        allTabContent.removeClass('active');
     });
 
 
@@ -231,20 +240,21 @@ jQuery(document).ready(function($) {
 
                     accordionList.not('.secondary').find('.accordion-content').slideUp(duration);
                     accordionList.not('.secondary').removeClass('open');
-                    if(secondaryCountOpen > 0) {
-                        thirdItems.addClass('disable');
-                    } else {
-                        accordionList.removeClass('disable');
-                    }
+                    // if(secondaryCountOpen > 0) {
+                    //     thirdItems.addClass('disable');
+                    // } else {
+                    //     accordionList.removeClass('disable');
+                    // }
 
-                    if (href == '#impact') {
-                        accordionList.not('.primary').not('.third').addClass('open');
-                        accordionList.not('.primary').not('.third').find('.accordion-content').slideDown(duration);
-                        thirdItems.addClass('disable');
-                    } else {
+                    // if (href == '#impact') {
+                    //     accordionList.not('.primary').not('.third').addClass('open');
+                    //     accordionList.not('.primary').not('.third').find('.accordion-content').slideDown(duration);
+                    //     thirdItems.addClass('disable');
+                    // } else {
+                        accordionList.removeClass('disable');
                         accordionItem.addClass('open');
                         accordionItem.find('.accordion-content').slideDown(duration);
-                    }
+                    // }
 
 
                 } else if (accordionItem.hasClass(third)) {
