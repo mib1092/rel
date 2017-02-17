@@ -1208,22 +1208,30 @@ img {
                             .slider-text-content,
                             .item-content {
                                 text-align: left;
+                                color: #ffffff;
                             }
                                 .slider-text-content > * {
                                     font-size: 0.94em;
                                     margin-bottom: 10px;
                                 }
                                 .item-content > p a.open-popup-link {
+                                    color: #ffffff;
+                                    text-decoration: none;
+                                }
+                                .item-content > p .link-more {
                                     margin-left: 8px;
                                     font-size: 0.9em;
-                                    color: #ffffff;
+                                    -webkit-transition: 0.25s;
+                                    -moz-transition: 0.25s;
+                                    -o-transition: 0.25s;
+                                    transition: 0.25s;
                                 }
-                                .open-popup-link .fa-angle-right {
-                                    margin-left: 1px;
-                                }
-                                .item-content > p a.open-popup-link:hover {
+                                .item-content > p a.open-popup-link:hover .link-more {
                                     color: #0cbcc9;
                                     text-decoration: none;
+                                }
+                                .link-more .fa-angle-right {
+                                    margin-left: 1px;
                                 }
                                 .slider-text-content a {
                                     color: #ffffff;
