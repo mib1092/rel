@@ -1162,14 +1162,13 @@ img {
                 background-color: #F2FBFA;
             }
             .slider-list {
-                /*width: 100%;*/
                 margin: 0 -10px;
             }
                 .slider-list > li {
+                    position: relative;
                     color: #ffffff;
                     display: inline-block;
                     width: 32%;
-                    /*max-width: 360px;*/
                     padding: 0 10px;
                     vertical-align: top;
                 }
@@ -1179,6 +1178,52 @@ img {
                 .slider-list.one > li {
                     width: 100%;
                 }
+                    .slider-list > li:before,
+                    .slider-list > li:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        z-index: 3;
+                    }
+                    .slider-list > li:before {
+                        top: 30px;
+                        left: -16px;
+                        background: #109fb5;
+                        width: 36px;
+                        height: 14px;
+                    }
+                    .slider-list > li:after {
+                        top: 24px;
+                        left: 20px;
+                        width: 0;
+                        height: 0;
+                        border: 13px solid transparent;
+                        border-left: 16px solid #109fb5;
+                        border-right: 0;
+                    }
+                    .theme-light-color + li:before {
+                        background-color: #109fb5;
+                    }
+                    .theme-light-color + li:after {
+                        border-left-color: #109fb5;
+                    }
+                    .theme-color + li:before {
+                        background-color: #0e899b;
+                    }
+                    .theme-color + li:after {
+                        border-left-color: #0e899b;
+                    }
+                    .theme-dark-color + li:before {
+                        background-color: #0c7281;
+                    }
+                    .theme-dark-color + li:after {
+                        border-left-color: #0c7281;
+                    }
+                    .slider-list > li:first-of-type:before,
+                    .slider-list > li:first-of-type:after {
+                        display: none;
+                    }
+
                     .slider-text-wrap {
                         padding: 24px 20px 20px
                     }
@@ -1585,9 +1630,6 @@ img {
     .mobile-menu-toggle {
         right: -12px;
     }
-    /*.container .main {*/
-        /*padding-right: 10px;*/
-    /*}*/
     .footer-box,
     .footer-top .footer-box {
         padding: 40px 10px;
@@ -1648,6 +1690,24 @@ img {
     .slider-list.two > li,
     .slider-list.one > li {
         margin-bottom: 0;
+    }
+    .slider-list > li:nth-child(3):before {
+        top: -31px;
+        left: inherit;
+        right: 30px;
+        width: 14px;
+        height: 41px;
+    }
+    .slider-list > li:nth-child(3):after {
+        top: 10px;
+        right: 24px;
+        left: inherit;
+        border: 13px solid transparent;
+        border-top: 16px solid #109fb5;
+        border-bottom: 0;
+    }
+    .theme-color + li:nth-child(3):after {
+        border-top-color: #0e899b;
     }
 }
 @media all and (max-width: 1180px) {
@@ -1842,7 +1902,7 @@ img {
     .slider-list > li,
     .slider-list.two > li {
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
     .slider-text-content {
         height: auto !important;
@@ -1894,6 +1954,35 @@ img {
     .white-popup {
         padding-left: 25px;
         padding-right: 25px;
+    }
+    .slider-list > li:before,
+    .slider-list > li:nth-child(3):before {
+        top: -26px;
+        left: 50%;
+        right: inherit;
+        width: 14px;
+        height: 33px;
+        margin-left: -7px;
+    }
+    .slider-list > li:after,
+    .slider-list > li:nth-child(3):after {
+        top: 7px;
+        right: inherit;
+        left: 50%;
+        margin-left: -13px;
+        border: 13px solid transparent;
+        border-top: 16px solid #109fb5;
+        border-bottom: 0;
+    }
+    .theme-light-color + li:after {
+        border-top-color: #109fb5;
+    }
+    .theme-color + li:after,
+    .theme-color + li:nth-child(3):after {
+        border-top-color: #0e899b;
+    }
+    .theme-dark-color + li:after {
+        border-top-color: #0c7281;
     }
 }
 @media all and (max-width: 560px) {
