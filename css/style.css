@@ -651,7 +651,7 @@ img {
                             position: relative;
                         }
                         .accordion-content-box-wrap .mfp-close {
-                            right: 15px;
+                            left: 15px;
                             top: 15px;
                         }
                         .accordion-content-box > *:not(:last-child),
