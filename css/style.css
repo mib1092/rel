@@ -2131,6 +2131,10 @@ img {
     width: 100%;
     background: rgba(19, 22, 23, 0.3);
 }
+.fixed .header-box {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 .section {
     padding-top: 160px;
     padding-bottom: 30px;
