@@ -2139,6 +2139,10 @@ img {
     background-position: center;
     background-repeat: no-repeat;
 }
+.section.footer {
+    z-index: 200;
+    padding: 0;
+}
 .section .container {
     display: table;
     width: 100%;
@@ -2152,6 +2156,10 @@ img {
     padding-left: 184px;
     padding-right: 90px;
     vertical-align: middle;
+}
+.section.footer .container {
+    min-height: auto;
+    display: block;
 }
     .slide-box {
         max-width: 1040px;

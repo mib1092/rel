@@ -360,16 +360,16 @@ jQuery(document).ready(function($) {
             }, 400);
         }, duration + 10);
     }
-    //
-    // allNavItem.click(function(){
-    //     mainLogic('click');
-    //     scrollHash();
-    // });
-    //
-    // $(window).on('load', function() {
-    //     mainLogic('load');
-    //     scrollHash();
-    // });
+
+    allNavItem.click(function(){
+        mainLogic('click');
+        scrollHash();
+    });
+
+    $(window).on('load', function() {
+        mainLogic('load');
+        scrollHash();
+    });
 
     $('#fullpage').fullpage({
         verticalCentered: false,
@@ -379,4 +379,13 @@ jQuery(document).ready(function($) {
         navigationPosition: 'right'
     });
     console.log('init');
+
+    // footer height
+    $(window).on('load resize', function() {
+        var footer = $('#footer'),
+            footerSlide = $('.section.footer');
+            footerHeight = footer.outerHeight();
+
+            footerSlide.height(footerHeight);
+    })
 });
