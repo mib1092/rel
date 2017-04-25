@@ -2150,20 +2150,29 @@ img {
 .section .container {
     display: table;
     width: 100%;
-    min-height: 500px;
+    min-height: 200px;
     height: 100%;
 }
 .section .container-box {
     display: table-cell;
     width: 100%;
-    min-height: 400px;
+    min-height: 200px;
     padding-left: 184px;
-    padding-right: 90px;
+    padding-right: 120px;
     vertical-align: middle;
 }
 .section.footer .container {
     min-height: auto;
     display: block;
+}
+.fp-responsive .wrapper {
+    padding-top: 0 !important;
+}
+.fp-responsive #footer{
+    display: none;
+}
+.fp-responsive .wrapper:after {
+    height: 0;
 }
     .slide-box {
         max-width: 1040px;
@@ -2363,7 +2372,31 @@ img {
 }
 
 @media all and (max-width: 768px) {
-
+    .fixed .header-box {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .section {
+        padding-top: 85px
+    }
+    .slide-title {
+        font-size: 2.8em;
+    }
+    .section .content * {
+        font-size: 1.2em;
+    }
+    a.btn-slide, .btn-slide {
+        font-size: 1.4em;
+    }
+    .right-nav {
+        right: 15px;
+    }
+    .right-nav > li a {
+        padding-right: 15px;
+    }
+    .section .container-box {
+        padding-right: 60px;
+    }
 }
 
 @media all and (max-width: 767px) {

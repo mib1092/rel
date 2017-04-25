@@ -372,24 +372,69 @@ jQuery(document).ready(function($) {
     });
 
     //for fullpage
+    function maxHeight(box) {
+        var maxHeight = 0;
+        box.each(function () {
+            if ( $(this).height() > maxHeight ) {
+                maxHeight = $(this).height();
+            }
+        });
+        return maxHeight;
+    }
+
     $('#fullpage').fullpage({
         verticalCentered: false,
         css3:false,
         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
         menu: '#myMenu',
-        navigationPosition: 'right'
+        navigationPosition: 'right',
+        afterResponsive: function(isResponsive){
+
+        }
     });
-    console.log('init');
 
     $(window).on('load resize', function() {
         var footer = $('#footer'),
             footerSlide = $('.section.footer'),
             footerHeight = footer.outerHeight(),
             rightNav = $('.right-nav'),
-            rightNavHeight = rightNav.outerHeight() / 2;
+            rightNavHeight = rightNav.outerHeight() / 2,
+            box = $('.slide-box'),
+            maxH = maxHeight(box),
+            fullWinHeight = $(window).height(),
+            winHeight = fullWinHeight - $('.header').height();
 
-            console.log(rightNavHeight);
-            // rightNav.css('margin-top', '-' + rightNavHeight);
+            if (maxH > winHeight) {
+                setTimeout(function () {
+                    $.fn.fullpage.destroy('all');
+                    $('#fullpage').fullpage({
+                        verticalCentered: false,
+                        css3:false,
+                        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+                        menu: '#myMenu',
+                        navigationPosition: 'right',
+                        responsiveHeight: fullWinHeight + 50,
+                        afterResponsive: function(isResponsive){
+
+                        }
+                    });
+                },200)
+            }
+        setTimeout(function () {
             footerSlide.height(footerHeight);
-    })
+        }, 400);
+    });
+
+    // $('#fullpage').fullpage({
+    //     verticalCentered: false,
+    //     css3:false,
+    //     anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+    //     menu: '#myMenu',
+    //     navigationPosition: 'right',
+    //     //responsiveWidth: 1400,
+    //     responsiveHeight: 800,
+    //     afterResponsive: function(isResponsive){
+    //         console.log('resize');
+    //     }
+    // });
 });
