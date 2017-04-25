@@ -2275,10 +2275,10 @@ img {
                 color: #fff;
                 opacity: 0.3;
                 cursor: pointer;
-                -webkit-transition: 0.25s;
-                -moz-transition: 0.25s;
-                -o-transition: 0.25s;
-                transition: 0.25s;
+                -webkit-transition: 0.7s;
+                -moz-transition: 0.7s;
+                -o-transition: 0.7s;
+                transition: 0.7s;
             }
             .right-nav > li a:hover {
                 text-decoration: none;
@@ -2297,10 +2297,10 @@ img {
                 border-radius: 50%;
                 opacity: 0.3;
                 cursor: pointer;
-                -webkit-transition: 0.25s;
-                -moz-transition: 0.25s;
-                -o-transition: 0.25s;
-                transition: 0.25s;
+                -webkit-transition: 0.7s;
+                -moz-transition: 0.7s;
+                -o-transition: 0.7s;
+                transition: 0.7s;
             }
             .right-nav > li.active a {
                 opacity: 1;
