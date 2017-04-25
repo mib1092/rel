@@ -252,6 +252,9 @@ jQuery(document).ready(function($) {
                     //     thirdItems.addClass('disable');
                     // } else {
                         accordionList.removeClass('disable');
+                        accordionList.removeClass('open');
+                        accordionList.find('.accordion-content').slideUp(duration);
+                        accordionList.removeClass('disable');
                         accordionItem.addClass('open');
                         accordionItem.find('.accordion-content').slideDown(duration);
                     // }
@@ -295,9 +298,9 @@ jQuery(document).ready(function($) {
                         accordionList.find('.accordion-content').slideUp(duration);
                         accordionList.removeClass('disable');
                     } else if (accordionItem.hasClass(secondary)) {
-                        accordionList.removeClass('open');
-                        accordionList.find('.accordion-content').slideUp(duration);
-                        accordionList.removeClass('disable');
+                        // accordionItem.removeClass('open');
+                        // accordionItem.find('.accordion-content').slideUp(duration);
+                        // accordionItem.removeClass('disable');
                     } else if (accordionItem.hasClass(third)) {
                         accordionList.removeClass('open');
                         accordionList.find('.accordion-content').slideUp(duration);
@@ -357,15 +360,23 @@ jQuery(document).ready(function($) {
             }, 400);
         }, duration + 10);
     }
+    //
+    // allNavItem.click(function(){
+    //     mainLogic('click');
+    //     scrollHash();
+    // });
+    //
+    // $(window).on('load', function() {
+    //     mainLogic('load');
+    //     scrollHash();
+    // });
 
-    allNavItem.click(function(){
-        mainLogic('click');
-        scrollHash();
+    $('#fullpage').fullpage({
+        verticalCentered: false,
+        css3:false,
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+        menu: '#myMenu',
+        navigationPosition: 'right'
     });
-
-    $(window).on('load', function() {
-        mainLogic('load');
-        scrollHash();
-    });
-
+    console.log('init');
 });
