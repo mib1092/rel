@@ -2279,10 +2279,10 @@ img {
                 color: #fff;
                 opacity: 0.3;
                 cursor: pointer;
-                -webkit-transition: 0.7s;
-                -moz-transition: 0.7s;
-                -o-transition: 0.7s;
-                transition: 0.7s;
+                -webkit-transition: 0.5s;
+                -moz-transition: 0.5s;
+                -o-transition: 0.5s;
+                transition: 0.5s;
             }
             .right-nav > li a:hover {
                 text-decoration: none;
@@ -2299,25 +2299,22 @@ img {
                 -webkit-border-radius: 50%;
                 -moz-border-radius: 50%;
                 border-radius: 50%;
-                opacity: 0.3;
                 cursor: pointer;
-                -webkit-transition: 0.7s;
-                -moz-transition: 0.7s;
-                -o-transition: 0.7s;
-                transition: 0.7s;
+                -webkit-transition: 0.5s;
+                -moz-transition: 0.5s;
+                -o-transition: 0.5s;
+                transition: 0.5s;
             }
             .right-nav > li.active a {
                 opacity: 1;
             }
             .right-nav > li.active a:after {
-                opacity: 1;
                 background-color: #fff;
             }
             .right-nav > li a:hover {
                 opacity: 1;
             }
             .right-nav > li a:hover:after {
-                opacity: 1;
                 background-color: #fff;
             }
 @media all and (min-width: 1920px) {
