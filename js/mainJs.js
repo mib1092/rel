@@ -415,7 +415,6 @@ jQuery(document).ready(function($) {
                         navigationPosition: 'right',
                         responsiveHeight: fullWinHeight + 20,
                         afterResponsive: function(isResponsive){
-
                         }
                     });
                 },200)
