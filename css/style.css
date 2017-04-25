@@ -2230,7 +2230,6 @@ img {
         /*width: 100%;*/
         padding: 0;
         margin: -120px 0 0 0;
-
     }
     .right-nav:after,
     .right-nav:before {
@@ -2299,7 +2298,6 @@ img {
                 -webkit-border-radius: 50%;
                 -moz-border-radius: 50%;
                 border-radius: 50%;
-                cursor: pointer;
                 -webkit-transition: 0.5s;
                 -moz-transition: 0.5s;
                 -o-transition: 0.5s;
