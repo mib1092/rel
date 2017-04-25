@@ -386,10 +386,10 @@ jQuery(document).ready(function($) {
             footerSlide = $('.section.footer'),
             footerHeight = footer.outerHeight(),
             rightNav = $('.right-nav'),
-            rightNavHeight = rightNav.outerHeight();
+            rightNavHeight = rightNav.outerHeight() / 2;
 
             console.log(rightNavHeight);
-            rightNav.css('margin-top', '-' + rightNavHeight);
+            // rightNav.css('margin-top', '-' + rightNavHeight);
             footerSlide.height(footerHeight);
     })
 });
