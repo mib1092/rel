@@ -371,6 +371,7 @@ jQuery(document).ready(function($) {
         scrollHash();
     });
 
+    //for fullpage
     $('#fullpage').fullpage({
         verticalCentered: false,
         css3:false,
@@ -380,12 +381,15 @@ jQuery(document).ready(function($) {
     });
     console.log('init');
 
-    // footer height
     $(window).on('load resize', function() {
         var footer = $('#footer'),
-            footerSlide = $('.section.footer');
-            footerHeight = footer.outerHeight();
+            footerSlide = $('.section.footer'),
+            footerHeight = footer.outerHeight(),
+            rightNav = $('.right-nav'),
+            rightNavHeight = rightNav.outerHeight();
 
+            console.log(rightNavHeight);
+            rightNav.css('margin-top', '-' + rightNavHeight);
             footerSlide.height(footerHeight);
     })
 });
