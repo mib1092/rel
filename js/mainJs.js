@@ -413,7 +413,7 @@ jQuery(document).ready(function($) {
                         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
                         menu: '#myMenu',
                         navigationPosition: 'right',
-                        responsiveHeight: fullWinHeight + 50,
+                        responsiveHeight: fullWinHeight + 20,
                         afterResponsive: function(isResponsive){
 
                         }

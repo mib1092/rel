@@ -2174,6 +2174,9 @@ img {
 .fp-responsive .wrapper:after {
     height: 0;
 }
+.fp-responsive .section {
+    min-height: 100vh;
+}
     .slide-box {
         max-width: 1040px;
     }
