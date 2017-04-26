@@ -2511,7 +2511,10 @@ img {
 }
 
 @media all and (max-width: 640px) {
-
+    .section .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 @media all and (max-width: 600px) {

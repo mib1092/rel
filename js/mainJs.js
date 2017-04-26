@@ -400,7 +400,7 @@ jQuery(document).ready(function($) {
                         slideTitle.removeClass('invisible').addClass('visible animated fadeInUp');
                     }
                     if (slideContent.hasClass('invisible')) {
-                        slideContent.removeClass('invisible').addClass('visible animated fadeInUpCustom');
+                        slideContent.removeClass('invisible').addClass('visible animated fadeInUp');
                     }
                     if (slideBtn.hasClass('invisible')) {
                         slideBtn.removeClass('invisible').addClass('visible animated fadeInUp');
@@ -443,7 +443,7 @@ jQuery(document).ready(function($) {
                                         slideTitle.removeClass('invisible').addClass('visible animated fadeInUp');
                                     }
                                     if (slideContent.hasClass('invisible')) {
-                                        slideContent.removeClass('invisible').addClass('visible animated fadeInUpCustom');
+                                        slideContent.removeClass('invisible').addClass('visible animated fadeInUp');
                                     }
                                     if (slideBtn.hasClass('invisible')) {
                                         slideBtn.removeClass('invisible').addClass('visible animated fadeInUp');
@@ -462,15 +462,15 @@ jQuery(document).ready(function($) {
     //for animate
     function animate() {
         /*viewportchecker to trigger animations throughout*/
-        $(".slide-box .btn, .slide-title").addClass("invisible").viewportChecker({
+        $(".slide-box .btn, .slide-title, .slide-box .content").addClass("invisible").viewportChecker({
             classToAdd: 'visible animated fadeInUp',
             offset: 50
         });
 
-        $(".slide-box .content").addClass("invisible").viewportChecker({
-            classToAdd: 'visible animated fadeInUpCustom',
-            offset: 50
-        });
+        // $(".slide-box .content").addClass("invisible").viewportChecker({
+        //     classToAdd: 'visible animated fadeInUpCustom',
+        //     offset: 50
+        // });
         /*end viewportchecker*/
     }
 
