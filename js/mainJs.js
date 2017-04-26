@@ -388,8 +388,25 @@ jQuery(document).ready(function($) {
         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
         menu: '#myMenu',
         navigationPosition: 'right',
-        afterResponsive: function(isResponsive){
+        afterLoad: function(anchorLink, index){
+            setTimeout(function () {
+                if ((!$('body').hasClass('fp-responsive'))) {
+                    var slideBox = $('.slide-box').eq(index - 1),
+                        slideTitle = slideBox.find('.slide-title'),
+                        slideContent =slideBox.find('.content'),
+                        slideBtn = slideBox.find('.btn');
 
+                    if (slideTitle.hasClass('invisible')) {
+                        slideTitle.removeClass('invisible').addClass('visible animated fadeInUp');
+                    }
+                    if (slideContent.hasClass('invisible')) {
+                        slideContent.removeClass('invisible').addClass('visible animated fadeInUpCustom');
+                    }
+                    if (slideBtn.hasClass('invisible')) {
+                        slideBtn.removeClass('invisible').addClass('visible animated fadeInUp');
+                    }
+                }
+            }, 300)
         }
     });
 
@@ -414,7 +431,25 @@ jQuery(document).ready(function($) {
                         menu: '#myMenu',
                         navigationPosition: 'right',
                         responsiveHeight: fullWinHeight + 20,
-                        afterResponsive: function(isResponsive){
+                        afterLoad: function(anchorLink, index){
+                            setTimeout(function () {
+                                if ((!$('body').hasClass('fp-responsive'))) {
+                                    var slideBox = $('.slide-box').eq(index - 1),
+                                        slideTitle = slideBox.find('.slide-title'),
+                                        slideContent =slideBox.find('.content'),
+                                        slideBtn = slideBox.find('.btn');
+
+                                    if (slideTitle.hasClass('invisible')) {
+                                        slideTitle.removeClass('invisible').addClass('visible animated fadeInUp');
+                                    }
+                                    if (slideContent.hasClass('invisible')) {
+                                        slideContent.removeClass('invisible').addClass('visible animated fadeInUpCustom');
+                                    }
+                                    if (slideBtn.hasClass('invisible')) {
+                                        slideBtn.removeClass('invisible').addClass('visible animated fadeInUp');
+                                    }
+                                }
+                            }, 100)
                         }
                     });
                 },200)
@@ -424,16 +459,20 @@ jQuery(document).ready(function($) {
         }, 400);
     });
 
-    // $('#fullpage').fullpage({
-    //     verticalCentered: false,
-    //     css3:false,
-    //     anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
-    //     menu: '#myMenu',
-    //     navigationPosition: 'right',
-    //     //responsiveWidth: 1400,
-    //     responsiveHeight: 800,
-    //     afterResponsive: function(isResponsive){
-    //         console.log('resize');
-    //     }
-    // });
+    //for animate
+    function animate() {
+        /*viewportchecker to trigger animations throughout*/
+        $(".slide-box .btn, .slide-title").addClass("invisible").viewportChecker({
+            classToAdd: 'visible animated fadeInUp',
+            offset: 50
+        });
+
+        $(".slide-box .content").addClass("invisible").viewportChecker({
+            classToAdd: 'visible animated fadeInUpCustom',
+            offset: 50
+        });
+        /*end viewportchecker*/
+    }
+
+    animate();
 });
