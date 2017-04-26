@@ -2208,7 +2208,7 @@ img {
             width: 100%;
             max-width: 438px;
             margin: 40px 0 0 0;
-            padding: 17px 20px 22px;
+            padding: 19px 20px 20px;
             font-size: 1.6em;
             color: #ffffff;
             text-align: center;
@@ -2473,7 +2473,7 @@ img {
         padding-bottom: 10px;
     }
     .section {
-        padding-top: 85px
+        padding-top: 95px;
     }
     .slide-title {
         font-size: 1.8em;
