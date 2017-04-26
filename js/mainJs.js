@@ -372,6 +372,7 @@ jQuery(document).ready(function($) {
     });
 
     //for fullpage
+    // if ($('div').hasClass())
     function maxHeight(box) {
         var maxHeight = 0;
         box.each(function () {
