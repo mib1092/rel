@@ -442,25 +442,25 @@ jQuery(document).ready(function($) {
                                     slideContent = slideBox.find('.content'),
                                     slideBtn = slideBox.find('.btn');
 
-                                if (slideTitle.hasClass('invisible')) {
-                                    slideTitle.removeClass('invisible').addClass('visible animated fadeInUp');
+                                    if (slideTitle.hasClass('invisible')) {
+                                        slideTitle.removeClass('invisible').addClass('visible animated fadeInUp');
+                                    }
+                                    if (slideContent.hasClass('invisible')) {
+                                        slideContent.removeClass('invisible').addClass('visible animated fadeInUp');
+                                    }
+                                    if (slideBtn.hasClass('invisible')) {
+                                        slideBtn.removeClass('invisible').addClass('visible animated fadeInUp');
+                                    }
                                 }
-                                if (slideContent.hasClass('invisible')) {
-                                    slideContent.removeClass('invisible').addClass('visible animated fadeInUp');
-                                }
-                                if (slideBtn.hasClass('invisible')) {
-                                    slideBtn.removeClass('invisible').addClass('visible animated fadeInUp');
-                                }
-                            }
-                        }, 50)
-                    }
-                });
-            }, 50)
-        }
-        setTimeout(function () {
-            footerSlide.height(footerHeight);
-        }, 400);
-    });
+                            }, 10)
+                        }
+                    });
+                }, 10)
+            }
+            setTimeout(function () {
+                footerSlide.height(footerHeight);
+            }, 400);
+        });
 
     //for animate
     function animate() {
