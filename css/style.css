@@ -2374,8 +2374,8 @@ img {
     -webkit-animation-delay: .3s;
 }
 .slide-box .btn {
-    animation-delay: .35s;
-    -webkit-animation-delay: .35s;
+    animation-delay: .25s;
+    -webkit-animation-delay: .25s;
 }
 @keyframes fadeInUpCustom {
     from {
