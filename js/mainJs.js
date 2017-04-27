@@ -303,46 +303,6 @@ jQuery(document).ready(function($) {
                     accordionItem.addClass('open');
                     accordionItem.find('.accordion-content').slideDown(duration);
 
-                    // if (!(accordionItem.hasClass('show-animate'))) {
-                    //     accordionItem.addClass('show-animate');
-                    //
-                    //     var subTabItem = accordionItem.find('.sub-tab-item'),
-                    //         subTabItemImg = accordionItem.find('.sub-tab-item-img'),
-                    //         iconImgBox = accordionItem.find('.icon-img-box'),
-                    //         subTabItemTitle = accordionItem.find('.sub-tab-item-title'),
-                    //         iconTitle = accordionItem.find('.icon-title');
-                    //
-                    //     subTabItem.each(function () {
-                    //         if ($(this).hasClass('invisible')) {
-                    //             $(this).removeClass('invisible');
-                    //             $(this).addClass('visible animated fadeInUp');
-                    //         }
-                    //     });
-                    //     subTabItemTitle.each(function () {
-                    //         if ($(this).hasClass('invisible')) {
-                    //             $(this).removeClass('invisible');
-                    //             $(this).addClass('visible animated fadeIn');
-                    //         }
-                    //     });
-                    //     subTabItemImg.each(function () {
-                    //         if ($(this).hasClass('invisible')) {
-                    //             $(this).removeClass('invisible');
-                    //             $(this).addClass('visible animated fadeInUp');
-                    //         }
-                    //     });
-                    //     iconImgBox.each(function () {
-                    //         if ($(this).hasClass('invisible')) {
-                    //             $(this).removeClass('invisible');
-                    //             $(this).addClass('visible animated fadeInUp');
-                    //         }
-                    //     });
-                    //     iconTitle.each(function () {
-                    //         if ($(this).hasClass('invisible')) {
-                    //             $(this).removeClass('invisible');
-                    //             $(this).addClass('visible animated fadeIn');
-                    //         }
-                    //     });
-                    // }
                 }
             } else {
                 if ( arg == 'click') {
@@ -358,48 +318,6 @@ jQuery(document).ready(function($) {
                         accordionList.removeClass('open');
                         accordionList.find('.accordion-content').slideUp(duration);
                         accordionList.removeClass('disable');
-
-                        // if (!(accordionItem.hasClass('show-animate'))) {
-                        //     accordionItem.addClass('show-animate');
-                        //
-                        //     var subTabItem = accordionItem.find('.sub-tab-item'),
-                        //         subTabItemImg = accordionItem.find('.sub-tab-item-img'),
-                        //         iconImgBox = accordionItem.find('.icon-img-box'),
-                        //         subTabItemTitle = accordionItem.find('.sub-tab-item-title'),
-                        //         iconTitle = accordionItem.find('.icon-title');
-                        //
-                        //     subTabItem.each(function () {
-                        //         if ($(this).hasClass('invisible')) {
-                        //             $(this).removeClass('invisible');
-                        //             $(this).addClass('visible animated fadeInUp');
-                        //         }
-                        //     });
-                        //     subTabItemTitle.each(function () {
-                        //         if ($(this).hasClass('invisible')) {
-                        //             $(this).removeClass('invisible');
-                        //             $(this).addClass('visible animated fadeIn');
-                        //         }
-                        //     });
-                        //     subTabItemImg.each(function () {
-                        //         if ($(this).hasClass('invisible')) {
-                        //             $(this).removeClass('invisible');
-                        //             $(this).addClass('visible animated fadeInUp');
-                        //         }
-                        //     });
-                        //     iconImgBox.each(function () {
-                        //         if ($(this).hasClass('invisible')) {
-                        //             $(this).removeClass('invisible');
-                        //             $(this).addClass('visible animated fadeInUp');
-                        //         }
-                        //     });
-                        //     iconTitle.each(function () {
-                        //         if ($(this).hasClass('invisible')) {
-                        //             $(this).removeClass('invisible');
-                        //             $(this).addClass('visible animated fadeIn');
-                        //         }
-                        //     });
-                        // }
-
                     }
                 }
             }
@@ -590,7 +508,7 @@ jQuery(document).ready(function($) {
     }
 
 
-    // // animate
+   // animate
     $('.icon-list .icon-img-box, .sub-tab-item-img').addClass("invisible").viewportChecker({
             classToAdd: 'visible animated fadeInUp',
             offset: 50

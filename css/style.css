@@ -2358,16 +2358,24 @@ img {
     -webkit-animation-delay: .1s;
 }
 .slide-box .content *:first-child {
+    animation-delay: .15s;
+    -webkit-animation-delay: .15s;
+}
+.slide-box .content *:nth-child(2) {
     animation-delay: .2s;
     -webkit-animation-delay: .2s;
 }
-.slide-box .content *:nth-child(2) {
+.slide-box .content *:nth-child(3) {
+    animation-delay: .25s;
+    -webkit-animation-delay: .25s;
+}
+.slide-box .content *:nth-child(4) {
     animation-delay: .3s;
     -webkit-animation-delay: .3s;
 }
 .slide-box .btn {
-    animation-delay: .4s;
-    -webkit-animation-delay: .4s;
+    animation-delay: .35s;
+    -webkit-animation-delay: .35s;
 }
 @keyframes fadeInUpCustom {
     from {
@@ -2499,8 +2507,18 @@ img {
 
 @media all and (max-width: 640px) {
     .section .container {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .footer-contacts {
+        text-align: center;
+    }
+    .footer-contacts .fa {
+        float: none;
+        display: inline-block;
+    }
+    .footer-contacts .fa ~ p {
+        display: inline;
     }
 }
 
@@ -2509,8 +2527,8 @@ img {
         display: none;
     }
     .section .container {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
