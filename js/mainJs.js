@@ -1,13 +1,5 @@
 jQuery(document).ready(function($) {
 
-    // header fade
-    $(function() {
-        var header = $('.header');
-        setTimeout(function(){
-            header.addClass('show');
-        },800);
-    });
-
     // for burger menu
     $('.mobile-menu-toggle, .mobile-menu-overlay, .mobile-menu-box .nav-menu a').on('click', function(){
         $('.mobile-menu-toggle').toggleClass('active');
@@ -382,6 +374,15 @@ jQuery(document).ready(function($) {
     }
 
     //for fullpage
+
+    // header fade
+    $(function() {
+        var header = $('.header');
+        setTimeout(function(){
+            header.addClass('show');
+        },800);
+    });
+
     if ($('div#fullpage').hasClass('fullpage')) {
         function maxHeight(box) {
             var maxHeight = 0;
