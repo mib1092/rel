@@ -137,9 +137,13 @@ jQuery(document).ready(function($) {
 
                 allTab.removeClass('active');
                 allTabContent.removeClass('active');
+                allTabContent.find('.sub-tab-box-wrap').removeClass('visible animated fadeIn');
+                allTabContent.find('.sub-tab-box-wrap').addClass('invisible');
                 // allTabContent.find('.sub-tab-box').slideUp(500);
                 $(this).addClass('active');
                 idTabContent.addClass('active');
+                idTabContent.find('.sub-tab-box-wrap').removeClass('invisible');
+                idTabContent.find('.sub-tab-box-wrap').addClass('visible animated fadeIn');
                 // setTimeout(function () {
                 //     // idTabContent.find('.sub-tab-box').slideDown(500);
                 // }, 500);
@@ -182,10 +186,15 @@ jQuery(document).ready(function($) {
                 var idTabContent = tabContent.find("[data-examples-box="+tabID+"]");
                 allTab.removeClass('active');
                 allTabContent.removeClass('active');
+                allTabContent.find('.accordion-content-box-wrap').removeClass('visible animated fadeIn');
+                allTabContent.find('.accordion-content-box-wrap').addClass('invisible');
 
                 // $(this).addClass('active');
                 tabWrap.find("[data-examples-item="+tabID+"]").addClass('active');
                 idTabContent.addClass('active');
+
+                idTabContent.find('.accordion-content-box-wrap').removeClass('invisible');
+                idTabContent.find('.accordion-content-box-wrap').addClass('visible animated fadeIn');
             }
     });
     //close example tab content
@@ -197,8 +206,11 @@ jQuery(document).ready(function($) {
 
         allTab.removeClass('active');
         allTabContent.removeClass('active');
+        allTabContent.find('.accordion-content-box-wrap').removeClass('visible animated fadeIn');
+        allTabContent.find('.accordion-content-box-wrap').addClass('invisible');
     });
 
+    // $('.sub-tab-item, .icon-img-box, .sub-tab-item-img, .icon-title, .sub-tab-item-title, .sub-tab-box-wrap').addClass("invisible");//fadeIn
 
     // main Accordion logic
     var primary = 'primary',
@@ -277,7 +289,7 @@ jQuery(document).ready(function($) {
                         accordionItem.addClass('top');
                     } else if (!prevItem.hasClass(secondary) && nextItem.hasClass(secondary)) {
                         nextItem.addClass('neighbors-open');
-                        if (nextItem.hasClass(secondary) && prevItem.hasClass(third) ) {
+                        if (nextItem.hasClass(secondary) && prevItem.hasClass(third)) {
                             prevItem.removeClass('bottom');
                             prevItem.addClass('top');
                             accordionItem.removeClass('bottom');
@@ -290,6 +302,47 @@ jQuery(document).ready(function($) {
                     accordionList.removeClass('open');
                     accordionItem.addClass('open');
                     accordionItem.find('.accordion-content').slideDown(duration);
+
+                    // if (!(accordionItem.hasClass('show-animate'))) {
+                    //     accordionItem.addClass('show-animate');
+                    //
+                    //     var subTabItem = accordionItem.find('.sub-tab-item'),
+                    //         subTabItemImg = accordionItem.find('.sub-tab-item-img'),
+                    //         iconImgBox = accordionItem.find('.icon-img-box'),
+                    //         subTabItemTitle = accordionItem.find('.sub-tab-item-title'),
+                    //         iconTitle = accordionItem.find('.icon-title');
+                    //
+                    //     subTabItem.each(function () {
+                    //         if ($(this).hasClass('invisible')) {
+                    //             $(this).removeClass('invisible');
+                    //             $(this).addClass('visible animated fadeInUp');
+                    //         }
+                    //     });
+                    //     subTabItemTitle.each(function () {
+                    //         if ($(this).hasClass('invisible')) {
+                    //             $(this).removeClass('invisible');
+                    //             $(this).addClass('visible animated fadeIn');
+                    //         }
+                    //     });
+                    //     subTabItemImg.each(function () {
+                    //         if ($(this).hasClass('invisible')) {
+                    //             $(this).removeClass('invisible');
+                    //             $(this).addClass('visible animated fadeInUp');
+                    //         }
+                    //     });
+                    //     iconImgBox.each(function () {
+                    //         if ($(this).hasClass('invisible')) {
+                    //             $(this).removeClass('invisible');
+                    //             $(this).addClass('visible animated fadeInUp');
+                    //         }
+                    //     });
+                    //     iconTitle.each(function () {
+                    //         if ($(this).hasClass('invisible')) {
+                    //             $(this).removeClass('invisible');
+                    //             $(this).addClass('visible animated fadeIn');
+                    //         }
+                    //     });
+                    // }
                 }
             } else {
                 if ( arg == 'click') {
@@ -305,6 +358,48 @@ jQuery(document).ready(function($) {
                         accordionList.removeClass('open');
                         accordionList.find('.accordion-content').slideUp(duration);
                         accordionList.removeClass('disable');
+
+                        // if (!(accordionItem.hasClass('show-animate'))) {
+                        //     accordionItem.addClass('show-animate');
+                        //
+                        //     var subTabItem = accordionItem.find('.sub-tab-item'),
+                        //         subTabItemImg = accordionItem.find('.sub-tab-item-img'),
+                        //         iconImgBox = accordionItem.find('.icon-img-box'),
+                        //         subTabItemTitle = accordionItem.find('.sub-tab-item-title'),
+                        //         iconTitle = accordionItem.find('.icon-title');
+                        //
+                        //     subTabItem.each(function () {
+                        //         if ($(this).hasClass('invisible')) {
+                        //             $(this).removeClass('invisible');
+                        //             $(this).addClass('visible animated fadeInUp');
+                        //         }
+                        //     });
+                        //     subTabItemTitle.each(function () {
+                        //         if ($(this).hasClass('invisible')) {
+                        //             $(this).removeClass('invisible');
+                        //             $(this).addClass('visible animated fadeIn');
+                        //         }
+                        //     });
+                        //     subTabItemImg.each(function () {
+                        //         if ($(this).hasClass('invisible')) {
+                        //             $(this).removeClass('invisible');
+                        //             $(this).addClass('visible animated fadeInUp');
+                        //         }
+                        //     });
+                        //     iconImgBox.each(function () {
+                        //         if ($(this).hasClass('invisible')) {
+                        //             $(this).removeClass('invisible');
+                        //             $(this).addClass('visible animated fadeInUp');
+                        //         }
+                        //     });
+                        //     iconTitle.each(function () {
+                        //         if ($(this).hasClass('invisible')) {
+                        //             $(this).removeClass('invisible');
+                        //             $(this).addClass('visible animated fadeIn');
+                        //         }
+                        //     });
+                        // }
+
                     }
                 }
             }
@@ -377,9 +472,16 @@ jQuery(document).ready(function($) {
 
     // header fade
     $(function() {
-        var header = $('.header');
+        var header = $('.header'),
+            sidebar = $('.sidebar'),
+            contentBox = $('.content-box'),
+            menuIcon = $('.menu-icon');
+
         setTimeout(function(){
             header.addClass('show');
+            sidebar.addClass('visible animated fadeInUp');
+            contentBox.addClass('visible animated fadeInUp');
+            menuIcon.addClass('visible animated fadeIn');
         },800);
     });
 
@@ -482,13 +584,32 @@ jQuery(document).ready(function($) {
                 classToAdd: 'visible animated fadeInUp',
                 offset: 0
             });
-            // $(".slide-box .content").addClass("invisible").viewportChecker({
-            //     classToAdd: 'visible animated fadeInUpCustom',
-            //     offset: 50
-            // });
-            /*end viewportchecker*/
         }
 
         animate();
     }
+
+
+    // // animate
+    $('.icon-list .icon-img-box, .sub-tab-item-img').addClass("invisible").viewportChecker({
+            classToAdd: 'visible animated fadeInUp',
+            offset: 50
+        });
+    $('.icon-list .icon-title, .sub-tab-item-title').addClass("invisible").viewportChecker({
+        classToAdd: 'visible animated fadeIn',
+        offset: 0
+    });
+    $('.strategy-examples-block, .outcomes-block').addClass("invisible").viewportChecker({
+        classToAdd: 'visible animated fadeIn',
+        offset: 50
+    });
+    $('.cell-list').addClass("invisible").viewportChecker({
+        classToAdd: 'visible animated fadeIn',
+        offset: 50
+    });
+    $('.sub-tab-box-wrap').addClass("invisible");
+    // $(".sidebar, .content-box").addClass("invisible").viewportChecker({
+    //     classToAdd: 'visible animated fadeInUp',
+    //     offset: 50
+    // });
 });
