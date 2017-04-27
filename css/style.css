@@ -2593,7 +2593,21 @@ img {
     animation-delay: .65s;
     -webkit-animation-delay: .65s;
 }
-
+.accordion-sub-tab-list > li:nth-child(8) .sub-tab-item-img,
+.icon-list > li:nth-child(8) .icon-img-box {
+    animation-delay: .7s;
+    -webkit-animation-delay: .7s;
+}
+.accordion-sub-tab-list > li:nth-child(9) .sub-tab-item-img,
+.icon-list > li:nth-child(9) .icon-img-box {
+    animation-delay: .75s;
+    -webkit-animation-delay: .75s;
+}
+.accordion-sub-tab-list > li:nth-child(10) .sub-tab-item-img,
+.icon-list > li:nth-child(10) .icon-img-box {
+    animation-delay: .8s;
+    -webkit-animation-delay: .8s;
+}
 
 .accordion-sub-tab-list > li:nth-child(1) .sub-tab-item-title,
 .icon-list > li:nth-child(1) .icon-title {
@@ -2629,6 +2643,21 @@ img {
 .icon-list > li:nth-child(7) .icon-title{
     animation-delay: 1.3s;
     -webkit-animation-delay: 1.3s;
+}
+.accordion-sub-tab-list > li:nth-child(8) .sub-tab-item-title,
+.icon-list > li:nth-child(8) .icon-title{
+    animation-delay: 1.35s;
+    -webkit-animation-delay: 1.35s;
+}
+.accordion-sub-tab-list > li:nth-child(9) .sub-tab-item-title,
+.icon-list > li:nth-child(9) .icon-title{
+    animation-delay: 1.4s;
+    -webkit-animation-delay: 1.4s;
+}
+.accordion-sub-tab-list > li:nth-child(10) .sub-tab-item-title,
+.icon-list > li:nth-child(10) .icon-title{
+    animation-delay: 1.45s;
+    -webkit-animation-delay: 1.45s;
 }
 /*.icon-img-box,*/
 /*.sub-tab-item-img {*/
