@@ -2123,6 +2123,15 @@ img {
 
 /*NEW PAGE*/
 /*--------------------------------------HOME----------------------------------------*/
+.header {
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+.header.show {
+    opacity: 1;
+}
 .header.fixed {
     position: fixed;
     z-index: 100;
@@ -2210,7 +2219,7 @@ img {
             margin: 40px 0 0 0;
             padding: 19px 20px 20px;
             font-size: 1.6em;
-            color: #ffffff;
+            color: #FCC11F;
             text-align: center;
             cursor: pointer;
             text-decoration: none;
@@ -2218,19 +2227,20 @@ img {
             -webkit-border-radius: 10px;
             -moz-border-radius: 10px;
             border-radius: 10px;
-            background-color: #FCC11F;
+            background-color: transparent;
         }
         a.btn:hover, .btn:hover {
-            color: #FCC11F;;
-            background-color: transparent;
+            color: #ffffff;
+            background-color: #FCC11F;
         }
         a.btn-blue, .btn-blue {
+            color: #0CBCC9;
             border-color: #0CBCC9;
-            background-color: #0CBCC9;
+            background-color: transparent;
         }
         a.btn-blue:hover, .btn-blue:hover {
-            color: #0CBCC9;;
-            background-color: transparent;
+            color: #ffffff;;
+            background-color: #0CBCC9;
         }
 
 
@@ -2352,11 +2362,21 @@ img {
         transform: none;
     }
 }
-.slide-title,
-.slide-box .content,
+.slide-title {
+    animation-delay: .1s;
+    -webkit-animation-delay: .1s;
+}
+.slide-box .content *:first-child {
+    animation-delay: .2s;
+    -webkit-animation-delay: .2s;
+}
+.slide-box .content *:nth-child(2) {
+    animation-delay: .3s;
+    -webkit-animation-delay: .3s;
+}
 .slide-box .btn {
-    animation-delay: 0s;
-    -webkit-animation-delay: 0s;
+    animation-delay: .4s;
+    -webkit-animation-delay: .4s;
 }
 @keyframes fadeInUpCustom {
     from {

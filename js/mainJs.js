@@ -1,5 +1,13 @@
 jQuery(document).ready(function($) {
 
+    // header fade
+    $(function() {
+        var header = $('.header');
+        setTimeout(function(){
+            header.addClass('show');
+        },800);
+    });
+
     // for burger menu
     $('.mobile-menu-toggle, .mobile-menu-overlay, .mobile-menu-box .nav-menu a').on('click', function(){
         $('.mobile-menu-toggle').toggleClass('active');
@@ -374,73 +382,73 @@ jQuery(document).ready(function($) {
     }
 
     //for fullpage
+    if ($('div#fullpage').hasClass('fullpage')) {
+        function maxHeight(box) {
+            var maxHeight = 0;
+            box.each(function () {
+                if ($(this).height() > maxHeight) {
+                    maxHeight = $(this).height();
+                }
+            });
+            return maxHeight;
+        }
 
-    function maxHeight(box) {
-        var maxHeight = 0;
-        box.each(function () {
-            if ($(this).height() > maxHeight) {
-                maxHeight = $(this).height();
+        $('#fullpage').fullpage({
+            verticalCentered: false,
+            css3: false,
+            anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+            menu: '#myMenu',
+            navigationPosition: 'right',
+            afterLoad: function (anchorLink, index) {
+                setTimeout(function () {
+                    if ((!$('body').hasClass('fp-responsive'))) {
+                        var slideBox = $('.slide-box').eq(index - 1),
+                            slideTitle = slideBox.find('.slide-title'),
+                            slideContent = slideBox.find('.content *'),
+                            slideBtn = slideBox.find('.btn');
+
+                        if (slideTitle.hasClass('invisible')) {
+                            slideTitle.removeClass('invisible').addClass('visible animated fadeInUp');
+                        }
+                        if (slideContent.hasClass('invisible')) {
+                            slideContent.removeClass('invisible').addClass('visible animated fadeInUp');
+                        }
+                        if (slideBtn.hasClass('invisible')) {
+                            slideBtn.removeClass('invisible').addClass('visible animated fadeInUp');
+                        }
+                    }
+                }, 100)
             }
         });
-        return maxHeight;
-    }
 
-    $('#fullpage').fullpage({
-        verticalCentered: false,
-        css3: false,
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
-        menu: '#myMenu',
-        navigationPosition: 'right',
-        afterLoad: function (anchorLink, index) {
-            setTimeout(function () {
-                if ((!$('body').hasClass('fp-responsive'))) {
-                    var slideBox = $('.slide-box').eq(index - 1),
-                        slideTitle = slideBox.find('.slide-title'),
-                        slideContent = slideBox.find('.content'),
-                        slideBtn = slideBox.find('.btn');
+        $(window).on('load resize', function () {
+            var footer = $('#footer'),
+                footerSlide = $('.section.footer'),
+                footerHeight = footer.outerHeight(),
+                rightNav = $('.right-nav'),
+                rightNavHeight = rightNav.outerHeight() / 2,
+                box = $('.slide-box'),
+                maxH = maxHeight(box),
+                fullWinHeight = $(window).height(),
+                winHeight = fullWinHeight - $('.header').height();
 
-                    if (slideTitle.hasClass('invisible')) {
-                        slideTitle.removeClass('invisible').addClass('visible animated fadeInUp');
-                    }
-                    if (slideContent.hasClass('invisible')) {
-                        slideContent.removeClass('invisible').addClass('visible animated fadeInUp');
-                    }
-                    if (slideBtn.hasClass('invisible')) {
-                        slideBtn.removeClass('invisible').addClass('visible animated fadeInUp');
-                    }
-                }
-            }, 100)
-        }
-    });
-
-    $(window).on('load resize', function () {
-        var footer = $('#footer'),
-            footerSlide = $('.section.footer'),
-            footerHeight = footer.outerHeight(),
-            rightNav = $('.right-nav'),
-            rightNavHeight = rightNav.outerHeight() / 2,
-            box = $('.slide-box'),
-            maxH = maxHeight(box),
-            fullWinHeight = $(window).height(),
-            winHeight = fullWinHeight - $('.header').height();
-
-        if (maxH > winHeight) {
-            setTimeout(function () {
-                $.fn.fullpage.destroy('all');
-                $('#fullpage').fullpage({
-                    verticalCentered: false,
-                    css3: false,
-                    anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
-                    menu: '#myMenu',
-                    navigationPosition: 'right',
-                    responsiveHeight: fullWinHeight + 20,
-                    afterLoad: function (anchorLink, index) {
-                        setTimeout(function () {
-                            if ((!$('body').hasClass('fp-responsive'))) {
-                                var slideBox = $('.slide-box').eq(index - 1),
-                                    slideTitle = slideBox.find('.slide-title'),
-                                    slideContent = slideBox.find('.content'),
-                                    slideBtn = slideBox.find('.btn');
+            if (maxH > winHeight) {
+                setTimeout(function () {
+                    $.fn.fullpage.destroy('all');
+                    $('#fullpage').fullpage({
+                        verticalCentered: false,
+                        css3: false,
+                        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+                        menu: '#myMenu',
+                        navigationPosition: 'right',
+                        responsiveHeight: fullWinHeight + 20,
+                        afterLoad: function (anchorLink, index) {
+                            setTimeout(function () {
+                                if ((!$('body').hasClass('fp-responsive'))) {
+                                    var slideBox = $('.slide-box').eq(index - 1),
+                                        slideTitle = slideBox.find('.slide-title'),
+                                        slideContent = slideBox.find('.content *'),
+                                        slideBtn = slideBox.find('.btn');
 
                                     if (slideTitle.hasClass('invisible')) {
                                         slideTitle.removeClass('invisible').addClass('visible animated fadeInUp');
@@ -462,20 +470,24 @@ jQuery(document).ready(function($) {
             }, 400);
         });
 
-    //for animate
-    function animate() {
-        /*viewportchecker to trigger animations throughout*/
-        $(".slide-box .btn, .slide-title, .slide-box .content").addClass("invisible").viewportChecker({
-            classToAdd: 'visible animated fadeInUp',
-            offset: 50
-        });
+        //for animate
+        function animate() {
+            /*viewportchecker to trigger animations throughout*/
+            $(".slide-title, .slide-box .content *").addClass("invisible").viewportChecker({
+                classToAdd: 'visible animated fadeInUp',
+                offset: 50
+            });
+            $(".slide-box .btn").addClass("invisible").viewportChecker({
+                classToAdd: 'visible animated fadeInUp',
+                offset: 0
+            });
+            // $(".slide-box .content").addClass("invisible").viewportChecker({
+            //     classToAdd: 'visible animated fadeInUpCustom',
+            //     offset: 50
+            // });
+            /*end viewportchecker*/
+        }
 
-        // $(".slide-box .content").addClass("invisible").viewportChecker({
-        //     classToAdd: 'visible animated fadeInUpCustom',
-        //     offset: 50
-        // });
-        /*end viewportchecker*/
+        animate();
     }
-
-    animate();
 });
