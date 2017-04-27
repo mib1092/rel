@@ -517,7 +517,7 @@ jQuery(document).ready(function($) {
         classToAdd: 'visible animated fadeIn',
         offset: 0
     });
-    $('.strategy-examples-block, .outcomes-block').addClass("invisible").viewportChecker({
+    $('.strategy-examples-block').addClass("invisible").viewportChecker({
         classToAdd: 'visible animated fadeIn',
         offset: 50
     });
