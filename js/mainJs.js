@@ -389,8 +389,6 @@ jQuery(document).ready(function($) {
     //for fullpage
 
     // header fade
-
-    // header fade
     $(function() {
         var header = $('.header'),
             sidebar = $('.sidebar'),
@@ -399,8 +397,8 @@ jQuery(document).ready(function($) {
             fullpage = $('.wrapper');
 
         setTimeout(function(){
-            fullpage.addClass('visible animated fadeIn');
-        },300);
+            $('.animated-wrap').addClass('visible animated fadeIn');
+        },100);
 
         setTimeout(function(){
             header.addClass('show');
