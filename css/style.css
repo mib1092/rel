@@ -2538,7 +2538,7 @@ img {
 .header.show {
     opacity: 1;
 }
-#fullpage {
+.wrapper {
     opacity: 0;
     animation-delay: .35s;
     -webkit-animation-delay: .35s;

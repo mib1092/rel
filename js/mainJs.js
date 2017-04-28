@@ -396,7 +396,7 @@ jQuery(document).ready(function($) {
             sidebar = $('.sidebar'),
             contentBox = $('.content-box'),
             menuIcon = $('.menu-icon'),
-            fullpage = $('#fullpage');
+            fullpage = $('.wrapper');
 
         setTimeout(function(){
             fullpage.addClass('visible animated fadeIn');
