@@ -2529,6 +2529,11 @@ img {
 }
 
 /*------------------------------------ANIMATED--------------------------------------*/
+.animated-wrap {
+    opacity: 0;
+    animation-delay: .05s;
+    -webkit-animation-delay: .05s;
+}
 .header {
     opacity: 0;
     -webkit-transition: all 0.5s ease;
@@ -2537,11 +2542,6 @@ img {
 }
 .header.show {
     opacity: 1;
-}
-#fullpage {
-    opacity: 0;
-    animation-delay: .35s;
-    -webkit-animation-delay: .35s;
 }
 .sidebar {
     opacity: 0;
