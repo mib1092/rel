@@ -389,11 +389,18 @@ jQuery(document).ready(function($) {
     //for fullpage
 
     // header fade
+
+    // header fade
     $(function() {
         var header = $('.header'),
             sidebar = $('.sidebar'),
             contentBox = $('.content-box'),
-            menuIcon = $('.menu-icon');
+            menuIcon = $('.menu-icon'),
+            fullpage = $('#fullpage');
+
+        setTimeout(function(){
+            fullpage.addClass('visible animated fadeIn');
+        },300);
 
         setTimeout(function(){
             header.addClass('show');
