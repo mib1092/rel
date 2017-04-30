@@ -2410,6 +2410,7 @@ img {
 .mk-img-home-wrapper, .mk-scroll-down-text {
     display: none;
 }
+
 @media only screen and (min-width: 1024px) {
     .mk-scroll-down-block {
         position: absolute;
