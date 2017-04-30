@@ -329,9 +329,12 @@ jQuery(document).ready(function($) {
             activeNavItem.each(function (i) {
                 var id = activeNavItem.eq(i).attr('href');
                 allNavItem.each(function (y) {
-                    if (id == allNavItem.eq(y).attr('href')) {
-                        allNavItem.eq(y).addClass('active');
-                    }
+                    var all = allNavItem.eq(y).attr('href').split('#'),
+                        idAll = '#' + all[1];
+
+                        if (id == idAll) {
+                            allNavItem.eq(y).addClass('active');
+                        }
                 })
 
             });
