@@ -461,24 +461,19 @@ jQuery(document).ready(function($) {
             }
         });
 
-        $(window).on('load resize', function (){
-            var header = $('#header'),
-                firstSlide = $('.section.first-slide'),
-                firstHeight = firstSlide.outerHeight();
+        $(window).on('scroll', function() {
+            var currentPosition = $(window).scrollTop(),
+                header = $('#header');
 
-            $(window).on('scroll', function() {
-                var currentPosition = $(window).scrollTop();
-
-                if (currentPosition > firstHeight) {
-                    if (!(header.hasClass('fullpage-bg'))) {
-                        header.addClass('fullpage-bg');
-                    }
-                } else {
-                    if (header.hasClass('fullpage-bg')) {
-                        header.removeClass('fullpage-bg');
-                    }
+            if (currentPosition > 1) {
+                if (!(header.hasClass('fullpage-bg'))) {
+                    header.addClass('fullpage-bg');
                 }
-            });
+            } else {
+                if (header.hasClass('fullpage-bg')) {
+                    header.removeClass('fullpage-bg');
+                }
+            }
         });
 
         $(window).on('load resize', function () {
@@ -521,6 +516,21 @@ jQuery(document).ready(function($) {
                                     }
                                 }
                             }, 10)
+                        },
+                        onLeave: function(index, nextIndex, direction){
+                            var leavingSection = $(this),
+                                header = $('#header');
+
+                            //after leaving section 2
+                            if(index == 1 && direction =='down'){
+                                if (!(header.hasClass('fullpage-bg'))) {
+                                    header.addClass('fullpage-bg');
+                                }
+                            } else if(index == 2 && direction == 'up'){
+                                if (header.hasClass('fullpage-bg')) {
+                                    header.removeClass('fullpage-bg');
+                                }
+                            }
                         }
                     });
                 }, 10)

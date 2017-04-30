@@ -2146,7 +2146,7 @@ img {
 }
 .section.footer {
     min-height: auto;
-    z-index: 200;
+    z-index: 10;
     padding: 0;
 }
 .section .container {
@@ -2208,8 +2208,8 @@ img {
             width: 100%;
             max-width: 438px;
             margin: 40px 0 0 0;
-            padding: 19px 20px 20px;
-            font-size: 1.6em;
+            padding: 22px 20px 23px;
+            font-size: 1.25em;
             color: #FCC11F;
             text-align: center;
             cursor: pointer;
@@ -2219,6 +2219,7 @@ img {
             -moz-border-radius: 10px;
             border-radius: 10px;
             background-color: transparent;
+            letter-spacing: 0.6px;
         }
         a.btn:hover, .btn:hover {
             color: #ffffff;
@@ -2421,17 +2422,17 @@ img {
     }
     .mk-scroll-down {
         width: 30px;
-        height: 42px;
+        height: 46px;
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url(../img/icon-mouse.svg);
+        /*background-image: url(../img/icon-mouse.svg);*/
         position: relative;
         margin: 0 auto;
         cursor: auto;
     }
     .mk-scroll-down-points, .mk-scroll-down-points:after, .mk-scroll-down-points:before {
         display: block;
-        background-color: #00A5FF;
+        background-color: #ffffff;
         width: 4px;
         height: 4px;
         border-radius: 50%;
@@ -2453,7 +2454,7 @@ img {
     }
     .mk-scroll-down-text {
         display: block;
-        color: #00A5FF;
+        color: #ffffff;
         font-size: 10px;
         text-transform: uppercase;
         margin-top: 7px;
@@ -2568,8 +2569,8 @@ img {
         font-size: 2.4em;
     }
     a.btn-slide, .btn-slide {
-        padding: 15px 12px 17px;
-        font-size: 1.3em;
+        /*padding: 15px 12px 17px;*/
+        /*font-size: 1.3em;*/
     }
 }
 
