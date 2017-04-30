@@ -2181,8 +2181,8 @@ img {
         max-width: 1040px;
     }
         .slide-title {
-            margin-bottom: 27px;
-            font-size: 3.5em;
+            margin-bottom: 34px;
+            font-size: 2.8em;
             font-family:'Gotham-Bold', 'MyriadProRegular', Arial, sans-serif;
             color: #fff;
             text-transform: uppercase;
@@ -2191,14 +2191,14 @@ img {
 
         .section .content * {
             /*display: none;*/
-            font-size: 1.5em;
+            font-size: 1.125em;
             font-family: 'Gotham-Book', 'MyriadProRegular', Arial, sans-serif;
             font-weight: 400;
             color: #fff;
             line-height: 1.583;
         }
         .section .content > *:not(:last-child) {
-            margin-bottom: 40px;
+            margin-bottom: 28px;
         }
 
         a.btn-slide,
@@ -2377,6 +2377,93 @@ img {
     animation-delay: .25s;
     -webkit-animation-delay: .25s;
 }
+.mk-scroll-down-block {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -16px;
+    margin-bottom: -25px;
+}
+.mk-scroll-down {
+    display: block;
+    width: 32px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(img/bg-scroll-down.svg);
+}
+.mk-scroll-down-points {
+    -webkit-animation-delay: .1s;
+    animation-delay: .1s;
+}
+.mk-scroll-down-points, .mk-scroll-down-points:after, .mk-scroll-down-points:before {
+    -webkit-animation-name: fadeInMousePoints;
+    animation-name: fadeInMousePoints;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+.mk-img-home-wrapper, .mk-scroll-down-text {
+    display: none;
+}
+@media only screen and (min-width: 1024px) {
+    .mk-scroll-down-block {
+        position: absolute;
+        bottom: auto;
+        top: 100%;
+        left: 50%;
+        margin-left: -16px;
+        margin-bottom: 0;
+        margin-top: -80px;
+    }
+    .mk-scroll-down {
+        width: 30px;
+        height: 42px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(/img/icon-mouse.svg);
+        position: relative;
+        margin: 0 auto;
+        cursor: auto;
+    }
+    .mk-scroll-down-points, .mk-scroll-down-points:after, .mk-scroll-down-points:before {
+        display: block;
+        background-color: #00A5FF;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -2px;
+    }
+    .mk-scroll-down-points {
+        margin-top: 10px;
+    }
+    .mk-scroll-down-points:before {
+        content: "";
+        margin-top: 7px;
+    }
+    .mk-scroll-down-points:after {
+        content: "";
+        margin-top: 14px;
+    }
+    .mk-scroll-down-text {
+        display: block;
+        color: #00A5FF;
+        font-size: 10px;
+        text-transform: uppercase;
+        margin-top: 7px;
+    }
+}
+/*@media (max-height: 770px) and (min-width: 992px){*/
+    /*.mk-scroll-down-block {*/
+        /*margin-top: 25px;*/
+    /*}*/
+/*}*/
 @keyframes fadeInUpCustom {
     from {
         opacity: 0;
@@ -2428,7 +2515,6 @@ img {
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
 }
-
 @-webkit-keyframes fadeInn{
     from {
         opacity: 0;
@@ -2450,7 +2536,21 @@ img {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
 }
-
+@-webkit-keyframes fadeInMousePoints{
+    from {
+        opacity:.5
+    }
+    100% {
+        opacity:1
+    }
+}@keyframes fadeInMousePoints {
+     from {
+         opacity:.5
+     }
+     100% {
+         opacity:1
+     }
+ }
 @media all and (min-width: 1680px) {
     .section .container-box {
         padding-left: 84px;
@@ -2465,10 +2565,7 @@ img {
 
 @media all and (max-width: 1440px) {
     .slide-title {
-        font-size: 2.5em;
-    }
-    .section .content * {
-        font-size: 1.2em;
+        font-size: 2.4em;
     }
     a.btn-slide, .btn-slide {
         padding: 15px 12px 17px;
@@ -2486,12 +2583,6 @@ img {
     }
     .slide-title {
         font-size: 1.8em;
-    }
-    .section .content * {
-        font-size: 1.2em;
-    }
-    .section .content > *:not(:last-child) {
-        margin-bottom: 30px;
     }
     .right-nav {
         display: none;
@@ -2540,13 +2631,11 @@ img {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
 }
+.header.fullpage-bg {
+    background: rgba(19, 22, 23, 1);
+}
 .header.show {
     opacity: 1;
-}
-.wrapper {
-    opacity: 0;
-    animation-delay: .35s;
-    -webkit-animation-delay: .35s;
 }
 .sidebar {
     opacity: 0;
