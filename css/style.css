@@ -2424,7 +2424,7 @@ img {
         height: 42px;
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url(/img/icon-mouse.svg);
+        background-image: url(../img/icon-mouse.svg);
         position: relative;
         margin: 0 auto;
         cursor: auto;
