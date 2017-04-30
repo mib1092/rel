@@ -2383,7 +2383,7 @@ img {
     bottom: 0;
     left: 50%;
     margin-left: -16px;
-    margin-bottom: -25px;
+    margin-bottom: 20px;
 }
 .mk-scroll-down {
     display: block;
@@ -2391,7 +2391,7 @@ img {
     height: 19px;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../img/bg-scroll-down.svg);
+    /*background-image: url(../img/bg-scroll-down.svg);*/
 }
 .mk-scroll-down-points {
     -webkit-animation-delay: .1s;
@@ -2410,7 +2410,9 @@ img {
 .mk-img-home-wrapper, .mk-scroll-down-text {
     display: none;
 }
-
+#svg-mouse {
+    display: none ;
+}
 @media only screen and (min-width: 1024px) {
     .mk-scroll-down-block {
         position: absolute;
@@ -2419,7 +2421,7 @@ img {
         left: 50%;
         margin-left: -16px;
         margin-bottom: 0;
-        margin-top: -80px;
+        margin-top: -147px;
     }
     .mk-scroll-down {
         width: 30px;
@@ -2460,6 +2462,12 @@ img {
         font-family: 'Gotham-Book';
         text-transform: uppercase;
         margin-top: 7px;
+    }
+    #svg-mouse {
+        display: block;
+    }
+    #svg-down {
+        display: none;
     }
 }
 
