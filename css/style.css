@@ -2456,11 +2456,12 @@ img {
     .mk-scroll-down-text {
         display: block;
         color: #ffffff;
-        font-size: 10px;
+        font-size: 16px;
         text-transform: uppercase;
         margin-top: 7px;
     }
 }
+
 /*@media (max-height: 770px) and (min-width: 992px){*/
     /*.mk-scroll-down-block {*/
         /*margin-top: 25px;*/
