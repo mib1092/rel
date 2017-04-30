@@ -1275,7 +1275,8 @@ img {
                                 }
                                 .item-content > p .link-more {
                                     margin-left: 8px;
-                                    font-size: 0.9em;
+                                    font-size: 18px;
+                                    color: #fcc01e;
                                     -webkit-transition: 0.25s;
                                     -moz-transition: 0.25s;
                                     -o-transition: 0.25s;
@@ -2383,7 +2384,7 @@ img {
     bottom: 0;
     left: 50%;
     margin-left: -16px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .mk-scroll-down {
     display: block;
@@ -2421,7 +2422,7 @@ img {
         left: 50%;
         margin-left: -16px;
         margin-bottom: 0;
-        margin-top: -147px;
+        margin-top: -120px;
     }
     .mk-scroll-down {
         width: 30px;
