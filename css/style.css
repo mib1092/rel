@@ -2556,14 +2556,15 @@ img {
     100% {
         opacity:1
     }
-}@keyframes fadeInMousePoints {
-     from {
-         opacity:.5
-     }
-     100% {
-         opacity:1
-     }
- }
+}
+@keyframes fadeInMousePoints {
+    from {
+        opacity:.5
+    }
+    100% {
+        opacity:1
+    }
+}
 @media all and (min-width: 1680px) {
     .section .container-box {
         padding-left: 84px;
@@ -2583,6 +2584,12 @@ img {
     a.btn-slide, .btn-slide {
         /*padding: 15px 12px 17px;*/
         /*font-size: 1.3em;*/
+    }
+}
+
+@media all and (max-width: 1023px) {
+    .section {
+        padding-bottom: 70px;
     }
 }
 
