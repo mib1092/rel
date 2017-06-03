@@ -2146,7 +2146,7 @@ img {
 }
 .section.footer {
     min-height: auto;
-    z-index: 200;
+    z-index: 10;
     padding: 0;
 }
 .section .container {

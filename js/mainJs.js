@@ -452,10 +452,12 @@ jQuery(document).ready(function($) {
                 if(index == 1 && direction =='down'){
                     if (!(header.hasClass('fullpage-bg'))) {
                         header.addClass('fullpage-bg');
+                        console.log("ADD");
                     }
                 } else if(index == 2 && direction == 'up'){
                     if (header.hasClass('fullpage-bg')) {
                         header.removeClass('fullpage-bg');
+                        console.log("REMOVE");
                     }
                 }
             }
